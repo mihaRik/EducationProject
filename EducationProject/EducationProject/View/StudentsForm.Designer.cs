@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.btnStudentSaveChangeBio = new System.Windows.Forms.Button();
+            this.rbxStudentBio = new System.Windows.Forms.RichTextBox();
+            this.lblStudentBio = new System.Windows.Forms.Label();
             this.btnStudentChangePhoto = new System.Windows.Forms.Button();
             this.btnEditBirthDate = new System.Windows.Forms.Button();
             this.btnEditPhone = new System.Windows.Forms.Button();
@@ -58,6 +61,8 @@
             this.lblStudentInfo = new System.Windows.Forms.Label();
             this.pbxStudentPhoto = new System.Windows.Forms.PictureBox();
             this.tabTask = new System.Windows.Forms.TabPage();
+            this.lblStudentTaskPointValue = new System.Windows.Forms.Label();
+            this.lblStudentTaskPoint = new System.Windows.Forms.Label();
             this.cbxSelectTask = new System.Windows.Forms.ComboBox();
             this.lblStudentAvgPointValue = new System.Windows.Forms.Label();
             this.lblStudentTaskEndDateValue = new System.Windows.Forms.Label();
@@ -72,14 +77,49 @@
             this.lblStudentSelectTask = new System.Windows.Forms.Label();
             this.lblStudentTask = new System.Windows.Forms.Label();
             this.tabTeacherInfo = new System.Windows.Forms.TabPage();
-            this.taMentorInfo = new System.Windows.Forms.TabPage();
+            this.btnSendMsgToTeacher = new System.Windows.Forms.Button();
+            this.rbxStudentTeacherBio = new System.Windows.Forms.RichTextBox();
+            this.lblStudentTeacherBio = new System.Windows.Forms.Label();
+            this.lblStudentTeacherPhoneValue = new System.Windows.Forms.Label();
+            this.lblStudentTeacherPhone = new System.Windows.Forms.Label();
+            this.lblStudentTeacherEmailValue = new System.Windows.Forms.Label();
+            this.lblStudentTeacherEmail = new System.Windows.Forms.Label();
+            this.lblStudentTeacherSurnameValue = new System.Windows.Forms.Label();
+            this.lblStudentTeacherSurname = new System.Windows.Forms.Label();
+            this.lblStudentTeacherNameValue = new System.Windows.Forms.Label();
+            this.lblStudentTeacherName = new System.Windows.Forms.Label();
+            this.lblStudentTeacherInfo = new System.Windows.Forms.Label();
+            this.pbxStudentTeacherPhoto = new System.Windows.Forms.PictureBox();
+            this.tabMentorInfo = new System.Windows.Forms.TabPage();
+            this.btnSendMsgToMentor = new System.Windows.Forms.Button();
+            this.rbxStudentMentorBio = new System.Windows.Forms.RichTextBox();
+            this.lblStudentMentorBio = new System.Windows.Forms.Label();
+            this.lblStudentMentorPhoneValue = new System.Windows.Forms.Label();
+            this.lblStudentMentorPhone = new System.Windows.Forms.Label();
+            this.lblStudentMentorEmailValue = new System.Windows.Forms.Label();
+            this.lblStudentMentorEmail = new System.Windows.Forms.Label();
+            this.lblStudentMentorSurnameValue = new System.Windows.Forms.Label();
+            this.lblStudentMentorSurname = new System.Windows.Forms.Label();
+            this.lblStudentMentorNameValue = new System.Windows.Forms.Label();
+            this.lblStudentMentorName = new System.Windows.Forms.Label();
+            this.lblStudentMentorInfo = new System.Windows.Forms.Label();
+            this.pbxStudentMentorPhoto = new System.Windows.Forms.PictureBox();
             this.tabMessages = new System.Windows.Forms.TabPage();
             this.tabGroupmates = new System.Windows.Forms.TabPage();
             this.tabLibrary = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentPhoto)).BeginInit();
             this.tabTask.SuspendLayout();
+            this.tabTeacherInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStudentTeacherPhoto)).BeginInit();
+            this.tabMentorInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStudentMentorPhoto)).BeginInit();
+            this.tabMessages.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -87,7 +127,7 @@
             this.tabControl.Controls.Add(this.tabInfo);
             this.tabControl.Controls.Add(this.tabTask);
             this.tabControl.Controls.Add(this.tabTeacherInfo);
-            this.tabControl.Controls.Add(this.taMentorInfo);
+            this.tabControl.Controls.Add(this.tabMentorInfo);
             this.tabControl.Controls.Add(this.tabMessages);
             this.tabControl.Controls.Add(this.tabGroupmates);
             this.tabControl.Controls.Add(this.tabLibrary);
@@ -100,6 +140,9 @@
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.btnStudentSaveChangeBio);
+            this.tabInfo.Controls.Add(this.rbxStudentBio);
+            this.tabInfo.Controls.Add(this.lblStudentBio);
             this.tabInfo.Controls.Add(this.btnStudentChangePhoto);
             this.tabInfo.Controls.Add(this.btnEditBirthDate);
             this.tabInfo.Controls.Add(this.btnEditPhone);
@@ -133,6 +176,37 @@
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "Info";
             this.tabInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnStudentSaveChangeBio
+            // 
+            this.btnStudentSaveChangeBio.AutoSize = true;
+            this.btnStudentSaveChangeBio.Location = new System.Drawing.Point(654, 164);
+            this.btnStudentSaveChangeBio.Name = "btnStudentSaveChangeBio";
+            this.btnStudentSaveChangeBio.Size = new System.Drawing.Size(86, 23);
+            this.btnStudentSaveChangeBio.TabIndex = 41;
+            this.btnStudentSaveChangeBio.Text = "Save changes";
+            this.btnStudentSaveChangeBio.UseVisualStyleBackColor = true;
+            this.btnStudentSaveChangeBio.Visible = false;
+            this.btnStudentSaveChangeBio.Click += new System.EventHandler(this.btnStudentSaveChangeBio_Click);
+            // 
+            // rbxStudentBio
+            // 
+            this.rbxStudentBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxStudentBio.Location = new System.Drawing.Point(483, 62);
+            this.rbxStudentBio.Name = "rbxStudentBio";
+            this.rbxStudentBio.Size = new System.Drawing.Size(257, 96);
+            this.rbxStudentBio.TabIndex = 40;
+            this.rbxStudentBio.Text = "";
+            this.rbxStudentBio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rbxStudentBio_KeyPress);
+            // 
+            // lblStudentBio
+            // 
+            this.lblStudentBio.AutoSize = true;
+            this.lblStudentBio.Location = new System.Drawing.Point(435, 62);
+            this.lblStudentBio.Name = "lblStudentBio";
+            this.lblStudentBio.Size = new System.Drawing.Size(28, 13);
+            this.lblStudentBio.TabIndex = 39;
+            this.lblStudentBio.Text = "Bio :";
             // 
             // btnStudentChangePhoto
             // 
@@ -378,6 +452,8 @@
             // 
             // tabTask
             // 
+            this.tabTask.Controls.Add(this.lblStudentTaskPointValue);
+            this.tabTask.Controls.Add(this.lblStudentTaskPoint);
             this.tabTask.Controls.Add(this.cbxSelectTask);
             this.tabTask.Controls.Add(this.lblStudentAvgPointValue);
             this.tabTask.Controls.Add(this.lblStudentTaskEndDateValue);
@@ -399,6 +475,24 @@
             this.tabTask.Text = "Task";
             this.tabTask.UseVisualStyleBackColor = true;
             // 
+            // lblStudentTaskPointValue
+            // 
+            this.lblStudentTaskPointValue.AutoSize = true;
+            this.lblStudentTaskPointValue.Location = new System.Drawing.Point(525, 137);
+            this.lblStudentTaskPointValue.Name = "lblStudentTaskPointValue";
+            this.lblStudentTaskPointValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentTaskPointValue.TabIndex = 14;
+            this.lblStudentTaskPointValue.Text = "Loading...";
+            // 
+            // lblStudentTaskPoint
+            // 
+            this.lblStudentTaskPoint.AutoSize = true;
+            this.lblStudentTaskPoint.Location = new System.Drawing.Point(460, 137);
+            this.lblStudentTaskPoint.Name = "lblStudentTaskPoint";
+            this.lblStudentTaskPoint.Size = new System.Drawing.Size(63, 13);
+            this.lblStudentTaskPoint.TabIndex = 13;
+            this.lblStudentTaskPoint.Text = "Task point :";
+            // 
             // cbxSelectTask
             // 
             this.cbxSelectTask.FormattingEnabled = true;
@@ -411,7 +505,7 @@
             // lblStudentAvgPointValue
             // 
             this.lblStudentAvgPointValue.AutoSize = true;
-            this.lblStudentAvgPointValue.Location = new System.Drawing.Point(663, 15);
+            this.lblStudentAvgPointValue.Location = new System.Drawing.Point(544, 15);
             this.lblStudentAvgPointValue.Name = "lblStudentAvgPointValue";
             this.lblStudentAvgPointValue.Size = new System.Drawing.Size(54, 13);
             this.lblStudentAvgPointValue.TabIndex = 11;
@@ -420,7 +514,7 @@
             // lblStudentTaskEndDateValue
             // 
             this.lblStudentTaskEndDateValue.AutoSize = true;
-            this.lblStudentTaskEndDateValue.Location = new System.Drawing.Point(527, 174);
+            this.lblStudentTaskEndDateValue.Location = new System.Drawing.Point(525, 211);
             this.lblStudentTaskEndDateValue.Name = "lblStudentTaskEndDateValue";
             this.lblStudentTaskEndDateValue.Size = new System.Drawing.Size(54, 13);
             this.lblStudentTaskEndDateValue.TabIndex = 10;
@@ -429,7 +523,7 @@
             // lblStudentTaskStartDateValue
             // 
             this.lblStudentTaskStartDateValue.AutoSize = true;
-            this.lblStudentTaskStartDateValue.Location = new System.Drawing.Point(527, 136);
+            this.lblStudentTaskStartDateValue.Location = new System.Drawing.Point(525, 173);
             this.lblStudentTaskStartDateValue.Name = "lblStudentTaskStartDateValue";
             this.lblStudentTaskStartDateValue.Size = new System.Drawing.Size(54, 13);
             this.lblStudentTaskStartDateValue.TabIndex = 9;
@@ -447,7 +541,7 @@
             // lblStudentAvgPoint
             // 
             this.lblStudentAvgPoint.AutoSize = true;
-            this.lblStudentAvgPoint.Location = new System.Drawing.Point(578, 15);
+            this.lblStudentAvgPoint.Location = new System.Drawing.Point(459, 15);
             this.lblStudentAvgPoint.Name = "lblStudentAvgPoint";
             this.lblStudentAvgPoint.Size = new System.Drawing.Size(79, 13);
             this.lblStudentAvgPoint.TabIndex = 7;
@@ -456,7 +550,7 @@
             // lblStudentTaskEndDate
             // 
             this.lblStudentTaskEndDate.AutoSize = true;
-            this.lblStudentTaskEndDate.Location = new System.Drawing.Point(462, 174);
+            this.lblStudentTaskEndDate.Location = new System.Drawing.Point(460, 211);
             this.lblStudentTaskEndDate.Name = "lblStudentTaskEndDate";
             this.lblStudentTaskEndDate.Size = new System.Drawing.Size(56, 13);
             this.lblStudentTaskEndDate.TabIndex = 6;
@@ -465,7 +559,7 @@
             // lblStudentTaskStartDate
             // 
             this.lblStudentTaskStartDate.AutoSize = true;
-            this.lblStudentTaskStartDate.Location = new System.Drawing.Point(462, 136);
+            this.lblStudentTaskStartDate.Location = new System.Drawing.Point(460, 173);
             this.lblStudentTaskStartDate.Name = "lblStudentTaskStartDate";
             this.lblStudentTaskStartDate.Size = new System.Drawing.Size(59, 13);
             this.lblStudentTaskStartDate.TabIndex = 5;
@@ -520,6 +614,19 @@
             // 
             // tabTeacherInfo
             // 
+            this.tabTeacherInfo.Controls.Add(this.btnSendMsgToTeacher);
+            this.tabTeacherInfo.Controls.Add(this.rbxStudentTeacherBio);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherBio);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherPhoneValue);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherPhone);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherEmailValue);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherEmail);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherSurnameValue);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherSurname);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherNameValue);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherName);
+            this.tabTeacherInfo.Controls.Add(this.lblStudentTeacherInfo);
+            this.tabTeacherInfo.Controls.Add(this.pbxStudentTeacherPhoto);
             this.tabTeacherInfo.Location = new System.Drawing.Point(4, 22);
             this.tabTeacherInfo.Name = "tabTeacherInfo";
             this.tabTeacherInfo.Size = new System.Drawing.Size(793, 424);
@@ -527,17 +634,275 @@
             this.tabTeacherInfo.Text = "Teacher info";
             this.tabTeacherInfo.UseVisualStyleBackColor = true;
             // 
-            // taMentorInfo
+            // btnSendMsgToTeacher
             // 
-            this.taMentorInfo.Location = new System.Drawing.Point(4, 22);
-            this.taMentorInfo.Name = "taMentorInfo";
-            this.taMentorInfo.Size = new System.Drawing.Size(793, 424);
-            this.taMentorInfo.TabIndex = 3;
-            this.taMentorInfo.Text = "Mentor info";
-            this.taMentorInfo.UseVisualStyleBackColor = true;
+            this.btnSendMsgToTeacher.AutoSize = true;
+            this.btnSendMsgToTeacher.Location = new System.Drawing.Point(125, 333);
+            this.btnSendMsgToTeacher.Name = "btnSendMsgToTeacher";
+            this.btnSendMsgToTeacher.Size = new System.Drawing.Size(87, 23);
+            this.btnSendMsgToTeacher.TabIndex = 54;
+            this.btnSendMsgToTeacher.Text = "Send message";
+            this.btnSendMsgToTeacher.UseVisualStyleBackColor = true;
+            // 
+            // rbxStudentTeacherBio
+            // 
+            this.rbxStudentTeacherBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxStudentTeacherBio.Location = new System.Drawing.Point(216, 185);
+            this.rbxStudentTeacherBio.Name = "rbxStudentTeacherBio";
+            this.rbxStudentTeacherBio.ReadOnly = true;
+            this.rbxStudentTeacherBio.Size = new System.Drawing.Size(257, 96);
+            this.rbxStudentTeacherBio.TabIndex = 53;
+            this.rbxStudentTeacherBio.Text = "";
+            // 
+            // lblStudentTeacherBio
+            // 
+            this.lblStudentTeacherBio.AutoSize = true;
+            this.lblStudentTeacherBio.Location = new System.Drawing.Point(125, 187);
+            this.lblStudentTeacherBio.Name = "lblStudentTeacherBio";
+            this.lblStudentTeacherBio.Size = new System.Drawing.Size(28, 13);
+            this.lblStudentTeacherBio.TabIndex = 37;
+            this.lblStudentTeacherBio.Text = "Bio :";
+            // 
+            // lblStudentTeacherPhoneValue
+            // 
+            this.lblStudentTeacherPhoneValue.AutoSize = true;
+            this.lblStudentTeacherPhoneValue.Location = new System.Drawing.Point(213, 157);
+            this.lblStudentTeacherPhoneValue.Name = "lblStudentTeacherPhoneValue";
+            this.lblStudentTeacherPhoneValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentTeacherPhoneValue.TabIndex = 36;
+            this.lblStudentTeacherPhoneValue.Text = "Loading...";
+            // 
+            // lblStudentTeacherPhone
+            // 
+            this.lblStudentTeacherPhone.AutoSize = true;
+            this.lblStudentTeacherPhone.Location = new System.Drawing.Point(125, 157);
+            this.lblStudentTeacherPhone.Name = "lblStudentTeacherPhone";
+            this.lblStudentTeacherPhone.Size = new System.Drawing.Size(44, 13);
+            this.lblStudentTeacherPhone.TabIndex = 35;
+            this.lblStudentTeacherPhone.Text = "Phone :";
+            // 
+            // lblStudentTeacherEmailValue
+            // 
+            this.lblStudentTeacherEmailValue.AutoSize = true;
+            this.lblStudentTeacherEmailValue.Location = new System.Drawing.Point(213, 127);
+            this.lblStudentTeacherEmailValue.Name = "lblStudentTeacherEmailValue";
+            this.lblStudentTeacherEmailValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentTeacherEmailValue.TabIndex = 34;
+            this.lblStudentTeacherEmailValue.Text = "Loading...";
+            // 
+            // lblStudentTeacherEmail
+            // 
+            this.lblStudentTeacherEmail.AutoSize = true;
+            this.lblStudentTeacherEmail.Location = new System.Drawing.Point(125, 127);
+            this.lblStudentTeacherEmail.Name = "lblStudentTeacherEmail";
+            this.lblStudentTeacherEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblStudentTeacherEmail.TabIndex = 33;
+            this.lblStudentTeacherEmail.Text = "Email :";
+            // 
+            // lblStudentTeacherSurnameValue
+            // 
+            this.lblStudentTeacherSurnameValue.AutoSize = true;
+            this.lblStudentTeacherSurnameValue.Location = new System.Drawing.Point(213, 96);
+            this.lblStudentTeacherSurnameValue.Name = "lblStudentTeacherSurnameValue";
+            this.lblStudentTeacherSurnameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentTeacherSurnameValue.TabIndex = 32;
+            this.lblStudentTeacherSurnameValue.Text = "Loading...";
+            // 
+            // lblStudentTeacherSurname
+            // 
+            this.lblStudentTeacherSurname.AutoSize = true;
+            this.lblStudentTeacherSurname.Location = new System.Drawing.Point(125, 96);
+            this.lblStudentTeacherSurname.Name = "lblStudentTeacherSurname";
+            this.lblStudentTeacherSurname.Size = new System.Drawing.Size(55, 13);
+            this.lblStudentTeacherSurname.TabIndex = 31;
+            this.lblStudentTeacherSurname.Text = "Surname :";
+            // 
+            // lblStudentTeacherNameValue
+            // 
+            this.lblStudentTeacherNameValue.AutoSize = true;
+            this.lblStudentTeacherNameValue.Location = new System.Drawing.Point(213, 67);
+            this.lblStudentTeacherNameValue.Name = "lblStudentTeacherNameValue";
+            this.lblStudentTeacherNameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentTeacherNameValue.TabIndex = 30;
+            this.lblStudentTeacherNameValue.Text = "Loading...";
+            // 
+            // lblStudentTeacherName
+            // 
+            this.lblStudentTeacherName.AutoSize = true;
+            this.lblStudentTeacherName.Location = new System.Drawing.Point(125, 67);
+            this.lblStudentTeacherName.Name = "lblStudentTeacherName";
+            this.lblStudentTeacherName.Size = new System.Drawing.Size(41, 13);
+            this.lblStudentTeacherName.TabIndex = 29;
+            this.lblStudentTeacherName.Text = "Name :";
+            // 
+            // lblStudentTeacherInfo
+            // 
+            this.lblStudentTeacherInfo.AutoSize = true;
+            this.lblStudentTeacherInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStudentTeacherInfo.Location = new System.Drawing.Point(120, 12);
+            this.lblStudentTeacherInfo.Name = "lblStudentTeacherInfo";
+            this.lblStudentTeacherInfo.Size = new System.Drawing.Size(144, 25);
+            this.lblStudentTeacherInfo.TabIndex = 28;
+            this.lblStudentTeacherInfo.Text = "Teacher info";
+            // 
+            // pbxStudentTeacherPhoto
+            // 
+            this.pbxStudentTeacherPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxStudentTeacherPhoto.ErrorImage")));
+            this.pbxStudentTeacherPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxStudentTeacherPhoto.Image")));
+            this.pbxStudentTeacherPhoto.Location = new System.Drawing.Point(8, 12);
+            this.pbxStudentTeacherPhoto.Name = "pbxStudentTeacherPhoto";
+            this.pbxStudentTeacherPhoto.Size = new System.Drawing.Size(105, 112);
+            this.pbxStudentTeacherPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxStudentTeacherPhoto.TabIndex = 27;
+            this.pbxStudentTeacherPhoto.TabStop = false;
+            // 
+            // tabMentorInfo
+            // 
+            this.tabMentorInfo.Controls.Add(this.btnSendMsgToMentor);
+            this.tabMentorInfo.Controls.Add(this.rbxStudentMentorBio);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorBio);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorPhoneValue);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorPhone);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorEmailValue);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorEmail);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorSurnameValue);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorSurname);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorNameValue);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorName);
+            this.tabMentorInfo.Controls.Add(this.lblStudentMentorInfo);
+            this.tabMentorInfo.Controls.Add(this.pbxStudentMentorPhoto);
+            this.tabMentorInfo.Location = new System.Drawing.Point(4, 22);
+            this.tabMentorInfo.Name = "tabMentorInfo";
+            this.tabMentorInfo.Size = new System.Drawing.Size(793, 424);
+            this.tabMentorInfo.TabIndex = 3;
+            this.tabMentorInfo.Text = "Mentor info";
+            this.tabMentorInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnSendMsgToMentor
+            // 
+            this.btnSendMsgToMentor.AutoSize = true;
+            this.btnSendMsgToMentor.Location = new System.Drawing.Point(125, 333);
+            this.btnSendMsgToMentor.Name = "btnSendMsgToMentor";
+            this.btnSendMsgToMentor.Size = new System.Drawing.Size(87, 23);
+            this.btnSendMsgToMentor.TabIndex = 67;
+            this.btnSendMsgToMentor.Text = "Send message";
+            this.btnSendMsgToMentor.UseVisualStyleBackColor = true;
+            // 
+            // rbxStudentMentorBio
+            // 
+            this.rbxStudentMentorBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxStudentMentorBio.Location = new System.Drawing.Point(216, 185);
+            this.rbxStudentMentorBio.Name = "rbxStudentMentorBio";
+            this.rbxStudentMentorBio.ReadOnly = true;
+            this.rbxStudentMentorBio.Size = new System.Drawing.Size(257, 96);
+            this.rbxStudentMentorBio.TabIndex = 66;
+            this.rbxStudentMentorBio.Text = "";
+            // 
+            // lblStudentMentorBio
+            // 
+            this.lblStudentMentorBio.AutoSize = true;
+            this.lblStudentMentorBio.Location = new System.Drawing.Point(125, 187);
+            this.lblStudentMentorBio.Name = "lblStudentMentorBio";
+            this.lblStudentMentorBio.Size = new System.Drawing.Size(28, 13);
+            this.lblStudentMentorBio.TabIndex = 65;
+            this.lblStudentMentorBio.Text = "Bio :";
+            // 
+            // lblStudentMentorPhoneValue
+            // 
+            this.lblStudentMentorPhoneValue.AutoSize = true;
+            this.lblStudentMentorPhoneValue.Location = new System.Drawing.Point(213, 157);
+            this.lblStudentMentorPhoneValue.Name = "lblStudentMentorPhoneValue";
+            this.lblStudentMentorPhoneValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentMentorPhoneValue.TabIndex = 64;
+            this.lblStudentMentorPhoneValue.Text = "Loading...";
+            // 
+            // lblStudentMentorPhone
+            // 
+            this.lblStudentMentorPhone.AutoSize = true;
+            this.lblStudentMentorPhone.Location = new System.Drawing.Point(125, 157);
+            this.lblStudentMentorPhone.Name = "lblStudentMentorPhone";
+            this.lblStudentMentorPhone.Size = new System.Drawing.Size(44, 13);
+            this.lblStudentMentorPhone.TabIndex = 63;
+            this.lblStudentMentorPhone.Text = "Phone :";
+            // 
+            // lblStudentMentorEmailValue
+            // 
+            this.lblStudentMentorEmailValue.AutoSize = true;
+            this.lblStudentMentorEmailValue.Location = new System.Drawing.Point(213, 127);
+            this.lblStudentMentorEmailValue.Name = "lblStudentMentorEmailValue";
+            this.lblStudentMentorEmailValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentMentorEmailValue.TabIndex = 62;
+            this.lblStudentMentorEmailValue.Text = "Loading...";
+            // 
+            // lblStudentMentorEmail
+            // 
+            this.lblStudentMentorEmail.AutoSize = true;
+            this.lblStudentMentorEmail.Location = new System.Drawing.Point(125, 127);
+            this.lblStudentMentorEmail.Name = "lblStudentMentorEmail";
+            this.lblStudentMentorEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblStudentMentorEmail.TabIndex = 61;
+            this.lblStudentMentorEmail.Text = "Email :";
+            // 
+            // lblStudentMentorSurnameValue
+            // 
+            this.lblStudentMentorSurnameValue.AutoSize = true;
+            this.lblStudentMentorSurnameValue.Location = new System.Drawing.Point(213, 96);
+            this.lblStudentMentorSurnameValue.Name = "lblStudentMentorSurnameValue";
+            this.lblStudentMentorSurnameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentMentorSurnameValue.TabIndex = 60;
+            this.lblStudentMentorSurnameValue.Text = "Loading...";
+            // 
+            // lblStudentMentorSurname
+            // 
+            this.lblStudentMentorSurname.AutoSize = true;
+            this.lblStudentMentorSurname.Location = new System.Drawing.Point(125, 96);
+            this.lblStudentMentorSurname.Name = "lblStudentMentorSurname";
+            this.lblStudentMentorSurname.Size = new System.Drawing.Size(55, 13);
+            this.lblStudentMentorSurname.TabIndex = 59;
+            this.lblStudentMentorSurname.Text = "Surname :";
+            // 
+            // lblStudentMentorNameValue
+            // 
+            this.lblStudentMentorNameValue.AutoSize = true;
+            this.lblStudentMentorNameValue.Location = new System.Drawing.Point(213, 67);
+            this.lblStudentMentorNameValue.Name = "lblStudentMentorNameValue";
+            this.lblStudentMentorNameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblStudentMentorNameValue.TabIndex = 58;
+            this.lblStudentMentorNameValue.Text = "Loading...";
+            // 
+            // lblStudentMentorName
+            // 
+            this.lblStudentMentorName.AutoSize = true;
+            this.lblStudentMentorName.Location = new System.Drawing.Point(125, 67);
+            this.lblStudentMentorName.Name = "lblStudentMentorName";
+            this.lblStudentMentorName.Size = new System.Drawing.Size(41, 13);
+            this.lblStudentMentorName.TabIndex = 57;
+            this.lblStudentMentorName.Text = "Name :";
+            // 
+            // lblStudentMentorInfo
+            // 
+            this.lblStudentMentorInfo.AutoSize = true;
+            this.lblStudentMentorInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStudentMentorInfo.Location = new System.Drawing.Point(120, 12);
+            this.lblStudentMentorInfo.Name = "lblStudentMentorInfo";
+            this.lblStudentMentorInfo.Size = new System.Drawing.Size(131, 25);
+            this.lblStudentMentorInfo.TabIndex = 56;
+            this.lblStudentMentorInfo.Text = "Mentor info";
+            // 
+            // pbxStudentMentorPhoto
+            // 
+            this.pbxStudentMentorPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxStudentMentorPhoto.ErrorImage")));
+            this.pbxStudentMentorPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxStudentMentorPhoto.Image")));
+            this.pbxStudentMentorPhoto.Location = new System.Drawing.Point(8, 12);
+            this.pbxStudentMentorPhoto.Name = "pbxStudentMentorPhoto";
+            this.pbxStudentMentorPhoto.Size = new System.Drawing.Size(105, 112);
+            this.pbxStudentMentorPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxStudentMentorPhoto.TabIndex = 55;
+            this.pbxStudentMentorPhoto.TabStop = false;
             // 
             // tabMessages
             // 
+            this.tabMessages.Controls.Add(this.tabControl1);
             this.tabMessages.Location = new System.Drawing.Point(4, 22);
             this.tabMessages.Name = "tabMessages";
             this.tabMessages.Size = new System.Drawing.Size(793, 424);
@@ -563,6 +928,36 @@
             this.tabLibrary.Text = "Library";
             this.tabLibrary.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(801, 428);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(793, 398);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(793, 402);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,7 +966,6 @@
             this.Controls.Add(this.tabControl);
             this.Name = "StudentsForm";
             this.Text = "StudentsForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentsForm_FormClosed);
             this.Load += new System.EventHandler(this.StudentsForm_Load);
             this.tabControl.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
@@ -579,6 +973,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentPhoto)).EndInit();
             this.tabTask.ResumeLayout(false);
             this.tabTask.PerformLayout();
+            this.tabTeacherInfo.ResumeLayout(false);
+            this.tabTeacherInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStudentTeacherPhoto)).EndInit();
+            this.tabMentorInfo.ResumeLayout(false);
+            this.tabMentorInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxStudentMentorPhoto)).EndInit();
+            this.tabMessages.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -589,7 +991,7 @@
         private System.Windows.Forms.TabPage tabInfo;
         private System.Windows.Forms.TabPage tabTask;
         private System.Windows.Forms.TabPage tabTeacherInfo;
-        private System.Windows.Forms.TabPage taMentorInfo;
+        private System.Windows.Forms.TabPage tabMentorInfo;
         private System.Windows.Forms.TabPage tabMessages;
         private System.Windows.Forms.TabPage tabGroupmates;
         private System.Windows.Forms.TabPage tabLibrary;
@@ -632,5 +1034,39 @@
         private System.Windows.Forms.Label lblStudentTaskSubject;
         private System.Windows.Forms.Label lblStudentSelectTask;
         private System.Windows.Forms.Label lblStudentTask;
+        private System.Windows.Forms.Label lblStudentTaskPointValue;
+        private System.Windows.Forms.Label lblStudentTaskPoint;
+        private System.Windows.Forms.RichTextBox rbxStudentBio;
+        private System.Windows.Forms.Label lblStudentBio;
+        private System.Windows.Forms.Button btnSendMsgToTeacher;
+        private System.Windows.Forms.RichTextBox rbxStudentTeacherBio;
+        private System.Windows.Forms.Label lblStudentTeacherBio;
+        private System.Windows.Forms.Label lblStudentTeacherPhoneValue;
+        private System.Windows.Forms.Label lblStudentTeacherPhone;
+        private System.Windows.Forms.Label lblStudentTeacherEmailValue;
+        private System.Windows.Forms.Label lblStudentTeacherEmail;
+        private System.Windows.Forms.Label lblStudentTeacherSurnameValue;
+        private System.Windows.Forms.Label lblStudentTeacherSurname;
+        private System.Windows.Forms.Label lblStudentTeacherNameValue;
+        private System.Windows.Forms.Label lblStudentTeacherName;
+        private System.Windows.Forms.Label lblStudentTeacherInfo;
+        private System.Windows.Forms.PictureBox pbxStudentTeacherPhoto;
+        private System.Windows.Forms.Button btnSendMsgToMentor;
+        private System.Windows.Forms.RichTextBox rbxStudentMentorBio;
+        private System.Windows.Forms.Label lblStudentMentorBio;
+        private System.Windows.Forms.Label lblStudentMentorPhoneValue;
+        private System.Windows.Forms.Label lblStudentMentorPhone;
+        private System.Windows.Forms.Label lblStudentMentorEmailValue;
+        private System.Windows.Forms.Label lblStudentMentorEmail;
+        private System.Windows.Forms.Label lblStudentMentorSurnameValue;
+        private System.Windows.Forms.Label lblStudentMentorSurname;
+        private System.Windows.Forms.Label lblStudentMentorNameValue;
+        private System.Windows.Forms.Label lblStudentMentorName;
+        private System.Windows.Forms.Label lblStudentMentorInfo;
+        private System.Windows.Forms.PictureBox pbxStudentMentorPhoto;
+        private System.Windows.Forms.Button btnStudentSaveChangeBio;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
