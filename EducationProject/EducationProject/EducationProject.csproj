@@ -122,6 +122,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationProjectDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EducationProjectDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EducationProjectDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +152,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +187,28 @@
     </None>
     <None Include="EducationProjectDataSet.xss">
       <DependentUpon>EducationProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet1.xsc">
+      <DependentUpon>EducationProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet1.xss">
+      <DependentUpon>EducationProjectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet2.xsc">
+      <DependentUpon>EducationProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet2.xss">
+      <DependentUpon>EducationProjectDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

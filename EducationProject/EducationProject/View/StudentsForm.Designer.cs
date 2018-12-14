@@ -207,6 +207,8 @@
             this.tabControl.Controls.Add(this.tabGroupmates);
             this.tabControl.Controls.Add(this.tabLibrary);
             this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.MaximumSize = new System.Drawing.Size(801, 450);
+            this.tabControl.MinimumSize = new System.Drawing.Size(801, 450);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(801, 450);
@@ -1637,6 +1639,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "StudentsForm";
             this.Text = "StudentsForm";
             this.Load += new System.EventHandler(this.StudentsForm_Load);

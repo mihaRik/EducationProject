@@ -66,7 +66,7 @@
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(121, 22);
             this.tbxEmail.TabIndex = 2;
-            this.tbxEmail.Text = "rahimrt@code.edu.az";
+            this.tbxEmail.Text = "admin";
             // 
             // tbxPassword
             // 
@@ -76,7 +76,7 @@
             this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(121, 22);
             this.tbxPassword.TabIndex = 4;
-            this.tbxPassword.Text = "miharik123";
+            this.tbxPassword.Text = "admin";
             // 
             // lblPassword
             // 
@@ -144,6 +144,9 @@
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLogin);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(305, 262);
+            this.MinimumSize = new System.Drawing.Size(305, 262);
             this.Name = "Form1";
             this.Text = "Welcome to Code Academy";
             this.Load += new System.EventHandler(this.Form1_Load);

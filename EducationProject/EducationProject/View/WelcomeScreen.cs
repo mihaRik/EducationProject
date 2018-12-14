@@ -33,21 +33,30 @@ namespace EducationProject
             }
             else
             {
-                if (db.Users.ToList().Exists(x => x.UserEmail == tbxEmail.Text))
+                if (tbxEmail.Text == "admin" && tbxPassword.Text == "admin")
                 {
-                    user = db.Users.ToList().Find(x => x.UserEmail == tbxEmail.Text);
-                }
-                UserTypes userType = db.UserTypes.ToList().Find(x => x.UserTypeId == user.UserTypeId);
-
-                if (tbxPassword.Text == user.UserPassword && cbxUserType.SelectedItem.ToString() == userType.UserTypeName)
-                {
-                    Controller.Controller.user = user;
-                    StudentsForm studentsForm = new StudentsForm();
-                    studentsForm.Show();
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Inputs are invalid!", "Invalid inputs", MessageBoxButtons.OK);
+
+                    if (db.Users.ToList().Exists(x => x.UserEmail == tbxEmail.Text))
+                    {
+                        user = db.Users.ToList().Find(x => x.UserEmail == tbxEmail.Text);
+                    }
+                    UserTypes userType = db.UserTypes.ToList().Find(x => x.UserTypeId == user.UserTypeId);
+
+                    if (tbxPassword.Text == user.UserPassword && cbxUserType.SelectedItem.ToString() == userType.UserTypeName)
+                    {
+                        Controller.Controller.user = user;
+                        StudentsForm studentsForm = new StudentsForm();
+                        studentsForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inputs are invalid!", "Invalid inputs", MessageBoxButtons.OK);
+                    }
                 }
             }
 
