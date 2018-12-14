@@ -30,8 +30,6 @@ namespace EducationProject.Controller
                 var convertedClass = _class as Mentors;
                 return db.Groups.Where(x => x.MentorId == convertedClass.MentorId).ToList();
             }
-            //var ex= new ArgumentNullException("Group", "Does not have that property!");
-
             return null;
         }
     }

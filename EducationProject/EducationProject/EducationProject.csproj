@@ -90,6 +90,12 @@
     <Compile Include="Database\Messages.cs">
       <DependentUpon>EducationProjectDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EducationProjectDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_helpdiagrams_Result.cs">
+      <DependentUpon>EducationProjectDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Students.cs">
       <DependentUpon>EducationProjectDb.tt</DependentUpon>
     </Compile>
@@ -110,6 +116,11 @@
     </Compile>
     <Compile Include="Database\UserTypes.cs">
       <DependentUpon>EducationProjectDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\StudentsForm.cs">
       <SubType>Form</SubType>
@@ -146,6 +157,17 @@
     </EntityDeploy>
     <None Include="Database\EducationProjectDb.edmx.diagram">
       <DependentUpon>EducationProjectDb.edmx</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet.xsc">
+      <DependentUpon>EducationProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet.xss">
+      <DependentUpon>EducationProjectDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

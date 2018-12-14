@@ -19,12 +19,15 @@ namespace EducationProject.View
     public partial class StudentsForm : Form
     {
         static EducationProjectEntities db = Controller.Controller.db;
-        static Students stud;
-        IQueryable<StudentTasks> studTask;
+        Students stud;
+        List<StudentTasks> studTask;
         Tasks task;
         Groups studGroup;
         Teachers studTeacher;
         Mentors studMentor;
+        List<Messages> studMessages;
+        List<Messages> studSentMessages;
+        List<Students> studGroupmates;
 
         public StudentsForm()
         {
@@ -34,7 +37,16 @@ namespace EducationProject.View
         private void StudentsForm_Load(object sender, EventArgs e)
         {
             stud = db.Students.ToList().Find(x => x.UserId == Controller.Controller.user.UserId);
-            studTask = db.StudentTasks.Where(x => x.StudentId == stud.StudentId);
+            studTask = db.StudentTasks.Where(x => x.StudentId == stud.StudentId).ToList();
+            studGroupmates = db.Students.Where(x => x.GroupId != null && x.GroupId == stud.GroupId && x.StudentId != stud.StudentId).ToList();
+
+            if (stud.GroupId != null)
+            {
+                studGroup = db.Groups.ToList().Find(x => x.GroupId == stud.GroupId);
+                studTeacher = db.Teachers.ToList().Find(x => x.TeacherId == studGroup.TeacherId);
+                studMentor = db.Mentors.ToList().Find(x => x.MentorId == studGroup.MentorId);
+            }
+
             lblStudentNameValue.Text = stud.StudentName;
             lblStudentSurnameValue.Text = stud.StudentSurname;
             lblStudentEmailValue.Text = stud.StudentEmail;
@@ -105,7 +117,7 @@ namespace EducationProject.View
                 Font = new Font(FontFamily.GenericSansSerif, 20, FontStyle.Bold),
                 Text = "You dont have any group yet"
             };
-            
+
             noGroup.Left = Width / 2 - noGroup.Width * 2;
             noGroup.Top = Height / 2 - noGroup.Height * 2;
 
@@ -132,8 +144,6 @@ namespace EducationProject.View
                 case 2:
                     if (stud.GroupId != null)
                     {
-                        studGroup = db.Groups.ToList().Find(x => x.GroupId == stud.GroupId);
-                        studTeacher = db.Teachers.ToList().Find(x => x.TeacherId == studGroup.TeacherId);
                         lblStudentTeacherNameValue.Text = studTeacher.TeacherName;
                         lblStudentTeacherSurnameValue.Text = studTeacher.TeacherSurname;
                         lblStudentTeacherEmailValue.Text = studTeacher.TeacherEmail;
@@ -163,8 +173,6 @@ namespace EducationProject.View
                 case 3:
                     if (stud.GroupId != null)
                     {
-                        studMentor = db.Mentors.ToList().Find(x => x.MentorId == studGroup.MentorId);
-
                         lblStudentMentorNameValue.Text = studMentor.MentorName;
                         lblStudentMentorSurnameValue.Text = studMentor.MentorSurname;
                         lblStudentMentorEmailValue.Text = studMentor.MentorEmail;
@@ -188,6 +196,29 @@ namespace EducationProject.View
                     {
                         tabControl.SelectedTab.Controls.Clear();
                         tabControl.SelectedTab.Controls.Add(noGroup);
+                    }
+                    break;
+
+                case 4:
+                    studMessages = db.Messages.Where(x => x.ReceiverEmail == stud.StudentEmail).ToList();
+                    studSentMessages = db.Messages.Where(x => x.SenderEmail == stud.StudentEmail).ToList();
+                    dgvMessagesSent.DataSource = studSentMessages;
+                    dgvInbox.DataSource = studMessages;
+                    break;
+
+                case 5:
+                    if (studGroup != null)
+                    {
+                        cbxGroupmates.DisplayMember = "StudentName";
+                        cbxGroupmates.ValueMember = "StudentId";
+                        cbxGroupmates.DataSource = db.Students.Where(x => x.StudentId != stud.StudentId &&
+                        x.GroupId == studGroup.GroupId).ToList();
+                    }
+                    else
+                    {
+                        tabGroupmates.Controls.Clear();
+                        noGroup.Text = "You dont have any groupmates yet";
+                        tabGroupmates.Controls.Add(noGroup);
                     }
                     break;
 
@@ -233,6 +264,129 @@ namespace EducationProject.View
         private void rbxStudentBio_KeyPress(object sender, KeyPressEventArgs e)
         {
             btnStudentSaveChangeBio.Visible = true;
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbxMessageReceiver.Text) || String.IsNullOrEmpty(rbxMessageInboxBody.Text))
+            {
+                MessageBox.Show("Please fill out all required inputs!");
+            }
+            else
+            {
+                if (db.Users.ToList().Exists(x => x.UserEmail == tbxMessageReceiver.Text))
+                {
+                    Messages msg = new Messages()
+                    {
+                        SenderEmail = stud.StudentEmail,
+                        ReceiverEmail = tbxMessageReceiver.Text,
+                        MessageSubject = tbxMessageSubject.Text,
+                        MessageSendTime = DateTime.Now,
+                        MessageBody = rbxMessagesBody.Text,
+                    };
+                    db.Messages.Add(msg);
+                    db.SaveChanges();
+                    MessageBox.Show("Message sent!");
+                }
+                else
+                {
+                    MessageBox.Show("Check receiver email!");
+                }
+            }
+        }
+
+        private void dgvInbox_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblMessageInboxSenderValue.Text = dgvInbox.CurrentRow.Cells[0].Value.ToString();
+            lblMessageInboxSubjectValue.Text = dgvInbox.CurrentRow.Cells[2].Value.ToString();
+            rbxMessageInboxBody.Text = dgvInbox.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnSendToTeacher_Click(object sender, EventArgs e)
+        {
+            if (studTeacher != null)
+            {
+                tbxMessageReceiver.Text = studTeacher.TeacherEmail;
+            }
+            else
+            {
+                MessageBox.Show("You dont have a teacher!");
+            }
+        }
+
+        private void btnSendToMentor_Click(object sender, EventArgs e)
+        {
+            if (studMentor != null)
+            {
+                tbxMessageReceiver.Text = studMentor.MentorEmail;
+            }
+            else
+            {
+                MessageBox.Show("You dont have a mentor!");
+            }
+        }
+
+        private void dgvMessagesSent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblMessagesSentReceiverValue.Text = dgvMessagesSent.CurrentRow.Cells[0].Value.ToString();
+            lblMessagesSentSubjectValue.Text = dgvMessagesSent.CurrentRow.Cells[2].Value.ToString();
+            rbxMessagesSent.Text = dgvMessagesSent.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnSendToGroupMates_Click(object sender, EventArgs e)
+        {
+            if (studGroup != null)
+            {
+                tabMessagesSendTo.Controls.Remove(tbxMessageReceiver);
+
+                ComboBox cbxSelecetReceiver = new ComboBox()
+                {
+                    Top = tbxMessageReceiver.Top,
+                    Left = tbxMessageSubject.Left,
+                    Width = tbxMessageSubject.Width
+                };
+
+                studGroupmates.ForEach(x => cbxSelecetReceiver.Items.Add(x.StudentEmail));
+
+                tabMessagesSendTo.Controls.Add(cbxSelecetReceiver);
+            }
+            else
+            {
+                MessageBox.Show("You dont have groupmates!");
+            }
+        }
+
+        private void cbxGroupmates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Students selectedGroupmate = studGroupmates
+                .Find(x => x.StudentId == (int)cbxGroupmates.SelectedValue);
+
+            if (selectedGroupmate.StudentPhoto != null)
+            {
+                pbxGroupmatePhoto.Image = Image.FromFile(selectedGroupmate.StudentPhoto);
+            }
+
+            lblGroupmateNameValue.Text = selectedGroupmate.StudentName;
+            lblGroupmateSurnameValue.Text = selectedGroupmate.StudentSurname;
+            lblGroupmateEmailValue.Text = selectedGroupmate.StudentEmail;
+            lblGroupmatePhoneValue.Text = selectedGroupmate.StudentPhone;
+            lblGroupmateBirthdateValue.Text = selectedGroupmate.StudentBirthDate.ToString();
+            lblGroupmateRegisterDateValue.Text = selectedGroupmate.StudentRegistrationDate.ToShortDateString();
+
+            if (selectedGroupmate.GroupId != null)
+            {
+                Groups selectedMateGroup = db.Groups.ToList().Find(x => x.GroupId == selectedGroupmate.GroupId);
+                lblGroupmateGroupValue.Text = selectedMateGroup.GroupName;
+            }
+
+            if (selectedGroupmate.StudentBio != null)
+            {
+                rbxGroupmateBio.Text = selectedGroupmate.StudentBio;
+            }
+            else
+            {
+                rbxGroupmateBio.Text = "No info...";
+            }
         }
     }
 }

@@ -10,15 +10,13 @@
 namespace EducationProject.Database
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Messages
+    public partial class sp_helpdiagrams_Result
     {
-        public int MessageId { get; set; }
-        public string MessageSubject { get; set; }
-        public System.DateTime MessageSendTime { get; set; }
-        public string MessageBody { get; set; }
-        public string SenderEmail { get; set; }
-        public string ReceiverEmail { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

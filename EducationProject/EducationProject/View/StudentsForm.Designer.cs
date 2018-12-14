@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
@@ -105,11 +106,74 @@
             this.lblStudentMentorInfo = new System.Windows.Forms.Label();
             this.pbxStudentMentorPhoto = new System.Windows.Forms.PictureBox();
             this.tabMessages = new System.Windows.Forms.TabPage();
+            this.tabControllMessages = new System.Windows.Forms.TabControl();
+            this.tabMessagesSendTo = new System.Windows.Forms.TabPage();
+            this.tbxMessageSubject = new System.Windows.Forms.TextBox();
+            this.tbxMessageReceiver = new System.Windows.Forms.TextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.rbxMessagesBody = new System.Windows.Forms.RichTextBox();
+            this.lblMessagesBody = new System.Windows.Forms.Label();
+            this.lblMessagesSubject = new System.Windows.Forms.Label();
+            this.lblMessageReceiver = new System.Windows.Forms.Label();
+            this.btnSendToGroupMates = new System.Windows.Forms.Button();
+            this.btnSendToMentor = new System.Windows.Forms.Button();
+            this.btnSendToTeacher = new System.Windows.Forms.Button();
+            this.tabMessagesInbox = new System.Windows.Forms.TabPage();
+            this.rbxMessageInboxBody = new System.Windows.Forms.RichTextBox();
+            this.lblMessageInboxBody = new System.Windows.Forms.Label();
+            this.lblMessageInboxSubjectValue = new System.Windows.Forms.Label();
+            this.lblMessageInboxSubject = new System.Windows.Forms.Label();
+            this.lblMessageInboxSenderValue = new System.Windows.Forms.Label();
+            this.lblMessageInboxSender = new System.Windows.Forms.Label();
+            this.dgvInbox = new System.Windows.Forms.DataGridView();
+            this.senderEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageSendTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageSubjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageBodyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSet = new EducationProject.EducationProjectDataSet();
+            this.tabMessagesSent = new System.Windows.Forms.TabPage();
+            this.dgvMessagesSent = new System.Windows.Forms.DataGridView();
+            this.receiverEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageSendTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageSubjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageBodyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messagesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.rbxMessagesSent = new System.Windows.Forms.RichTextBox();
+            this.lblMessagesSentBody = new System.Windows.Forms.Label();
+            this.lblMessagesSentSubjectValue = new System.Windows.Forms.Label();
+            this.lblMessagesSentSubject = new System.Windows.Forms.Label();
+            this.lblMessagesSentReceiverValue = new System.Windows.Forms.Label();
+            this.lblMessagesSentReceiver = new System.Windows.Forms.Label();
             this.tabGroupmates = new System.Windows.Forms.TabPage();
+            this.cbxGroupmates = new System.Windows.Forms.ComboBox();
+            this.lblGroupmatesSelectGroupMate = new System.Windows.Forms.Label();
+            this.lblGroupmates = new System.Windows.Forms.Label();
+            this.rbxGroupmateBio = new System.Windows.Forms.RichTextBox();
+            this.lblGroupmateBio = new System.Windows.Forms.Label();
+            this.lblGroupmateEndDateValue = new System.Windows.Forms.Label();
+            this.lblGroupmateEndDate = new System.Windows.Forms.Label();
+            this.lblGroupmateStartDateValue = new System.Windows.Forms.Label();
+            this.lblGroupmateStartDate = new System.Windows.Forms.Label();
+            this.lblGroupmateGroupValue = new System.Windows.Forms.Label();
+            this.lblGroupmateGroup = new System.Windows.Forms.Label();
+            this.lblGroupmateRegisterDateValue = new System.Windows.Forms.Label();
+            this.lblGroupmateRegisterDate = new System.Windows.Forms.Label();
+            this.lblGroupmateBirthdateValue = new System.Windows.Forms.Label();
+            this.lblGroupmateBirthdate = new System.Windows.Forms.Label();
+            this.lblGroupmatePhoneValue = new System.Windows.Forms.Label();
+            this.lblGroupmatePhone = new System.Windows.Forms.Label();
+            this.lblGroupmateEmailValue = new System.Windows.Forms.Label();
+            this.lblGroupmateEmail = new System.Windows.Forms.Label();
+            this.lblGroupmateSurnameValue = new System.Windows.Forms.Label();
+            this.lblGroupmateSurname = new System.Windows.Forms.Label();
+            this.lblGroupmateNameValue = new System.Windows.Forms.Label();
+            this.lblGroupmateName = new System.Windows.Forms.Label();
+            this.pbxGroupmatePhoto = new System.Windows.Forms.PictureBox();
             this.tabLibrary = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.messagesTableAdapter = new EducationProject.EducationProjectDataSetTableAdapters.MessagesTableAdapter();
+            this.messagesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblGroupmateInfo = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentPhoto)).BeginInit();
@@ -119,7 +183,18 @@
             this.tabMentorInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentMentorPhoto)).BeginInit();
             this.tabMessages.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControllMessages.SuspendLayout();
+            this.tabMessagesSendTo.SuspendLayout();
+            this.tabMessagesInbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet)).BeginInit();
+            this.tabMessagesSent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMessagesSent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource2)).BeginInit();
+            this.tabGroupmates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGroupmatePhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -902,7 +977,7 @@
             // 
             // tabMessages
             // 
-            this.tabMessages.Controls.Add(this.tabControl1);
+            this.tabMessages.Controls.Add(this.tabControllMessages);
             this.tabMessages.Location = new System.Drawing.Point(4, 22);
             this.tabMessages.Name = "tabMessages";
             this.tabMessages.Size = new System.Drawing.Size(793, 424);
@@ -910,14 +985,623 @@
             this.tabMessages.Text = "Messages";
             this.tabMessages.UseVisualStyleBackColor = true;
             // 
+            // tabControllMessages
+            // 
+            this.tabControllMessages.Controls.Add(this.tabMessagesSendTo);
+            this.tabControllMessages.Controls.Add(this.tabMessagesInbox);
+            this.tabControllMessages.Controls.Add(this.tabMessagesSent);
+            this.tabControllMessages.Location = new System.Drawing.Point(-4, 0);
+            this.tabControllMessages.Name = "tabControllMessages";
+            this.tabControllMessages.SelectedIndex = 0;
+            this.tabControllMessages.Size = new System.Drawing.Size(801, 428);
+            this.tabControllMessages.TabIndex = 0;
+            // 
+            // tabMessagesSendTo
+            // 
+            this.tabMessagesSendTo.Controls.Add(this.tbxMessageSubject);
+            this.tabMessagesSendTo.Controls.Add(this.tbxMessageReceiver);
+            this.tabMessagesSendTo.Controls.Add(this.btnSendMessage);
+            this.tabMessagesSendTo.Controls.Add(this.rbxMessagesBody);
+            this.tabMessagesSendTo.Controls.Add(this.lblMessagesBody);
+            this.tabMessagesSendTo.Controls.Add(this.lblMessagesSubject);
+            this.tabMessagesSendTo.Controls.Add(this.lblMessageReceiver);
+            this.tabMessagesSendTo.Controls.Add(this.btnSendToGroupMates);
+            this.tabMessagesSendTo.Controls.Add(this.btnSendToMentor);
+            this.tabMessagesSendTo.Controls.Add(this.btnSendToTeacher);
+            this.tabMessagesSendTo.Location = new System.Drawing.Point(4, 22);
+            this.tabMessagesSendTo.Name = "tabMessagesSendTo";
+            this.tabMessagesSendTo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMessagesSendTo.Size = new System.Drawing.Size(793, 402);
+            this.tabMessagesSendTo.TabIndex = 0;
+            this.tabMessagesSendTo.Text = "Send to...";
+            this.tabMessagesSendTo.UseVisualStyleBackColor = true;
+            // 
+            // tbxMessageSubject
+            // 
+            this.tbxMessageSubject.Location = new System.Drawing.Point(257, 54);
+            this.tbxMessageSubject.Name = "tbxMessageSubject";
+            this.tbxMessageSubject.Size = new System.Drawing.Size(436, 20);
+            this.tbxMessageSubject.TabIndex = 9;
+            // 
+            // tbxMessageReceiver
+            // 
+            this.tbxMessageReceiver.Location = new System.Drawing.Point(257, 25);
+            this.tbxMessageReceiver.Name = "tbxMessageReceiver";
+            this.tbxMessageReceiver.Size = new System.Drawing.Size(436, 20);
+            this.tbxMessageReceiver.TabIndex = 8;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.AutoSize = true;
+            this.btnSendMessage.Location = new System.Drawing.Point(606, 335);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(87, 23);
+            this.btnSendMessage.TabIndex = 11;
+            this.btnSendMessage.Text = "Send message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // rbxMessagesBody
+            // 
+            this.rbxMessagesBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxMessagesBody.Location = new System.Drawing.Point(175, 118);
+            this.rbxMessagesBody.Name = "rbxMessagesBody";
+            this.rbxMessagesBody.Size = new System.Drawing.Size(518, 211);
+            this.rbxMessagesBody.TabIndex = 10;
+            this.rbxMessagesBody.Text = "";
+            // 
+            // lblMessagesBody
+            // 
+            this.lblMessagesBody.AutoSize = true;
+            this.lblMessagesBody.Location = new System.Drawing.Point(172, 91);
+            this.lblMessagesBody.Name = "lblMessagesBody";
+            this.lblMessagesBody.Size = new System.Drawing.Size(44, 13);
+            this.lblMessagesBody.TabIndex = 5;
+            this.lblMessagesBody.Text = "* Body :";
+            // 
+            // lblMessagesSubject
+            // 
+            this.lblMessagesSubject.AutoSize = true;
+            this.lblMessagesSubject.Location = new System.Drawing.Point(172, 57);
+            this.lblMessagesSubject.Name = "lblMessagesSubject";
+            this.lblMessagesSubject.Size = new System.Drawing.Size(49, 13);
+            this.lblMessagesSubject.TabIndex = 4;
+            this.lblMessagesSubject.Text = "Subject :";
+            // 
+            // lblMessageReceiver
+            // 
+            this.lblMessageReceiver.AutoSize = true;
+            this.lblMessageReceiver.Location = new System.Drawing.Point(172, 32);
+            this.lblMessageReceiver.Name = "lblMessageReceiver";
+            this.lblMessageReceiver.Size = new System.Drawing.Size(63, 13);
+            this.lblMessageReceiver.TabIndex = 3;
+            this.lblMessageReceiver.Text = "* Receiver :";
+            // 
+            // btnSendToGroupMates
+            // 
+            this.btnSendToGroupMates.AutoSize = true;
+            this.btnSendToGroupMates.Location = new System.Drawing.Point(9, 86);
+            this.btnSendToGroupMates.Name = "btnSendToGroupMates";
+            this.btnSendToGroupMates.Size = new System.Drawing.Size(91, 23);
+            this.btnSendToGroupMates.TabIndex = 2;
+            this.btnSendToGroupMates.Text = "To group mates";
+            this.btnSendToGroupMates.UseVisualStyleBackColor = true;
+            this.btnSendToGroupMates.Click += new System.EventHandler(this.btnSendToGroupMates_Click);
+            // 
+            // btnSendToMentor
+            // 
+            this.btnSendToMentor.AutoSize = true;
+            this.btnSendToMentor.Location = new System.Drawing.Point(9, 57);
+            this.btnSendToMentor.Name = "btnSendToMentor";
+            this.btnSendToMentor.Size = new System.Drawing.Size(75, 23);
+            this.btnSendToMentor.TabIndex = 1;
+            this.btnSendToMentor.Text = "To mentor";
+            this.btnSendToMentor.UseVisualStyleBackColor = true;
+            this.btnSendToMentor.Click += new System.EventHandler(this.btnSendToMentor_Click);
+            // 
+            // btnSendToTeacher
+            // 
+            this.btnSendToTeacher.AutoSize = true;
+            this.btnSendToTeacher.Location = new System.Drawing.Point(9, 28);
+            this.btnSendToTeacher.Name = "btnSendToTeacher";
+            this.btnSendToTeacher.Size = new System.Drawing.Size(75, 23);
+            this.btnSendToTeacher.TabIndex = 0;
+            this.btnSendToTeacher.Text = "To teacher";
+            this.btnSendToTeacher.UseVisualStyleBackColor = true;
+            this.btnSendToTeacher.Click += new System.EventHandler(this.btnSendToTeacher_Click);
+            // 
+            // tabMessagesInbox
+            // 
+            this.tabMessagesInbox.Controls.Add(this.rbxMessageInboxBody);
+            this.tabMessagesInbox.Controls.Add(this.lblMessageInboxBody);
+            this.tabMessagesInbox.Controls.Add(this.lblMessageInboxSubjectValue);
+            this.tabMessagesInbox.Controls.Add(this.lblMessageInboxSubject);
+            this.tabMessagesInbox.Controls.Add(this.lblMessageInboxSenderValue);
+            this.tabMessagesInbox.Controls.Add(this.lblMessageInboxSender);
+            this.tabMessagesInbox.Controls.Add(this.dgvInbox);
+            this.tabMessagesInbox.Location = new System.Drawing.Point(4, 22);
+            this.tabMessagesInbox.Name = "tabMessagesInbox";
+            this.tabMessagesInbox.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMessagesInbox.Size = new System.Drawing.Size(793, 402);
+            this.tabMessagesInbox.TabIndex = 1;
+            this.tabMessagesInbox.Text = "Inbox";
+            this.tabMessagesInbox.UseVisualStyleBackColor = true;
+            // 
+            // rbxMessageInboxBody
+            // 
+            this.rbxMessageInboxBody.Location = new System.Drawing.Point(55, 258);
+            this.rbxMessageInboxBody.Name = "rbxMessageInboxBody";
+            this.rbxMessageInboxBody.ReadOnly = true;
+            this.rbxMessageInboxBody.Size = new System.Drawing.Size(729, 133);
+            this.rbxMessageInboxBody.TabIndex = 6;
+            this.rbxMessageInboxBody.Text = "";
+            // 
+            // lblMessageInboxBody
+            // 
+            this.lblMessageInboxBody.AutoSize = true;
+            this.lblMessageInboxBody.Location = new System.Drawing.Point(12, 261);
+            this.lblMessageInboxBody.Name = "lblMessageInboxBody";
+            this.lblMessageInboxBody.Size = new System.Drawing.Size(37, 13);
+            this.lblMessageInboxBody.TabIndex = 5;
+            this.lblMessageInboxBody.Text = "Body :";
+            // 
+            // lblMessageInboxSubjectValue
+            // 
+            this.lblMessageInboxSubjectValue.AutoSize = true;
+            this.lblMessageInboxSubjectValue.Location = new System.Drawing.Point(62, 235);
+            this.lblMessageInboxSubjectValue.Name = "lblMessageInboxSubjectValue";
+            this.lblMessageInboxSubjectValue.Size = new System.Drawing.Size(54, 13);
+            this.lblMessageInboxSubjectValue.TabIndex = 4;
+            this.lblMessageInboxSubjectValue.Text = "Loading...";
+            // 
+            // lblMessageInboxSubject
+            // 
+            this.lblMessageInboxSubject.AutoSize = true;
+            this.lblMessageInboxSubject.Location = new System.Drawing.Point(9, 235);
+            this.lblMessageInboxSubject.Name = "lblMessageInboxSubject";
+            this.lblMessageInboxSubject.Size = new System.Drawing.Size(49, 13);
+            this.lblMessageInboxSubject.TabIndex = 3;
+            this.lblMessageInboxSubject.Text = "Subject :";
+            // 
+            // lblMessageInboxSenderValue
+            // 
+            this.lblMessageInboxSenderValue.AutoSize = true;
+            this.lblMessageInboxSenderValue.Location = new System.Drawing.Point(62, 211);
+            this.lblMessageInboxSenderValue.Name = "lblMessageInboxSenderValue";
+            this.lblMessageInboxSenderValue.Size = new System.Drawing.Size(54, 13);
+            this.lblMessageInboxSenderValue.TabIndex = 2;
+            this.lblMessageInboxSenderValue.Text = "Loading...";
+            // 
+            // lblMessageInboxSender
+            // 
+            this.lblMessageInboxSender.AutoSize = true;
+            this.lblMessageInboxSender.Location = new System.Drawing.Point(9, 211);
+            this.lblMessageInboxSender.Name = "lblMessageInboxSender";
+            this.lblMessageInboxSender.Size = new System.Drawing.Size(47, 13);
+            this.lblMessageInboxSender.TabIndex = 1;
+            this.lblMessageInboxSender.Text = "Sender :";
+            // 
+            // dgvInbox
+            // 
+            this.dgvInbox.AllowUserToOrderColumns = true;
+            this.dgvInbox.AutoGenerateColumns = false;
+            this.dgvInbox.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInbox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInbox.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.senderEmailDataGridViewTextBoxColumn,
+            this.messageSendTimeDataGridViewTextBoxColumn,
+            this.messageSubjectDataGridViewTextBoxColumn,
+            this.messageBodyDataGridViewTextBoxColumn});
+            this.dgvInbox.DataSource = this.messagesBindingSource;
+            this.dgvInbox.Location = new System.Drawing.Point(4, 7);
+            this.dgvInbox.Name = "dgvInbox";
+            this.dgvInbox.Size = new System.Drawing.Size(780, 187);
+            this.dgvInbox.TabIndex = 0;
+            this.dgvInbox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInbox_CellClick);
+            // 
+            // senderEmailDataGridViewTextBoxColumn
+            // 
+            this.senderEmailDataGridViewTextBoxColumn.DataPropertyName = "SenderEmail";
+            this.senderEmailDataGridViewTextBoxColumn.HeaderText = "Sender email";
+            this.senderEmailDataGridViewTextBoxColumn.Name = "senderEmailDataGridViewTextBoxColumn";
+            // 
+            // messageSendTimeDataGridViewTextBoxColumn
+            // 
+            this.messageSendTimeDataGridViewTextBoxColumn.DataPropertyName = "MessageSendTime";
+            this.messageSendTimeDataGridViewTextBoxColumn.HeaderText = "Message send time";
+            this.messageSendTimeDataGridViewTextBoxColumn.Name = "messageSendTimeDataGridViewTextBoxColumn";
+            // 
+            // messageSubjectDataGridViewTextBoxColumn
+            // 
+            this.messageSubjectDataGridViewTextBoxColumn.DataPropertyName = "MessageSubject";
+            this.messageSubjectDataGridViewTextBoxColumn.HeaderText = "Message subject";
+            this.messageSubjectDataGridViewTextBoxColumn.Name = "messageSubjectDataGridViewTextBoxColumn";
+            // 
+            // messageBodyDataGridViewTextBoxColumn
+            // 
+            this.messageBodyDataGridViewTextBoxColumn.DataPropertyName = "MessageBody";
+            this.messageBodyDataGridViewTextBoxColumn.HeaderText = "Message body";
+            this.messageBodyDataGridViewTextBoxColumn.Name = "messageBodyDataGridViewTextBoxColumn";
+            // 
+            // messagesBindingSource
+            // 
+            this.messagesBindingSource.DataMember = "Messages";
+            this.messagesBindingSource.DataSource = this.educationProjectDataSet;
+            // 
+            // educationProjectDataSet
+            // 
+            this.educationProjectDataSet.DataSetName = "EducationProjectDataSet";
+            this.educationProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabMessagesSent
+            // 
+            this.tabMessagesSent.Controls.Add(this.dgvMessagesSent);
+            this.tabMessagesSent.Controls.Add(this.rbxMessagesSent);
+            this.tabMessagesSent.Controls.Add(this.lblMessagesSentBody);
+            this.tabMessagesSent.Controls.Add(this.lblMessagesSentSubjectValue);
+            this.tabMessagesSent.Controls.Add(this.lblMessagesSentSubject);
+            this.tabMessagesSent.Controls.Add(this.lblMessagesSentReceiverValue);
+            this.tabMessagesSent.Controls.Add(this.lblMessagesSentReceiver);
+            this.tabMessagesSent.Location = new System.Drawing.Point(4, 22);
+            this.tabMessagesSent.Name = "tabMessagesSent";
+            this.tabMessagesSent.Size = new System.Drawing.Size(793, 402);
+            this.tabMessagesSent.TabIndex = 2;
+            this.tabMessagesSent.Text = "Sent";
+            this.tabMessagesSent.UseVisualStyleBackColor = true;
+            // 
+            // dgvMessagesSent
+            // 
+            this.dgvMessagesSent.AutoGenerateColumns = false;
+            this.dgvMessagesSent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMessagesSent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMessagesSent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.receiverEmailDataGridViewTextBoxColumn,
+            this.messageSendTimeDataGridViewTextBoxColumn1,
+            this.messageSubjectDataGridViewTextBoxColumn1,
+            this.messageBodyDataGridViewTextBoxColumn1});
+            this.dgvMessagesSent.DataSource = this.messagesBindingSource2;
+            this.dgvMessagesSent.Location = new System.Drawing.Point(9, 4);
+            this.dgvMessagesSent.Name = "dgvMessagesSent";
+            this.dgvMessagesSent.Size = new System.Drawing.Size(775, 189);
+            this.dgvMessagesSent.TabIndex = 14;
+            this.dgvMessagesSent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMessagesSent_CellClick);
+            // 
+            // receiverEmailDataGridViewTextBoxColumn
+            // 
+            this.receiverEmailDataGridViewTextBoxColumn.DataPropertyName = "ReceiverEmail";
+            this.receiverEmailDataGridViewTextBoxColumn.HeaderText = "Receiver email";
+            this.receiverEmailDataGridViewTextBoxColumn.Name = "receiverEmailDataGridViewTextBoxColumn";
+            // 
+            // messageSendTimeDataGridViewTextBoxColumn1
+            // 
+            this.messageSendTimeDataGridViewTextBoxColumn1.DataPropertyName = "MessageSendTime";
+            this.messageSendTimeDataGridViewTextBoxColumn1.HeaderText = "Message sent time";
+            this.messageSendTimeDataGridViewTextBoxColumn1.Name = "messageSendTimeDataGridViewTextBoxColumn1";
+            // 
+            // messageSubjectDataGridViewTextBoxColumn1
+            // 
+            this.messageSubjectDataGridViewTextBoxColumn1.DataPropertyName = "MessageSubject";
+            this.messageSubjectDataGridViewTextBoxColumn1.HeaderText = "Message subject";
+            this.messageSubjectDataGridViewTextBoxColumn1.Name = "messageSubjectDataGridViewTextBoxColumn1";
+            // 
+            // messageBodyDataGridViewTextBoxColumn1
+            // 
+            this.messageBodyDataGridViewTextBoxColumn1.DataPropertyName = "MessageBody";
+            this.messageBodyDataGridViewTextBoxColumn1.HeaderText = "Message body";
+            this.messageBodyDataGridViewTextBoxColumn1.Name = "messageBodyDataGridViewTextBoxColumn1";
+            // 
+            // messagesBindingSource2
+            // 
+            this.messagesBindingSource2.DataMember = "Messages";
+            this.messagesBindingSource2.DataSource = this.educationProjectDataSet;
+            // 
+            // rbxMessagesSent
+            // 
+            this.rbxMessagesSent.Location = new System.Drawing.Point(57, 260);
+            this.rbxMessagesSent.Name = "rbxMessagesSent";
+            this.rbxMessagesSent.ReadOnly = true;
+            this.rbxMessagesSent.Size = new System.Drawing.Size(729, 133);
+            this.rbxMessagesSent.TabIndex = 13;
+            this.rbxMessagesSent.Text = "";
+            // 
+            // lblMessagesSentBody
+            // 
+            this.lblMessagesSentBody.AutoSize = true;
+            this.lblMessagesSentBody.Location = new System.Drawing.Point(14, 263);
+            this.lblMessagesSentBody.Name = "lblMessagesSentBody";
+            this.lblMessagesSentBody.Size = new System.Drawing.Size(37, 13);
+            this.lblMessagesSentBody.TabIndex = 12;
+            this.lblMessagesSentBody.Text = "Body :";
+            // 
+            // lblMessagesSentSubjectValue
+            // 
+            this.lblMessagesSentSubjectValue.AutoSize = true;
+            this.lblMessagesSentSubjectValue.Location = new System.Drawing.Point(64, 237);
+            this.lblMessagesSentSubjectValue.Name = "lblMessagesSentSubjectValue";
+            this.lblMessagesSentSubjectValue.Size = new System.Drawing.Size(54, 13);
+            this.lblMessagesSentSubjectValue.TabIndex = 11;
+            this.lblMessagesSentSubjectValue.Text = "Loading...";
+            // 
+            // lblMessagesSentSubject
+            // 
+            this.lblMessagesSentSubject.AutoSize = true;
+            this.lblMessagesSentSubject.Location = new System.Drawing.Point(11, 237);
+            this.lblMessagesSentSubject.Name = "lblMessagesSentSubject";
+            this.lblMessagesSentSubject.Size = new System.Drawing.Size(49, 13);
+            this.lblMessagesSentSubject.TabIndex = 10;
+            this.lblMessagesSentSubject.Text = "Subject :";
+            // 
+            // lblMessagesSentReceiverValue
+            // 
+            this.lblMessagesSentReceiverValue.AutoSize = true;
+            this.lblMessagesSentReceiverValue.Location = new System.Drawing.Point(64, 213);
+            this.lblMessagesSentReceiverValue.Name = "lblMessagesSentReceiverValue";
+            this.lblMessagesSentReceiverValue.Size = new System.Drawing.Size(54, 13);
+            this.lblMessagesSentReceiverValue.TabIndex = 9;
+            this.lblMessagesSentReceiverValue.Text = "Loading...";
+            // 
+            // lblMessagesSentReceiver
+            // 
+            this.lblMessagesSentReceiver.AutoSize = true;
+            this.lblMessagesSentReceiver.Location = new System.Drawing.Point(11, 213);
+            this.lblMessagesSentReceiver.Name = "lblMessagesSentReceiver";
+            this.lblMessagesSentReceiver.Size = new System.Drawing.Size(56, 13);
+            this.lblMessagesSentReceiver.TabIndex = 8;
+            this.lblMessagesSentReceiver.Text = "Receiver :";
+            // 
             // tabGroupmates
             // 
+            this.tabGroupmates.Controls.Add(this.cbxGroupmates);
+            this.tabGroupmates.Controls.Add(this.lblGroupmatesSelectGroupMate);
+            this.tabGroupmates.Controls.Add(this.lblGroupmates);
+            this.tabGroupmates.Controls.Add(this.rbxGroupmateBio);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateBio);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateEndDateValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateEndDate);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateStartDateValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateStartDate);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateGroupValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateGroup);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateRegisterDateValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateRegisterDate);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateBirthdateValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateBirthdate);
+            this.tabGroupmates.Controls.Add(this.lblGroupmatePhoneValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmatePhone);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateEmailValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateEmail);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateSurnameValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateSurname);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateNameValue);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateName);
+            this.tabGroupmates.Controls.Add(this.lblGroupmateInfo);
+            this.tabGroupmates.Controls.Add(this.pbxGroupmatePhoto);
             this.tabGroupmates.Location = new System.Drawing.Point(4, 22);
             this.tabGroupmates.Name = "tabGroupmates";
             this.tabGroupmates.Size = new System.Drawing.Size(793, 424);
             this.tabGroupmates.TabIndex = 5;
             this.tabGroupmates.Text = "Groupmates";
             this.tabGroupmates.UseVisualStyleBackColor = true;
+            // 
+            // cbxGroupmates
+            // 
+            this.cbxGroupmates.FormattingEnabled = true;
+            this.cbxGroupmates.Location = new System.Drawing.Point(128, 45);
+            this.cbxGroupmates.Name = "cbxGroupmates";
+            this.cbxGroupmates.Size = new System.Drawing.Size(121, 21);
+            this.cbxGroupmates.TabIndex = 72;
+            this.cbxGroupmates.SelectedIndexChanged += new System.EventHandler(this.cbxGroupmates_SelectedIndexChanged);
+            // 
+            // lblGroupmatesSelectGroupMate
+            // 
+            this.lblGroupmatesSelectGroupMate.AutoSize = true;
+            this.lblGroupmatesSelectGroupMate.Location = new System.Drawing.Point(13, 48);
+            this.lblGroupmatesSelectGroupMate.Name = "lblGroupmatesSelectGroupMate";
+            this.lblGroupmatesSelectGroupMate.Size = new System.Drawing.Size(90, 13);
+            this.lblGroupmatesSelectGroupMate.TabIndex = 71;
+            this.lblGroupmatesSelectGroupMate.Text = "Select groupmate";
+            // 
+            // lblGroupmates
+            // 
+            this.lblGroupmates.AutoSize = true;
+            this.lblGroupmates.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupmates.Location = new System.Drawing.Point(8, 9);
+            this.lblGroupmates.Name = "lblGroupmates";
+            this.lblGroupmates.Size = new System.Drawing.Size(139, 25);
+            this.lblGroupmates.TabIndex = 70;
+            this.lblGroupmates.Text = "Groupmates";
+            // 
+            // rbxGroupmateBio
+            // 
+            this.rbxGroupmateBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxGroupmateBio.Location = new System.Drawing.Point(391, 149);
+            this.rbxGroupmateBio.Name = "rbxGroupmateBio";
+            this.rbxGroupmateBio.ReadOnly = true;
+            this.rbxGroupmateBio.Size = new System.Drawing.Size(257, 96);
+            this.rbxGroupmateBio.TabIndex = 69;
+            this.rbxGroupmateBio.Text = "";
+            // 
+            // lblGroupmateBio
+            // 
+            this.lblGroupmateBio.AutoSize = true;
+            this.lblGroupmateBio.Location = new System.Drawing.Point(343, 149);
+            this.lblGroupmateBio.Name = "lblGroupmateBio";
+            this.lblGroupmateBio.Size = new System.Drawing.Size(28, 13);
+            this.lblGroupmateBio.TabIndex = 68;
+            this.lblGroupmateBio.Text = "Bio :";
+            // 
+            // lblGroupmateEndDateValue
+            // 
+            this.lblGroupmateEndDateValue.AutoSize = true;
+            this.lblGroupmateEndDateValue.Location = new System.Drawing.Point(213, 390);
+            this.lblGroupmateEndDateValue.Name = "lblGroupmateEndDateValue";
+            this.lblGroupmateEndDateValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateEndDateValue.TabIndex = 61;
+            this.lblGroupmateEndDateValue.Text = "Loading...";
+            // 
+            // lblGroupmateEndDate
+            // 
+            this.lblGroupmateEndDate.AutoSize = true;
+            this.lblGroupmateEndDate.Location = new System.Drawing.Point(125, 390);
+            this.lblGroupmateEndDate.Name = "lblGroupmateEndDate";
+            this.lblGroupmateEndDate.Size = new System.Drawing.Size(56, 13);
+            this.lblGroupmateEndDate.TabIndex = 60;
+            this.lblGroupmateEndDate.Text = "End date :";
+            // 
+            // lblGroupmateStartDateValue
+            // 
+            this.lblGroupmateStartDateValue.AutoSize = true;
+            this.lblGroupmateStartDateValue.Location = new System.Drawing.Point(213, 361);
+            this.lblGroupmateStartDateValue.Name = "lblGroupmateStartDateValue";
+            this.lblGroupmateStartDateValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateStartDateValue.TabIndex = 59;
+            this.lblGroupmateStartDateValue.Text = "Loading...";
+            // 
+            // lblGroupmateStartDate
+            // 
+            this.lblGroupmateStartDate.AutoSize = true;
+            this.lblGroupmateStartDate.Location = new System.Drawing.Point(125, 361);
+            this.lblGroupmateStartDate.Name = "lblGroupmateStartDate";
+            this.lblGroupmateStartDate.Size = new System.Drawing.Size(59, 13);
+            this.lblGroupmateStartDate.TabIndex = 58;
+            this.lblGroupmateStartDate.Text = "Start date :";
+            // 
+            // lblGroupmateGroupValue
+            // 
+            this.lblGroupmateGroupValue.AutoSize = true;
+            this.lblGroupmateGroupValue.Location = new System.Drawing.Point(213, 329);
+            this.lblGroupmateGroupValue.Name = "lblGroupmateGroupValue";
+            this.lblGroupmateGroupValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateGroupValue.TabIndex = 57;
+            this.lblGroupmateGroupValue.Text = "Loading...";
+            // 
+            // lblGroupmateGroup
+            // 
+            this.lblGroupmateGroup.AutoSize = true;
+            this.lblGroupmateGroup.Location = new System.Drawing.Point(125, 329);
+            this.lblGroupmateGroup.Name = "lblGroupmateGroup";
+            this.lblGroupmateGroup.Size = new System.Drawing.Size(42, 13);
+            this.lblGroupmateGroup.TabIndex = 56;
+            this.lblGroupmateGroup.Text = "Group :";
+            // 
+            // lblGroupmateRegisterDateValue
+            // 
+            this.lblGroupmateRegisterDateValue.AutoSize = true;
+            this.lblGroupmateRegisterDateValue.Location = new System.Drawing.Point(213, 298);
+            this.lblGroupmateRegisterDateValue.Name = "lblGroupmateRegisterDateValue";
+            this.lblGroupmateRegisterDateValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateRegisterDateValue.TabIndex = 55;
+            this.lblGroupmateRegisterDateValue.Text = "Loading...";
+            // 
+            // lblGroupmateRegisterDate
+            // 
+            this.lblGroupmateRegisterDate.AutoSize = true;
+            this.lblGroupmateRegisterDate.Location = new System.Drawing.Point(125, 298);
+            this.lblGroupmateRegisterDate.Name = "lblGroupmateRegisterDate";
+            this.lblGroupmateRegisterDate.Size = new System.Drawing.Size(76, 13);
+            this.lblGroupmateRegisterDate.TabIndex = 54;
+            this.lblGroupmateRegisterDate.Text = "Register date :";
+            // 
+            // lblGroupmateBirthdateValue
+            // 
+            this.lblGroupmateBirthdateValue.AutoSize = true;
+            this.lblGroupmateBirthdateValue.Location = new System.Drawing.Point(213, 269);
+            this.lblGroupmateBirthdateValue.Name = "lblGroupmateBirthdateValue";
+            this.lblGroupmateBirthdateValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateBirthdateValue.TabIndex = 53;
+            this.lblGroupmateBirthdateValue.Text = "Loading...";
+            // 
+            // lblGroupmateBirthdate
+            // 
+            this.lblGroupmateBirthdate.AutoSize = true;
+            this.lblGroupmateBirthdate.Location = new System.Drawing.Point(125, 269);
+            this.lblGroupmateBirthdate.Name = "lblGroupmateBirthdate";
+            this.lblGroupmateBirthdate.Size = new System.Drawing.Size(55, 13);
+            this.lblGroupmateBirthdate.TabIndex = 52;
+            this.lblGroupmateBirthdate.Text = "Birthdate :";
+            // 
+            // lblGroupmatePhoneValue
+            // 
+            this.lblGroupmatePhoneValue.AutoSize = true;
+            this.lblGroupmatePhoneValue.Location = new System.Drawing.Point(213, 239);
+            this.lblGroupmatePhoneValue.Name = "lblGroupmatePhoneValue";
+            this.lblGroupmatePhoneValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmatePhoneValue.TabIndex = 51;
+            this.lblGroupmatePhoneValue.Text = "Loading...";
+            // 
+            // lblGroupmatePhone
+            // 
+            this.lblGroupmatePhone.AutoSize = true;
+            this.lblGroupmatePhone.Location = new System.Drawing.Point(125, 239);
+            this.lblGroupmatePhone.Name = "lblGroupmatePhone";
+            this.lblGroupmatePhone.Size = new System.Drawing.Size(44, 13);
+            this.lblGroupmatePhone.TabIndex = 50;
+            this.lblGroupmatePhone.Text = "Phone :";
+            // 
+            // lblGroupmateEmailValue
+            // 
+            this.lblGroupmateEmailValue.AutoSize = true;
+            this.lblGroupmateEmailValue.Location = new System.Drawing.Point(213, 209);
+            this.lblGroupmateEmailValue.Name = "lblGroupmateEmailValue";
+            this.lblGroupmateEmailValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateEmailValue.TabIndex = 49;
+            this.lblGroupmateEmailValue.Text = "Loading...";
+            // 
+            // lblGroupmateEmail
+            // 
+            this.lblGroupmateEmail.AutoSize = true;
+            this.lblGroupmateEmail.Location = new System.Drawing.Point(125, 209);
+            this.lblGroupmateEmail.Name = "lblGroupmateEmail";
+            this.lblGroupmateEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblGroupmateEmail.TabIndex = 48;
+            this.lblGroupmateEmail.Text = "Email :";
+            // 
+            // lblGroupmateSurnameValue
+            // 
+            this.lblGroupmateSurnameValue.AutoSize = true;
+            this.lblGroupmateSurnameValue.Location = new System.Drawing.Point(213, 178);
+            this.lblGroupmateSurnameValue.Name = "lblGroupmateSurnameValue";
+            this.lblGroupmateSurnameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateSurnameValue.TabIndex = 47;
+            this.lblGroupmateSurnameValue.Text = "Loading...";
+            // 
+            // lblGroupmateSurname
+            // 
+            this.lblGroupmateSurname.AutoSize = true;
+            this.lblGroupmateSurname.Location = new System.Drawing.Point(125, 178);
+            this.lblGroupmateSurname.Name = "lblGroupmateSurname";
+            this.lblGroupmateSurname.Size = new System.Drawing.Size(55, 13);
+            this.lblGroupmateSurname.TabIndex = 46;
+            this.lblGroupmateSurname.Text = "Surname :";
+            // 
+            // lblGroupmateNameValue
+            // 
+            this.lblGroupmateNameValue.AutoSize = true;
+            this.lblGroupmateNameValue.Location = new System.Drawing.Point(213, 149);
+            this.lblGroupmateNameValue.Name = "lblGroupmateNameValue";
+            this.lblGroupmateNameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblGroupmateNameValue.TabIndex = 45;
+            this.lblGroupmateNameValue.Text = "Loading...";
+            // 
+            // lblGroupmateName
+            // 
+            this.lblGroupmateName.AutoSize = true;
+            this.lblGroupmateName.Location = new System.Drawing.Point(125, 149);
+            this.lblGroupmateName.Name = "lblGroupmateName";
+            this.lblGroupmateName.Size = new System.Drawing.Size(41, 13);
+            this.lblGroupmateName.TabIndex = 44;
+            this.lblGroupmateName.Text = "Name :";
+            // 
+            // pbxGroupmatePhoto
+            // 
+            this.pbxGroupmatePhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxGroupmatePhoto.ErrorImage")));
+            this.pbxGroupmatePhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxGroupmatePhoto.Image")));
+            this.pbxGroupmatePhoto.Location = new System.Drawing.Point(8, 94);
+            this.pbxGroupmatePhoto.Name = "pbxGroupmatePhoto";
+            this.pbxGroupmatePhoto.Size = new System.Drawing.Size(105, 112);
+            this.pbxGroupmatePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxGroupmatePhoto.TabIndex = 42;
+            this.pbxGroupmatePhoto.TabStop = false;
             // 
             // tabLibrary
             // 
@@ -928,35 +1612,24 @@
             this.tabLibrary.Text = "Library";
             this.tabLibrary.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // messagesTableAdapter
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(801, 428);
-            this.tabControl1.TabIndex = 0;
+            this.messagesTableAdapter.ClearBeforeFill = true;
             // 
-            // tabPage1
+            // messagesBindingSource1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(793, 398);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.messagesBindingSource1.DataMember = "Messages";
+            this.messagesBindingSource1.DataSource = this.educationProjectDataSet;
             // 
-            // tabPage2
+            // lblGroupmateInfo
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(793, 402);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lblGroupmateInfo.AutoSize = true;
+            this.lblGroupmateInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupmateInfo.Location = new System.Drawing.Point(120, 94);
+            this.lblGroupmateInfo.Name = "lblGroupmateInfo";
+            this.lblGroupmateInfo.Size = new System.Drawing.Size(51, 25);
+            this.lblGroupmateInfo.TabIndex = 43;
+            this.lblGroupmateInfo.Text = "Info";
             // 
             // StudentsForm
             // 
@@ -980,7 +1653,22 @@
             this.tabMentorInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentMentorPhoto)).EndInit();
             this.tabMessages.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControllMessages.ResumeLayout(false);
+            this.tabMessagesSendTo.ResumeLayout(false);
+            this.tabMessagesSendTo.PerformLayout();
+            this.tabMessagesInbox.ResumeLayout(false);
+            this.tabMessagesInbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet)).EndInit();
+            this.tabMessagesSent.ResumeLayout(false);
+            this.tabMessagesSent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMessagesSent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource2)).EndInit();
+            this.tabGroupmates.ResumeLayout(false);
+            this.tabGroupmates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGroupmatePhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1065,8 +1753,71 @@
         private System.Windows.Forms.Label lblStudentMentorInfo;
         private System.Windows.Forms.PictureBox pbxStudentMentorPhoto;
         private System.Windows.Forms.Button btnStudentSaveChangeBio;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabControllMessages;
+        private System.Windows.Forms.TabPage tabMessagesSendTo;
+        private System.Windows.Forms.TabPage tabMessagesInbox;
+        private System.Windows.Forms.TextBox tbxMessageSubject;
+        private System.Windows.Forms.TextBox tbxMessageReceiver;
+        private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.RichTextBox rbxMessagesBody;
+        private System.Windows.Forms.Label lblMessagesBody;
+        private System.Windows.Forms.Label lblMessagesSubject;
+        private System.Windows.Forms.Label lblMessageReceiver;
+        private System.Windows.Forms.Button btnSendToGroupMates;
+        private System.Windows.Forms.Button btnSendToMentor;
+        private System.Windows.Forms.Button btnSendToTeacher;
+        private System.Windows.Forms.TabPage tabMessagesSent;
+        private System.Windows.Forms.RichTextBox rbxMessageInboxBody;
+        private System.Windows.Forms.Label lblMessageInboxBody;
+        private System.Windows.Forms.Label lblMessageInboxSubjectValue;
+        private System.Windows.Forms.Label lblMessageInboxSubject;
+        private System.Windows.Forms.Label lblMessageInboxSenderValue;
+        private System.Windows.Forms.Label lblMessageInboxSender;
+        private System.Windows.Forms.DataGridView dgvInbox;
+        private EducationProjectDataSet educationProjectDataSet;
+        private System.Windows.Forms.BindingSource messagesBindingSource;
+        private EducationProjectDataSetTableAdapters.MessagesTableAdapter messagesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvMessagesSent;
+        private System.Windows.Forms.BindingSource messagesBindingSource2;
+        private System.Windows.Forms.RichTextBox rbxMessagesSent;
+        private System.Windows.Forms.Label lblMessagesSentBody;
+        private System.Windows.Forms.Label lblMessagesSentSubjectValue;
+        private System.Windows.Forms.Label lblMessagesSentSubject;
+        private System.Windows.Forms.Label lblMessagesSentReceiverValue;
+        private System.Windows.Forms.Label lblMessagesSentReceiver;
+        private System.Windows.Forms.BindingSource messagesBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receiverEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox cbxGroupmates;
+        private System.Windows.Forms.Label lblGroupmatesSelectGroupMate;
+        private System.Windows.Forms.Label lblGroupmates;
+        private System.Windows.Forms.RichTextBox rbxGroupmateBio;
+        private System.Windows.Forms.Label lblGroupmateBio;
+        private System.Windows.Forms.Label lblGroupmateEndDateValue;
+        private System.Windows.Forms.Label lblGroupmateEndDate;
+        private System.Windows.Forms.Label lblGroupmateStartDateValue;
+        private System.Windows.Forms.Label lblGroupmateStartDate;
+        private System.Windows.Forms.Label lblGroupmateGroupValue;
+        private System.Windows.Forms.Label lblGroupmateGroup;
+        private System.Windows.Forms.Label lblGroupmateRegisterDateValue;
+        private System.Windows.Forms.Label lblGroupmateRegisterDate;
+        private System.Windows.Forms.Label lblGroupmateBirthdateValue;
+        private System.Windows.Forms.Label lblGroupmateBirthdate;
+        private System.Windows.Forms.Label lblGroupmatePhoneValue;
+        private System.Windows.Forms.Label lblGroupmatePhone;
+        private System.Windows.Forms.Label lblGroupmateEmailValue;
+        private System.Windows.Forms.Label lblGroupmateEmail;
+        private System.Windows.Forms.Label lblGroupmateSurnameValue;
+        private System.Windows.Forms.Label lblGroupmateSurname;
+        private System.Windows.Forms.Label lblGroupmateNameValue;
+        private System.Windows.Forms.Label lblGroupmateName;
+        private System.Windows.Forms.PictureBox pbxGroupmatePhoto;
+        private System.Windows.Forms.Label lblGroupmateInfo;
     }
 }
