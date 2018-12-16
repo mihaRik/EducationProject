@@ -26,6 +26,8 @@ namespace EducationProject.Database
         public int TeacherId { get; set; }
         public int MentorId { get; set; }
         public int GroupTypeId { get; set; }
+        public Nullable<System.DateTime> GroupStartDate { get; set; }
+        public Nullable<System.DateTime> GroupEndDate { get; set; }
     
         public virtual EducationPackages EducationPackages { get; set; }
         public virtual GroupTypes GroupTypes { get; set; }

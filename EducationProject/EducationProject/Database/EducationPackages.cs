@@ -24,6 +24,7 @@ namespace EducationProject.Database
     
         public int ProgramId { get; set; }
         public string ProgramName { get; set; }
+        public Nullable<int> ProgramDuration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Groups> Groups { get; set; }

@@ -11,6 +11,7 @@
           </Key>
           <Property Name="ProgramId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProgramName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProgramDuration" Type="int" />
         </EntityType>
         <EntityType Name="GroupLessonTimes">
           <Key>
@@ -31,6 +32,8 @@
           <Property Name="TeacherId" Type="int" Nullable="false" />
           <Property Name="MentorId" Type="int" Nullable="false" />
           <Property Name="GroupTypeId" Type="int" Nullable="false" />
+          <Property Name="GroupStartDate" Type="datetime" />
+          <Property Name="GroupEndDate" Type="datetime" />
         </EntityType>
         <EntityType Name="GroupTypes">
           <Key>
@@ -430,6 +433,7 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <NavigationProperty Name="Groups" Relationship="Self.groups_programid_educationpackages" FromRole="EducationPackages" ToRole="Groups" />
           <NavigationProperty Name="Mentors" Relationship="Self.mentors_programid_educationpackages" FromRole="EducationPackages" ToRole="Mentors" />
           <NavigationProperty Name="Teachers" Relationship="Self.teachers_programid_educationpackages" FromRole="EducationPackages" ToRole="Teachers" />
+          <Property Name="ProgramDuration" Type="Int32" />
         </EntityType>
         <EntityType Name="GroupLessonTimes">
           <Key>
@@ -456,6 +460,8 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <NavigationProperty Name="Mentors" Relationship="Self.groups_mentorid_mentors" FromRole="Groups" ToRole="Mentors" />
           <NavigationProperty Name="Teachers" Relationship="Self.groups_teacherid_teachers" FromRole="Groups" ToRole="Teachers" />
           <NavigationProperty Name="Students" Relationship="Self.students_groupid_groups" FromRole="Groups" ToRole="Students" />
+          <Property Name="GroupStartDate" Type="DateTime" Precision="3" />
+          <Property Name="GroupEndDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="GroupTypes">
           <Key>
@@ -874,6 +880,7 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <EntitySetMapping Name="EducationPackages">
             <EntityTypeMapping TypeName="EducationProjectModel.EducationPackages">
               <MappingFragment StoreEntitySet="EducationPackages">
+                <ScalarProperty Name="ProgramDuration" ColumnName="ProgramDuration" />
                 <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
                 <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
               </MappingFragment>
@@ -892,6 +899,8 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <EntitySetMapping Name="Groups">
             <EntityTypeMapping TypeName="EducationProjectModel.Groups">
               <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="GroupEndDate" ColumnName="GroupEndDate" />
+                <ScalarProperty Name="GroupStartDate" ColumnName="GroupStartDate" />
                 <ScalarProperty Name="GroupId" ColumnName="GroupId" />
                 <ScalarProperty Name="GroupName" ColumnName="GroupName" />
                 <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />

@@ -35,15 +35,11 @@
             this.btnShowAllStudents = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSelectEducationPackage = new System.Windows.Forms.Label();
-            this.cbxSelectGroupType = new System.Windows.Forms.ComboBox();
-            this.cbxSelectGroupTime = new System.Windows.Forms.ComboBox();
             this.lblSearchByStudentName = new System.Windows.Forms.Label();
             this.cbxSelectEducationPackage = new System.Windows.Forms.ComboBox();
-            this.tbxSearchByName = new System.Windows.Forms.TextBox();
+            this.tbxSearchStudentByName = new System.Windows.Forms.TextBox();
             this.cbxSelectGroup = new System.Windows.Forms.ComboBox();
             this.lblSelectGroup = new System.Windows.Forms.Label();
-            this.lblSelectGroupType = new System.Windows.Forms.Label();
-            this.lblSelectGroupTime = new System.Windows.Forms.Label();
             this.gbxStudentAdd = new System.Windows.Forms.GroupBox();
             this.btnNewStudentAdd = new System.Windows.Forms.Button();
             this.tbxNewStudentPhone = new System.Windows.Forms.TextBox();
@@ -83,76 +79,159 @@
             this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.educationProjectDataSet1 = new EducationProject.EducationProjectDataSet1();
             this.tabGroup = new System.Windows.Forms.TabPage();
-            this.tabTeacher = new System.Windows.Forms.TabPage();
-            this.tabMentor = new System.Windows.Forms.TabPage();
-            this.studentsTableAdapter = new EducationProject.EducationProjectDataSet1TableAdapters.StudentsTableAdapter();
-            this.lblAddGroupName = new System.Windows.Forms.Label();
-            this.lblAddGroupEducationPackage = new System.Windows.Forms.Label();
-            this.lblAddGroupType = new System.Windows.Forms.Label();
-            this.lblAddGroupLessonTime = new System.Windows.Forms.Label();
-            this.lblAddGroupStartDate = new System.Windows.Forms.Label();
-            this.tbxAddGroupName = new System.Windows.Forms.TextBox();
-            this.cbxEducationPackage = new System.Windows.Forms.ComboBox();
-            this.cbxGroupType = new System.Windows.Forms.ComboBox();
-            this.cbxGroupLessonTime = new System.Windows.Forms.ComboBox();
-            this.dtpGroupStartDate = new System.Windows.Forms.DateTimePicker();
-            this.cbxGroupTeacher = new System.Windows.Forms.ComboBox();
-            this.lblGroupTeacher = new System.Windows.Forms.Label();
-            this.cbxGroupMentor = new System.Windows.Forms.ComboBox();
-            this.lblGroupMentor = new System.Windows.Forms.Label();
-            this.btnAddGroup = new System.Windows.Forms.Button();
+            this.dgvGroupsList = new System.Windows.Forms.DataGridView();
+            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSet3 = new EducationProject.EducationProjectDataSet3();
+            this.gbxUpdateGroup = new System.Windows.Forms.GroupBox();
+            this.btnUpdateGroup = new System.Windows.Forms.Button();
+            this.lblUpdateGroupStartDate = new System.Windows.Forms.Label();
+            this.tbxUpdateGroupName = new System.Windows.Forms.TextBox();
+            this.lblGroupUpdateName = new System.Windows.Forms.Label();
+            this.lblGroupUpdateGroupType = new System.Windows.Forms.Label();
+            this.lblGroupUpdateMentor = new System.Windows.Forms.Label();
+            this.lblGroupUpdateTeacher = new System.Windows.Forms.Label();
+            this.cbxUpdateGroupGroupType = new System.Windows.Forms.ComboBox();
+            this.cbxUpdateGroupMentor = new System.Windows.Forms.ComboBox();
+            this.cbxUpdateGroupTeacher = new System.Windows.Forms.ComboBox();
+            this.lblGroupUpdateProgramId = new System.Windows.Forms.Label();
+            this.cbxUpdateGroupProgramId = new System.Windows.Forms.ComboBox();
+            this.cbxSelectWhicGroup = new System.Windows.Forms.ComboBox();
+            this.lblSelectWhichGroup = new System.Windows.Forms.Label();
+            this.btnAddStudentToGroup = new System.Windows.Forms.Button();
+            this.dgvStudentsToGroup = new System.Windows.Forms.DataGridView();
+            this.studentNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentSurnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentPhoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxAddGroup = new System.Windows.Forms.GroupBox();
+            this.lblAddGroupEducationPackage = new System.Windows.Forms.Label();
+            this.btnAddGroup = new System.Windows.Forms.Button();
+            this.lblAddGroupName = new System.Windows.Forms.Label();
+            this.cbxGroupMentor = new System.Windows.Forms.ComboBox();
+            this.lblAddGroupType = new System.Windows.Forms.Label();
+            this.lblGroupMentor = new System.Windows.Forms.Label();
+            this.lblAddGroupLessonTime = new System.Windows.Forms.Label();
+            this.cbxGroupTeacher = new System.Windows.Forms.ComboBox();
+            this.lblAddGroupStartDate = new System.Windows.Forms.Label();
+            this.lblGroupTeacher = new System.Windows.Forms.Label();
+            this.tbxAddGroupName = new System.Windows.Forms.TextBox();
+            this.dtpGroupStartDate = new System.Windows.Forms.DateTimePicker();
+            this.cbxEducationPackage = new System.Windows.Forms.ComboBox();
+            this.cbxGroupLessonTime = new System.Windows.Forms.ComboBox();
+            this.cbxGroupType = new System.Windows.Forms.ComboBox();
+            this.tabTeacher = new System.Windows.Forms.TabPage();
             this.btnShowAllTeachers = new System.Windows.Forms.Button();
             this.gbxSearchTeacher = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblSearchEducationPackage = new System.Windows.Forms.Label();
             this.lblSearchByTeacherName = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cbxSearchTeacherEducationPackage = new System.Windows.Forms.ComboBox();
+            this.tbxSearchTeacherByName = new System.Windows.Forms.TextBox();
+            this.cbxSearchTeacherGroup = new System.Windows.Forms.ComboBox();
+            this.lblSearchGroup = new System.Windows.Forms.Label();
             this.gbxNewTeacher = new System.Windows.Forms.GroupBox();
+            this.lblNewTeacherEducationPackage = new System.Windows.Forms.Label();
+            this.cbxNewTeacherEducationPackage = new System.Windows.Forms.ComboBox();
             this.btnAddNewTeacher = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pbxTeacherPhoto = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.tbxNewTeacherPhone = new System.Windows.Forms.TextBox();
+            this.tbxNewTeacherEmail = new System.Windows.Forms.TextBox();
+            this.tbxNewTeacherSurname = new System.Windows.Forms.TextBox();
+            this.tbxNewTeacherName = new System.Windows.Forms.TextBox();
+            this.lblNewTeacherEmail = new System.Windows.Forms.Label();
+            this.lblNewTeacherPhone = new System.Windows.Forms.Label();
+            this.lblNewTeacherSurname = new System.Windows.Forms.Label();
+            this.lblNewTeacherName = new System.Windows.Forms.Label();
+            this.gbxTeacherUpdate = new System.Windows.Forms.GroupBox();
+            this.btnUpdateTeacherPhoto = new System.Windows.Forms.Button();
+            this.btnRemoveTeacher = new System.Windows.Forms.Button();
+            this.tbxUpdateTeacherPhone = new System.Windows.Forms.TextBox();
+            this.tbxUpdateTeacherEmail = new System.Windows.Forms.TextBox();
+            this.tbxUpdateTeacherSurname = new System.Windows.Forms.TextBox();
+            this.tbxUpdateTeacherName = new System.Windows.Forms.TextBox();
+            this.rbxUpdateTeacherBio = new System.Windows.Forms.RichTextBox();
+            this.btnUpdateTeacher = new System.Windows.Forms.Button();
+            this.pbxUpdateTeacherPhoto = new System.Windows.Forms.PictureBox();
+            this.lblUpdateTeacherBio = new System.Windows.Forms.Label();
+            this.lblUpdateTeacherEmail = new System.Windows.Forms.Label();
+            this.lblUpdateTeacherPhone = new System.Windows.Forms.Label();
+            this.lblUpdateTeacherSurname = new System.Windows.Forms.Label();
+            this.lblUpdateTeacherName = new System.Windows.Forms.Label();
             this.lblTeachers = new System.Windows.Forms.Label();
             this.dgvTeachersList = new System.Windows.Forms.DataGridView();
-            this.educationProjectDataSet2 = new EducationProject.EducationProjectDataSet2();
             this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSet2 = new EducationProject.EducationProjectDataSet2();
+            this.tabMentor = new System.Windows.Forms.TabPage();
+            this.btnShowAllMentors = new System.Windows.Forms.Button();
+            this.gbxSearchMentor = new System.Windows.Forms.GroupBox();
+            this.lblSearchMentorEducationPackage = new System.Windows.Forms.Label();
+            this.lblSearchMentorByName = new System.Windows.Forms.Label();
+            this.cbxSearchMentorEducationPackage = new System.Windows.Forms.ComboBox();
+            this.tbxSearchMentorByName = new System.Windows.Forms.TextBox();
+            this.cbxSearchMentorGroup = new System.Windows.Forms.ComboBox();
+            this.lblSearchMentorGroup = new System.Windows.Forms.Label();
+            this.gbxNewMentor = new System.Windows.Forms.GroupBox();
+            this.lblNewMentorEducationPackage = new System.Windows.Forms.Label();
+            this.cbxNewMentorEducationPackage = new System.Windows.Forms.ComboBox();
+            this.btnAddNewMentor = new System.Windows.Forms.Button();
+            this.tbxNewMentorPhone = new System.Windows.Forms.TextBox();
+            this.tbxNewMentorEmail = new System.Windows.Forms.TextBox();
+            this.tbxNewMentorSurname = new System.Windows.Forms.TextBox();
+            this.tbxNewMentorName = new System.Windows.Forms.TextBox();
+            this.lblNewMentorEmail = new System.Windows.Forms.Label();
+            this.lblNewMentorPhone = new System.Windows.Forms.Label();
+            this.lblNewMentorSurname = new System.Windows.Forms.Label();
+            this.lblNewMentorName = new System.Windows.Forms.Label();
+            this.gbxUpdateMentor = new System.Windows.Forms.GroupBox();
+            this.btnUpdateMentorPhoto = new System.Windows.Forms.Button();
+            this.btnRemoveMentor = new System.Windows.Forms.Button();
+            this.tbxUpdateMentorPhone = new System.Windows.Forms.TextBox();
+            this.tbxUpdateMentorEmail = new System.Windows.Forms.TextBox();
+            this.tbxUpdateMentorSurname = new System.Windows.Forms.TextBox();
+            this.tbxUpdateMentorName = new System.Windows.Forms.TextBox();
+            this.rbxUpdateMentorBio = new System.Windows.Forms.RichTextBox();
+            this.btnUpdateMentor = new System.Windows.Forms.Button();
+            this.pbxUpdateMentorPhoto = new System.Windows.Forms.PictureBox();
+            this.lblUpdateMentorBio = new System.Windows.Forms.Label();
+            this.lblUpdateMentorEmail = new System.Windows.Forms.Label();
+            this.lblUpdateMentorPhone = new System.Windows.Forms.Label();
+            this.lblUpdateMentorSurname = new System.Windows.Forms.Label();
+            this.lblUpdateMentorName = new System.Windows.Forms.Label();
+            this.lblMentors = new System.Windows.Forms.Label();
+            this.dgvMentorsList = new System.Windows.Forms.DataGridView();
+            this.mentorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSet4 = new EducationProject.EducationProjectDataSet4();
+            this.studentsTableAdapter = new EducationProject.EducationProjectDataSet1TableAdapters.StudentsTableAdapter();
             this.teachersTableAdapter = new EducationProject.EducationProjectDataSet2TableAdapters.TeachersTableAdapter();
-            this.teacherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupsTableAdapter = new EducationProject.EducationProjectDataSet3TableAdapters.GroupsTableAdapter();
+            this.mentorsTableAdapter = new EducationProject.EducationProjectDataSet4TableAdapters.MentorsTableAdapter();
+            this.dtpUpdateGroupStartDate = new System.Windows.Forms.DateTimePicker();
+            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeacherId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherPhotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherBioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherPhotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorBio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlAdmin.SuspendLayout();
             this.tabStudent.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -163,15 +242,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet1)).BeginInit();
             this.tabGroup.SuspendLayout();
-            this.tabTeacher.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet3)).BeginInit();
+            this.gbxUpdateGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentsToGroup)).BeginInit();
             this.gbxAddGroup.SuspendLayout();
+            this.tabTeacher.SuspendLayout();
             this.gbxSearchTeacher.SuspendLayout();
             this.gbxNewTeacher.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTeacherPhoto)).BeginInit();
+            this.gbxTeacherUpdate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdateTeacherPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeachersList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet2)).BeginInit();
+            this.tabMentor.SuspendLayout();
+            this.gbxSearchMentor.SuspendLayout();
+            this.gbxNewMentor.SuspendLayout();
+            this.gbxUpdateMentor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdateMentorPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMentorsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mentorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdmin
@@ -218,15 +310,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblSelectEducationPackage);
-            this.groupBox1.Controls.Add(this.cbxSelectGroupType);
-            this.groupBox1.Controls.Add(this.cbxSelectGroupTime);
             this.groupBox1.Controls.Add(this.lblSearchByStudentName);
             this.groupBox1.Controls.Add(this.cbxSelectEducationPackage);
-            this.groupBox1.Controls.Add(this.tbxSearchByName);
+            this.groupBox1.Controls.Add(this.tbxSearchStudentByName);
             this.groupBox1.Controls.Add(this.cbxSelectGroup);
             this.groupBox1.Controls.Add(this.lblSelectGroup);
-            this.groupBox1.Controls.Add(this.lblSelectGroupType);
-            this.groupBox1.Controls.Add(this.lblSelectGroupTime);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(866, 238);
             this.groupBox1.Name = "groupBox1";
@@ -245,30 +333,11 @@
             this.lblSelectEducationPackage.TabIndex = 6;
             this.lblSelectEducationPackage.Text = "Select education package";
             // 
-            // cbxSelectGroupType
-            // 
-            this.cbxSelectGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectGroupType.FormattingEnabled = true;
-            this.cbxSelectGroupType.Location = new System.Drawing.Point(173, 61);
-            this.cbxSelectGroupType.Name = "cbxSelectGroupType";
-            this.cbxSelectGroupType.Size = new System.Drawing.Size(158, 24);
-            this.cbxSelectGroupType.TabIndex = 2;
-            this.cbxSelectGroupType.SelectedIndexChanged += new System.EventHandler(this.cbxSelectGroupType_SelectedIndexChanged);
-            // 
-            // cbxSelectGroupTime
-            // 
-            this.cbxSelectGroupTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectGroupTime.FormattingEnabled = true;
-            this.cbxSelectGroupTime.Location = new System.Drawing.Point(173, 88);
-            this.cbxSelectGroupTime.Name = "cbxSelectGroupTime";
-            this.cbxSelectGroupTime.Size = new System.Drawing.Size(158, 24);
-            this.cbxSelectGroupTime.TabIndex = 3;
-            // 
             // lblSearchByStudentName
             // 
             this.lblSearchByStudentName.AutoSize = true;
             this.lblSearchByStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSearchByStudentName.Location = new System.Drawing.Point(6, 157);
+            this.lblSearchByStudentName.Location = new System.Drawing.Point(6, 110);
             this.lblSearchByStudentName.Name = "lblSearchByStudentName";
             this.lblSearchByStudentName.Size = new System.Drawing.Size(152, 16);
             this.lblSearchByStudentName.TabIndex = 11;
@@ -284,19 +353,20 @@
             this.cbxSelectEducationPackage.TabIndex = 4;
             this.cbxSelectEducationPackage.SelectedIndexChanged += new System.EventHandler(this.cbxSelectEducationPackage_SelectedIndexChanged);
             // 
-            // tbxSearchByName
+            // tbxSearchStudentByName
             // 
-            this.tbxSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxSearchByName.Location = new System.Drawing.Point(173, 154);
-            this.tbxSearchByName.Name = "tbxSearchByName";
-            this.tbxSearchByName.Size = new System.Drawing.Size(158, 22);
-            this.tbxSearchByName.TabIndex = 10;
+            this.tbxSearchStudentByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxSearchStudentByName.Location = new System.Drawing.Point(173, 107);
+            this.tbxSearchStudentByName.Name = "tbxSearchStudentByName";
+            this.tbxSearchStudentByName.Size = new System.Drawing.Size(158, 22);
+            this.tbxSearchStudentByName.TabIndex = 10;
+            this.tbxSearchStudentByName.TextChanged += new System.EventHandler(this.tbxSearchByName_TextChanged);
             // 
             // cbxSelectGroup
             // 
             this.cbxSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbxSelectGroup.FormattingEnabled = true;
-            this.cbxSelectGroup.Location = new System.Drawing.Point(173, 115);
+            this.cbxSelectGroup.Location = new System.Drawing.Point(173, 68);
             this.cbxSelectGroup.Name = "cbxSelectGroup";
             this.cbxSelectGroup.Size = new System.Drawing.Size(158, 24);
             this.cbxSelectGroup.TabIndex = 5;
@@ -306,31 +376,11 @@
             // 
             this.lblSelectGroup.AutoSize = true;
             this.lblSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectGroup.Location = new System.Drawing.Point(6, 118);
+            this.lblSelectGroup.Location = new System.Drawing.Point(6, 71);
             this.lblSelectGroup.Name = "lblSelectGroup";
             this.lblSelectGroup.Size = new System.Drawing.Size(84, 16);
             this.lblSelectGroup.TabIndex = 9;
             this.lblSelectGroup.Text = "Select group";
-            // 
-            // lblSelectGroupType
-            // 
-            this.lblSelectGroupType.AutoSize = true;
-            this.lblSelectGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectGroupType.Location = new System.Drawing.Point(6, 64);
-            this.lblSelectGroupType.Name = "lblSelectGroupType";
-            this.lblSelectGroupType.Size = new System.Drawing.Size(113, 16);
-            this.lblSelectGroupType.TabIndex = 7;
-            this.lblSelectGroupType.Text = "Select group type";
-            // 
-            // lblSelectGroupTime
-            // 
-            this.lblSelectGroupTime.AutoSize = true;
-            this.lblSelectGroupTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectGroupTime.Location = new System.Drawing.Point(6, 91);
-            this.lblSelectGroupTime.Name = "lblSelectGroupTime";
-            this.lblSelectGroupTime.Size = new System.Drawing.Size(112, 16);
-            this.lblSelectGroupTime.TabIndex = 8;
-            this.lblSelectGroupTime.Text = "Select group time";
             // 
             // gbxStudentAdd
             // 
@@ -699,6 +749,12 @@
             // 
             // tabGroup
             // 
+            this.tabGroup.Controls.Add(this.dgvGroupsList);
+            this.tabGroup.Controls.Add(this.gbxUpdateGroup);
+            this.tabGroup.Controls.Add(this.cbxSelectWhicGroup);
+            this.tabGroup.Controls.Add(this.lblSelectWhichGroup);
+            this.tabGroup.Controls.Add(this.btnAddStudentToGroup);
+            this.tabGroup.Controls.Add(this.dgvStudentsToGroup);
             this.tabGroup.Controls.Add(this.gbxAddGroup);
             this.tabGroup.Location = new System.Drawing.Point(4, 22);
             this.tabGroup.Name = "tabGroup";
@@ -708,176 +764,261 @@
             this.tabGroup.Text = "Groups";
             this.tabGroup.UseVisualStyleBackColor = true;
             // 
-            // tabTeacher
+            // dgvGroupsList
             // 
-            this.tabTeacher.Controls.Add(this.btnShowAllTeachers);
-            this.tabTeacher.Controls.Add(this.gbxSearchTeacher);
-            this.tabTeacher.Controls.Add(this.gbxNewTeacher);
-            this.tabTeacher.Controls.Add(this.groupBox4);
-            this.tabTeacher.Controls.Add(this.lblTeachers);
-            this.tabTeacher.Controls.Add(this.dgvTeachersList);
-            this.tabTeacher.Location = new System.Drawing.Point(4, 22);
-            this.tabTeacher.Name = "tabTeacher";
-            this.tabTeacher.Size = new System.Drawing.Size(1216, 520);
-            this.tabTeacher.TabIndex = 2;
-            this.tabTeacher.Text = "Teachers";
-            this.tabTeacher.UseVisualStyleBackColor = true;
+            this.dgvGroupsList.AutoGenerateColumns = false;
+            this.dgvGroupsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGroupsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGroupsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GroupName,
+            this.programIdDataGridViewTextBoxColumn1,
+            this.TeacherId,
+            this.MentorId,
+            this.GroupTypeId,
+            this.GroupStartDate,
+            this.GroupEndDate,
+            this.GroupId});
+            this.dgvGroupsList.DataSource = this.groupsBindingSource;
+            this.dgvGroupsList.Location = new System.Drawing.Point(8, 258);
+            this.dgvGroupsList.Name = "dgvGroupsList";
+            this.dgvGroupsList.Size = new System.Drawing.Size(772, 249);
+            this.dgvGroupsList.TabIndex = 22;
+            this.dgvGroupsList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupsList_CellClick);
             // 
-            // tabMentor
+            // groupsBindingSource
             // 
-            this.tabMentor.Location = new System.Drawing.Point(4, 22);
-            this.tabMentor.Name = "tabMentor";
-            this.tabMentor.Size = new System.Drawing.Size(1216, 520);
-            this.tabMentor.TabIndex = 3;
-            this.tabMentor.Text = "Mentors";
-            this.tabMentor.UseVisualStyleBackColor = true;
+            this.groupsBindingSource.DataMember = "Groups";
+            this.groupsBindingSource.DataSource = this.educationProjectDataSet3;
             // 
-            // studentsTableAdapter
+            // educationProjectDataSet3
             // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
+            this.educationProjectDataSet3.DataSetName = "EducationProjectDataSet3";
+            this.educationProjectDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lblAddGroupName
+            // gbxUpdateGroup
             // 
-            this.lblAddGroupName.AutoSize = true;
-            this.lblAddGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddGroupName.Location = new System.Drawing.Point(6, 27);
-            this.lblAddGroupName.Name = "lblAddGroupName";
-            this.lblAddGroupName.Size = new System.Drawing.Size(45, 16);
-            this.lblAddGroupName.TabIndex = 1;
-            this.lblAddGroupName.Text = "Name";
+            this.gbxUpdateGroup.Controls.Add(this.dtpUpdateGroupStartDate);
+            this.gbxUpdateGroup.Controls.Add(this.btnUpdateGroup);
+            this.gbxUpdateGroup.Controls.Add(this.lblUpdateGroupStartDate);
+            this.gbxUpdateGroup.Controls.Add(this.tbxUpdateGroupName);
+            this.gbxUpdateGroup.Controls.Add(this.lblGroupUpdateName);
+            this.gbxUpdateGroup.Controls.Add(this.lblGroupUpdateGroupType);
+            this.gbxUpdateGroup.Controls.Add(this.lblGroupUpdateMentor);
+            this.gbxUpdateGroup.Controls.Add(this.lblGroupUpdateTeacher);
+            this.gbxUpdateGroup.Controls.Add(this.cbxUpdateGroupGroupType);
+            this.gbxUpdateGroup.Controls.Add(this.cbxUpdateGroupMentor);
+            this.gbxUpdateGroup.Controls.Add(this.cbxUpdateGroupTeacher);
+            this.gbxUpdateGroup.Controls.Add(this.lblGroupUpdateProgramId);
+            this.gbxUpdateGroup.Controls.Add(this.cbxUpdateGroupProgramId);
+            this.gbxUpdateGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxUpdateGroup.Location = new System.Drawing.Point(786, 258);
+            this.gbxUpdateGroup.Name = "gbxUpdateGroup";
+            this.gbxUpdateGroup.Size = new System.Drawing.Size(424, 249);
+            this.gbxUpdateGroup.TabIndex = 21;
+            this.gbxUpdateGroup.TabStop = false;
+            this.gbxUpdateGroup.Text = "Update group data";
             // 
-            // lblAddGroupEducationPackage
+            // btnUpdateGroup
             // 
-            this.lblAddGroupEducationPackage.AutoSize = true;
-            this.lblAddGroupEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddGroupEducationPackage.Location = new System.Drawing.Point(7, 53);
-            this.lblAddGroupEducationPackage.Name = "lblAddGroupEducationPackage";
-            this.lblAddGroupEducationPackage.Size = new System.Drawing.Size(125, 16);
-            this.lblAddGroupEducationPackage.TabIndex = 2;
-            this.lblAddGroupEducationPackage.Text = "Education package";
+            this.btnUpdateGroup.AutoSize = true;
+            this.btnUpdateGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateGroup.Location = new System.Drawing.Point(322, 212);
+            this.btnUpdateGroup.Name = "btnUpdateGroup";
+            this.btnUpdateGroup.Size = new System.Drawing.Size(101, 26);
+            this.btnUpdateGroup.TabIndex = 23;
+            this.btnUpdateGroup.Text = "Update group";
+            this.btnUpdateGroup.UseVisualStyleBackColor = true;
+            this.btnUpdateGroup.Click += new System.EventHandler(this.btnUpdateGroup_Click);
             // 
-            // lblAddGroupType
+            // lblUpdateGroupStartDate
             // 
-            this.lblAddGroupType.AutoSize = true;
-            this.lblAddGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddGroupType.Location = new System.Drawing.Point(7, 80);
-            this.lblAddGroupType.Name = "lblAddGroupType";
-            this.lblAddGroupType.Size = new System.Drawing.Size(74, 16);
-            this.lblAddGroupType.TabIndex = 3;
-            this.lblAddGroupType.Text = "Group type";
+            this.lblUpdateGroupStartDate.AutoSize = true;
+            this.lblUpdateGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateGroupStartDate.Location = new System.Drawing.Point(6, 185);
+            this.lblUpdateGroupStartDate.Name = "lblUpdateGroupStartDate";
+            this.lblUpdateGroupStartDate.Size = new System.Drawing.Size(103, 16);
+            this.lblUpdateGroupStartDate.TabIndex = 16;
+            this.lblUpdateGroupStartDate.Text = "Group start date";
             // 
-            // lblAddGroupLessonTime
+            // tbxUpdateGroupName
             // 
-            this.lblAddGroupLessonTime.AutoSize = true;
-            this.lblAddGroupLessonTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddGroupLessonTime.Location = new System.Drawing.Point(6, 107);
-            this.lblAddGroupLessonTime.Name = "lblAddGroupLessonTime";
-            this.lblAddGroupLessonTime.Size = new System.Drawing.Size(116, 16);
-            this.lblAddGroupLessonTime.TabIndex = 4;
-            this.lblAddGroupLessonTime.Text = "Group lesson time";
+            this.tbxUpdateGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateGroupName.Location = new System.Drawing.Point(137, 34);
+            this.tbxUpdateGroupName.Name = "tbxUpdateGroupName";
+            this.tbxUpdateGroupName.Size = new System.Drawing.Size(280, 22);
+            this.tbxUpdateGroupName.TabIndex = 16;
             // 
-            // lblAddGroupStartDate
+            // lblGroupUpdateName
             // 
-            this.lblAddGroupStartDate.AutoSize = true;
-            this.lblAddGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddGroupStartDate.Location = new System.Drawing.Point(6, 137);
-            this.lblAddGroupStartDate.Name = "lblAddGroupStartDate";
-            this.lblAddGroupStartDate.Size = new System.Drawing.Size(65, 16);
-            this.lblAddGroupStartDate.TabIndex = 5;
-            this.lblAddGroupStartDate.Text = "Start date";
+            this.lblGroupUpdateName.AutoSize = true;
+            this.lblGroupUpdateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupUpdateName.Location = new System.Drawing.Point(6, 37);
+            this.lblGroupUpdateName.Name = "lblGroupUpdateName";
+            this.lblGroupUpdateName.Size = new System.Drawing.Size(45, 16);
+            this.lblGroupUpdateName.TabIndex = 23;
+            this.lblGroupUpdateName.Text = "Name";
             // 
-            // tbxAddGroupName
+            // lblGroupUpdateGroupType
             // 
-            this.tbxAddGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxAddGroupName.Location = new System.Drawing.Point(138, 24);
-            this.tbxAddGroupName.Name = "tbxAddGroupName";
-            this.tbxAddGroupName.Size = new System.Drawing.Size(250, 22);
-            this.tbxAddGroupName.TabIndex = 6;
+            this.lblGroupUpdateGroupType.AutoSize = true;
+            this.lblGroupUpdateGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupUpdateGroupType.Location = new System.Drawing.Point(6, 155);
+            this.lblGroupUpdateGroupType.Name = "lblGroupUpdateGroupType";
+            this.lblGroupUpdateGroupType.Size = new System.Drawing.Size(74, 16);
+            this.lblGroupUpdateGroupType.TabIndex = 22;
+            this.lblGroupUpdateGroupType.Text = "Group type";
             // 
-            // cbxEducationPackage
+            // lblGroupUpdateMentor
             // 
-            this.cbxEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxEducationPackage.FormattingEnabled = true;
-            this.cbxEducationPackage.Location = new System.Drawing.Point(138, 50);
-            this.cbxEducationPackage.Name = "cbxEducationPackage";
-            this.cbxEducationPackage.Size = new System.Drawing.Size(250, 24);
-            this.cbxEducationPackage.TabIndex = 7;
+            this.lblGroupUpdateMentor.AutoSize = true;
+            this.lblGroupUpdateMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupUpdateMentor.Location = new System.Drawing.Point(6, 125);
+            this.lblGroupUpdateMentor.Name = "lblGroupUpdateMentor";
+            this.lblGroupUpdateMentor.Size = new System.Drawing.Size(49, 16);
+            this.lblGroupUpdateMentor.TabIndex = 21;
+            this.lblGroupUpdateMentor.Text = "Mentor";
             // 
-            // cbxGroupType
+            // lblGroupUpdateTeacher
             // 
-            this.cbxGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxGroupType.FormattingEnabled = true;
-            this.cbxGroupType.Location = new System.Drawing.Point(138, 77);
-            this.cbxGroupType.Name = "cbxGroupType";
-            this.cbxGroupType.Size = new System.Drawing.Size(250, 24);
-            this.cbxGroupType.TabIndex = 8;
+            this.lblGroupUpdateTeacher.AutoSize = true;
+            this.lblGroupUpdateTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupUpdateTeacher.Location = new System.Drawing.Point(6, 95);
+            this.lblGroupUpdateTeacher.Name = "lblGroupUpdateTeacher";
+            this.lblGroupUpdateTeacher.Size = new System.Drawing.Size(59, 16);
+            this.lblGroupUpdateTeacher.TabIndex = 20;
+            this.lblGroupUpdateTeacher.Text = "Teacher";
             // 
-            // cbxGroupLessonTime
+            // cbxUpdateGroupGroupType
             // 
-            this.cbxGroupLessonTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxGroupLessonTime.FormattingEnabled = true;
-            this.cbxGroupLessonTime.Location = new System.Drawing.Point(138, 104);
-            this.cbxGroupLessonTime.Name = "cbxGroupLessonTime";
-            this.cbxGroupLessonTime.Size = new System.Drawing.Size(250, 24);
-            this.cbxGroupLessonTime.TabIndex = 9;
+            this.cbxUpdateGroupGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxUpdateGroupGroupType.FormattingEnabled = true;
+            this.cbxUpdateGroupGroupType.Location = new System.Drawing.Point(137, 152);
+            this.cbxUpdateGroupGroupType.Name = "cbxUpdateGroupGroupType";
+            this.cbxUpdateGroupGroupType.Size = new System.Drawing.Size(280, 24);
+            this.cbxUpdateGroupGroupType.TabIndex = 19;
             // 
-            // dtpGroupStartDate
+            // cbxUpdateGroupMentor
             // 
-            this.dtpGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpGroupStartDate.Location = new System.Drawing.Point(138, 131);
-            this.dtpGroupStartDate.Name = "dtpGroupStartDate";
-            this.dtpGroupStartDate.Size = new System.Drawing.Size(250, 22);
-            this.dtpGroupStartDate.TabIndex = 10;
+            this.cbxUpdateGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxUpdateGroupMentor.FormattingEnabled = true;
+            this.cbxUpdateGroupMentor.Location = new System.Drawing.Point(137, 122);
+            this.cbxUpdateGroupMentor.Name = "cbxUpdateGroupMentor";
+            this.cbxUpdateGroupMentor.Size = new System.Drawing.Size(280, 24);
+            this.cbxUpdateGroupMentor.TabIndex = 18;
             // 
-            // cbxGroupTeacher
+            // cbxUpdateGroupTeacher
             // 
-            this.cbxGroupTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxGroupTeacher.FormattingEnabled = true;
-            this.cbxGroupTeacher.Location = new System.Drawing.Point(138, 157);
-            this.cbxGroupTeacher.Name = "cbxGroupTeacher";
-            this.cbxGroupTeacher.Size = new System.Drawing.Size(250, 24);
-            this.cbxGroupTeacher.TabIndex = 12;
+            this.cbxUpdateGroupTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxUpdateGroupTeacher.FormattingEnabled = true;
+            this.cbxUpdateGroupTeacher.Location = new System.Drawing.Point(137, 92);
+            this.cbxUpdateGroupTeacher.Name = "cbxUpdateGroupTeacher";
+            this.cbxUpdateGroupTeacher.Size = new System.Drawing.Size(280, 24);
+            this.cbxUpdateGroupTeacher.TabIndex = 17;
             // 
-            // lblGroupTeacher
+            // lblGroupUpdateProgramId
             // 
-            this.lblGroupTeacher.AutoSize = true;
-            this.lblGroupTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGroupTeacher.Location = new System.Drawing.Point(6, 160);
-            this.lblGroupTeacher.Name = "lblGroupTeacher";
-            this.lblGroupTeacher.Size = new System.Drawing.Size(93, 16);
-            this.lblGroupTeacher.TabIndex = 11;
-            this.lblGroupTeacher.Text = "Group teacher";
+            this.lblGroupUpdateProgramId.AutoSize = true;
+            this.lblGroupUpdateProgramId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupUpdateProgramId.Location = new System.Drawing.Point(6, 65);
+            this.lblGroupUpdateProgramId.Name = "lblGroupUpdateProgramId";
+            this.lblGroupUpdateProgramId.Size = new System.Drawing.Size(125, 16);
+            this.lblGroupUpdateProgramId.TabIndex = 16;
+            this.lblGroupUpdateProgramId.Text = "Education package";
             // 
-            // cbxGroupMentor
+            // cbxUpdateGroupProgramId
             // 
-            this.cbxGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxGroupMentor.FormattingEnabled = true;
-            this.cbxGroupMentor.Location = new System.Drawing.Point(138, 184);
-            this.cbxGroupMentor.Name = "cbxGroupMentor";
-            this.cbxGroupMentor.Size = new System.Drawing.Size(250, 24);
-            this.cbxGroupMentor.TabIndex = 14;
+            this.cbxUpdateGroupProgramId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxUpdateGroupProgramId.FormattingEnabled = true;
+            this.cbxUpdateGroupProgramId.Location = new System.Drawing.Point(137, 62);
+            this.cbxUpdateGroupProgramId.Name = "cbxUpdateGroupProgramId";
+            this.cbxUpdateGroupProgramId.Size = new System.Drawing.Size(280, 24);
+            this.cbxUpdateGroupProgramId.TabIndex = 0;
             // 
-            // lblGroupMentor
+            // cbxSelectWhicGroup
             // 
-            this.lblGroupMentor.AutoSize = true;
-            this.lblGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGroupMentor.Location = new System.Drawing.Point(6, 187);
-            this.lblGroupMentor.Name = "lblGroupMentor";
-            this.lblGroupMentor.Size = new System.Drawing.Size(89, 16);
-            this.lblGroupMentor.TabIndex = 13;
-            this.lblGroupMentor.Text = "Group mentor";
+            this.cbxSelectWhicGroup.FormattingEnabled = true;
+            this.cbxSelectWhicGroup.Location = new System.Drawing.Point(980, 224);
+            this.cbxSelectWhicGroup.Name = "cbxSelectWhicGroup";
+            this.cbxSelectWhicGroup.Size = new System.Drawing.Size(121, 21);
+            this.cbxSelectWhicGroup.TabIndex = 20;
             // 
-            // btnAddGroup
+            // lblSelectWhichGroup
             // 
-            this.btnAddGroup.AutoSize = true;
-            this.btnAddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddGroup.Location = new System.Drawing.Point(292, 214);
-            this.btnAddGroup.Name = "btnAddGroup";
-            this.btnAddGroup.Size = new System.Drawing.Size(96, 26);
-            this.btnAddGroup.TabIndex = 15;
-            this.btnAddGroup.Text = "Create group";
-            this.btnAddGroup.UseVisualStyleBackColor = true;
-            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
+            this.lblSelectWhichGroup.AutoSize = true;
+            this.lblSelectWhichGroup.Location = new System.Drawing.Point(874, 228);
+            this.lblSelectWhichGroup.Name = "lblSelectWhichGroup";
+            this.lblSelectWhichGroup.Size = new System.Drawing.Size(100, 13);
+            this.lblSelectWhichGroup.TabIndex = 19;
+            this.lblSelectWhichGroup.Text = "Select group to add";
+            // 
+            // btnAddStudentToGroup
+            // 
+            this.btnAddStudentToGroup.AutoSize = true;
+            this.btnAddStudentToGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddStudentToGroup.Location = new System.Drawing.Point(1107, 220);
+            this.btnAddStudentToGroup.Name = "btnAddStudentToGroup";
+            this.btnAddStudentToGroup.Size = new System.Drawing.Size(96, 26);
+            this.btnAddStudentToGroup.TabIndex = 16;
+            this.btnAddStudentToGroup.Text = "Add to group";
+            this.btnAddStudentToGroup.UseVisualStyleBackColor = true;
+            this.btnAddStudentToGroup.Click += new System.EventHandler(this.btnAddStudentToGroup_Click);
+            // 
+            // dgvStudentsToGroup
+            // 
+            this.dgvStudentsToGroup.AutoGenerateColumns = false;
+            this.dgvStudentsToGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStudentsToGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentsToGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentNameDataGridViewTextBoxColumn1,
+            this.studentSurnameDataGridViewTextBoxColumn1,
+            this.studentEmailDataGridViewTextBoxColumn1,
+            this.studentPhoneDataGridViewTextBoxColumn1,
+            this.studentIdDataGridViewTextBoxColumn,
+            this.groupIdDataGridViewTextBoxColumn});
+            this.dgvStudentsToGroup.DataSource = this.studentsBindingSource;
+            this.dgvStudentsToGroup.Location = new System.Drawing.Point(408, 18);
+            this.dgvStudentsToGroup.Name = "dgvStudentsToGroup";
+            this.dgvStudentsToGroup.Size = new System.Drawing.Size(795, 196);
+            this.dgvStudentsToGroup.TabIndex = 18;
+            // 
+            // studentNameDataGridViewTextBoxColumn1
+            // 
+            this.studentNameDataGridViewTextBoxColumn1.DataPropertyName = "StudentName";
+            this.studentNameDataGridViewTextBoxColumn1.HeaderText = "Student name";
+            this.studentNameDataGridViewTextBoxColumn1.Name = "studentNameDataGridViewTextBoxColumn1";
+            // 
+            // studentSurnameDataGridViewTextBoxColumn1
+            // 
+            this.studentSurnameDataGridViewTextBoxColumn1.DataPropertyName = "StudentSurname";
+            this.studentSurnameDataGridViewTextBoxColumn1.HeaderText = "Student surname";
+            this.studentSurnameDataGridViewTextBoxColumn1.Name = "studentSurnameDataGridViewTextBoxColumn1";
+            // 
+            // studentEmailDataGridViewTextBoxColumn1
+            // 
+            this.studentEmailDataGridViewTextBoxColumn1.DataPropertyName = "StudentEmail";
+            this.studentEmailDataGridViewTextBoxColumn1.HeaderText = "Student email";
+            this.studentEmailDataGridViewTextBoxColumn1.Name = "studentEmailDataGridViewTextBoxColumn1";
+            // 
+            // studentPhoneDataGridViewTextBoxColumn1
+            // 
+            this.studentPhoneDataGridViewTextBoxColumn1.DataPropertyName = "StudentPhone";
+            this.studentPhoneDataGridViewTextBoxColumn1.HeaderText = "Student phone";
+            this.studentPhoneDataGridViewTextBoxColumn1.Name = "studentPhoneDataGridViewTextBoxColumn1";
+            // 
+            // studentIdDataGridViewTextBoxColumn
+            // 
+            this.studentIdDataGridViewTextBoxColumn.DataPropertyName = "StudentId";
+            this.studentIdDataGridViewTextBoxColumn.HeaderText = "StudentId";
+            this.studentIdDataGridViewTextBoxColumn.Name = "studentIdDataGridViewTextBoxColumn";
+            this.studentIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // groupIdDataGridViewTextBoxColumn
+            // 
+            this.groupIdDataGridViewTextBoxColumn.DataPropertyName = "GroupId";
+            this.groupIdDataGridViewTextBoxColumn.HeaderText = "GroupId";
+            this.groupIdDataGridViewTextBoxColumn.Name = "groupIdDataGridViewTextBoxColumn";
+            this.groupIdDataGridViewTextBoxColumn.Visible = false;
             // 
             // gbxAddGroup
             // 
@@ -904,6 +1045,164 @@
             this.gbxAddGroup.TabStop = false;
             this.gbxAddGroup.Text = "Add group";
             // 
+            // lblAddGroupEducationPackage
+            // 
+            this.lblAddGroupEducationPackage.AutoSize = true;
+            this.lblAddGroupEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddGroupEducationPackage.Location = new System.Drawing.Point(7, 53);
+            this.lblAddGroupEducationPackage.Name = "lblAddGroupEducationPackage";
+            this.lblAddGroupEducationPackage.Size = new System.Drawing.Size(125, 16);
+            this.lblAddGroupEducationPackage.TabIndex = 2;
+            this.lblAddGroupEducationPackage.Text = "Education package";
+            // 
+            // btnAddGroup
+            // 
+            this.btnAddGroup.AutoSize = true;
+            this.btnAddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddGroup.Location = new System.Drawing.Point(292, 214);
+            this.btnAddGroup.Name = "btnAddGroup";
+            this.btnAddGroup.Size = new System.Drawing.Size(96, 26);
+            this.btnAddGroup.TabIndex = 15;
+            this.btnAddGroup.Text = "Create group";
+            this.btnAddGroup.UseVisualStyleBackColor = true;
+            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
+            // 
+            // lblAddGroupName
+            // 
+            this.lblAddGroupName.AutoSize = true;
+            this.lblAddGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddGroupName.Location = new System.Drawing.Point(6, 27);
+            this.lblAddGroupName.Name = "lblAddGroupName";
+            this.lblAddGroupName.Size = new System.Drawing.Size(45, 16);
+            this.lblAddGroupName.TabIndex = 1;
+            this.lblAddGroupName.Text = "Name";
+            // 
+            // cbxGroupMentor
+            // 
+            this.cbxGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxGroupMentor.FormattingEnabled = true;
+            this.cbxGroupMentor.Location = new System.Drawing.Point(138, 184);
+            this.cbxGroupMentor.Name = "cbxGroupMentor";
+            this.cbxGroupMentor.Size = new System.Drawing.Size(250, 24);
+            this.cbxGroupMentor.TabIndex = 14;
+            // 
+            // lblAddGroupType
+            // 
+            this.lblAddGroupType.AutoSize = true;
+            this.lblAddGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddGroupType.Location = new System.Drawing.Point(7, 80);
+            this.lblAddGroupType.Name = "lblAddGroupType";
+            this.lblAddGroupType.Size = new System.Drawing.Size(74, 16);
+            this.lblAddGroupType.TabIndex = 3;
+            this.lblAddGroupType.Text = "Group type";
+            // 
+            // lblGroupMentor
+            // 
+            this.lblGroupMentor.AutoSize = true;
+            this.lblGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupMentor.Location = new System.Drawing.Point(6, 187);
+            this.lblGroupMentor.Name = "lblGroupMentor";
+            this.lblGroupMentor.Size = new System.Drawing.Size(89, 16);
+            this.lblGroupMentor.TabIndex = 13;
+            this.lblGroupMentor.Text = "Group mentor";
+            // 
+            // lblAddGroupLessonTime
+            // 
+            this.lblAddGroupLessonTime.AutoSize = true;
+            this.lblAddGroupLessonTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddGroupLessonTime.Location = new System.Drawing.Point(6, 107);
+            this.lblAddGroupLessonTime.Name = "lblAddGroupLessonTime";
+            this.lblAddGroupLessonTime.Size = new System.Drawing.Size(116, 16);
+            this.lblAddGroupLessonTime.TabIndex = 4;
+            this.lblAddGroupLessonTime.Text = "Group lesson time";
+            // 
+            // cbxGroupTeacher
+            // 
+            this.cbxGroupTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxGroupTeacher.FormattingEnabled = true;
+            this.cbxGroupTeacher.Location = new System.Drawing.Point(138, 157);
+            this.cbxGroupTeacher.Name = "cbxGroupTeacher";
+            this.cbxGroupTeacher.Size = new System.Drawing.Size(250, 24);
+            this.cbxGroupTeacher.TabIndex = 12;
+            // 
+            // lblAddGroupStartDate
+            // 
+            this.lblAddGroupStartDate.AutoSize = true;
+            this.lblAddGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddGroupStartDate.Location = new System.Drawing.Point(6, 137);
+            this.lblAddGroupStartDate.Name = "lblAddGroupStartDate";
+            this.lblAddGroupStartDate.Size = new System.Drawing.Size(65, 16);
+            this.lblAddGroupStartDate.TabIndex = 5;
+            this.lblAddGroupStartDate.Text = "Start date";
+            // 
+            // lblGroupTeacher
+            // 
+            this.lblGroupTeacher.AutoSize = true;
+            this.lblGroupTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupTeacher.Location = new System.Drawing.Point(6, 160);
+            this.lblGroupTeacher.Name = "lblGroupTeacher";
+            this.lblGroupTeacher.Size = new System.Drawing.Size(93, 16);
+            this.lblGroupTeacher.TabIndex = 11;
+            this.lblGroupTeacher.Text = "Group teacher";
+            // 
+            // tbxAddGroupName
+            // 
+            this.tbxAddGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxAddGroupName.Location = new System.Drawing.Point(138, 24);
+            this.tbxAddGroupName.Name = "tbxAddGroupName";
+            this.tbxAddGroupName.Size = new System.Drawing.Size(250, 22);
+            this.tbxAddGroupName.TabIndex = 6;
+            // 
+            // dtpGroupStartDate
+            // 
+            this.dtpGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpGroupStartDate.Location = new System.Drawing.Point(138, 131);
+            this.dtpGroupStartDate.Name = "dtpGroupStartDate";
+            this.dtpGroupStartDate.Size = new System.Drawing.Size(250, 22);
+            this.dtpGroupStartDate.TabIndex = 10;
+            // 
+            // cbxEducationPackage
+            // 
+            this.cbxEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxEducationPackage.FormattingEnabled = true;
+            this.cbxEducationPackage.Location = new System.Drawing.Point(138, 50);
+            this.cbxEducationPackage.Name = "cbxEducationPackage";
+            this.cbxEducationPackage.Size = new System.Drawing.Size(250, 24);
+            this.cbxEducationPackage.TabIndex = 7;
+            // 
+            // cbxGroupLessonTime
+            // 
+            this.cbxGroupLessonTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxGroupLessonTime.FormattingEnabled = true;
+            this.cbxGroupLessonTime.Location = new System.Drawing.Point(138, 104);
+            this.cbxGroupLessonTime.Name = "cbxGroupLessonTime";
+            this.cbxGroupLessonTime.Size = new System.Drawing.Size(250, 24);
+            this.cbxGroupLessonTime.TabIndex = 9;
+            // 
+            // cbxGroupType
+            // 
+            this.cbxGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxGroupType.FormattingEnabled = true;
+            this.cbxGroupType.Location = new System.Drawing.Point(138, 77);
+            this.cbxGroupType.Name = "cbxGroupType";
+            this.cbxGroupType.Size = new System.Drawing.Size(250, 24);
+            this.cbxGroupType.TabIndex = 8;
+            // 
+            // tabTeacher
+            // 
+            this.tabTeacher.Controls.Add(this.btnShowAllTeachers);
+            this.tabTeacher.Controls.Add(this.gbxSearchTeacher);
+            this.tabTeacher.Controls.Add(this.gbxNewTeacher);
+            this.tabTeacher.Controls.Add(this.gbxTeacherUpdate);
+            this.tabTeacher.Controls.Add(this.lblTeachers);
+            this.tabTeacher.Controls.Add(this.dgvTeachersList);
+            this.tabTeacher.Location = new System.Drawing.Point(4, 22);
+            this.tabTeacher.Name = "tabTeacher";
+            this.tabTeacher.Size = new System.Drawing.Size(1216, 520);
+            this.tabTeacher.TabIndex = 2;
+            this.tabTeacher.Text = "Teachers";
+            this.tabTeacher.UseVisualStyleBackColor = true;
+            // 
             // btnShowAllTeachers
             // 
             this.btnShowAllTeachers.AutoSize = true;
@@ -914,19 +1213,16 @@
             this.btnShowAllTeachers.TabIndex = 31;
             this.btnShowAllTeachers.Text = "Show all teachers";
             this.btnShowAllTeachers.UseVisualStyleBackColor = true;
+            this.btnShowAllTeachers.Click += new System.EventHandler(this.btnShowAllTeachers_Click);
             // 
             // gbxSearchTeacher
             // 
-            this.gbxSearchTeacher.Controls.Add(this.label1);
-            this.gbxSearchTeacher.Controls.Add(this.comboBox1);
-            this.gbxSearchTeacher.Controls.Add(this.comboBox2);
+            this.gbxSearchTeacher.Controls.Add(this.lblSearchEducationPackage);
             this.gbxSearchTeacher.Controls.Add(this.lblSearchByTeacherName);
-            this.gbxSearchTeacher.Controls.Add(this.comboBox3);
-            this.gbxSearchTeacher.Controls.Add(this.textBox1);
-            this.gbxSearchTeacher.Controls.Add(this.comboBox4);
-            this.gbxSearchTeacher.Controls.Add(this.label3);
-            this.gbxSearchTeacher.Controls.Add(this.label4);
-            this.gbxSearchTeacher.Controls.Add(this.label5);
+            this.gbxSearchTeacher.Controls.Add(this.cbxSearchTeacherEducationPackage);
+            this.gbxSearchTeacher.Controls.Add(this.tbxSearchTeacherByName);
+            this.gbxSearchTeacher.Controls.Add(this.cbxSearchTeacherGroup);
+            this.gbxSearchTeacher.Controls.Add(this.lblSearchGroup);
             this.gbxSearchTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbxSearchTeacher.Location = new System.Drawing.Point(866, 236);
             this.gbxSearchTeacher.Name = "gbxSearchTeacher";
@@ -935,111 +1231,78 @@
             this.gbxSearchTeacher.TabStop = false;
             this.gbxSearchTeacher.Text = "Search";
             // 
-            // label1
+            // lblSearchEducationPackage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(6, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Select education package";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(173, 88);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(158, 24);
-            this.comboBox2.TabIndex = 3;
+            this.lblSearchEducationPackage.AutoSize = true;
+            this.lblSearchEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSearchEducationPackage.Location = new System.Drawing.Point(6, 37);
+            this.lblSearchEducationPackage.Name = "lblSearchEducationPackage";
+            this.lblSearchEducationPackage.Size = new System.Drawing.Size(165, 16);
+            this.lblSearchEducationPackage.TabIndex = 6;
+            this.lblSearchEducationPackage.Text = "Select education package";
             // 
             // lblSearchByTeacherName
             // 
             this.lblSearchByTeacherName.AutoSize = true;
             this.lblSearchByTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSearchByTeacherName.Location = new System.Drawing.Point(6, 157);
+            this.lblSearchByTeacherName.Location = new System.Drawing.Point(6, 110);
             this.lblSearchByTeacherName.Name = "lblSearchByTeacherName";
             this.lblSearchByTeacherName.Size = new System.Drawing.Size(154, 16);
             this.lblSearchByTeacherName.TabIndex = 11;
             this.lblSearchByTeacherName.Text = "Search by teacher name";
             // 
-            // comboBox3
+            // cbxSearchTeacherEducationPackage
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(173, 34);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 24);
-            this.comboBox3.TabIndex = 4;
+            this.cbxSearchTeacherEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxSearchTeacherEducationPackage.FormattingEnabled = true;
+            this.cbxSearchTeacherEducationPackage.Location = new System.Drawing.Point(173, 34);
+            this.cbxSearchTeacherEducationPackage.Name = "cbxSearchTeacherEducationPackage";
+            this.cbxSearchTeacherEducationPackage.Size = new System.Drawing.Size(158, 24);
+            this.cbxSearchTeacherEducationPackage.TabIndex = 4;
+            this.cbxSearchTeacherEducationPackage.SelectedIndexChanged += new System.EventHandler(this.cbxSearchEducationPackage_SelectedIndexChanged);
             // 
-            // textBox1
+            // tbxSearchTeacherByName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(173, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 22);
-            this.textBox1.TabIndex = 10;
+            this.tbxSearchTeacherByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxSearchTeacherByName.Location = new System.Drawing.Point(173, 107);
+            this.tbxSearchTeacherByName.Name = "tbxSearchTeacherByName";
+            this.tbxSearchTeacherByName.Size = new System.Drawing.Size(158, 22);
+            this.tbxSearchTeacherByName.TabIndex = 10;
+            this.tbxSearchTeacherByName.TextChanged += new System.EventHandler(this.tbxSearchByName_TextChanged);
             // 
-            // comboBox4
+            // cbxSearchTeacherGroup
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(173, 115);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(158, 24);
-            this.comboBox4.TabIndex = 5;
+            this.cbxSearchTeacherGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxSearchTeacherGroup.FormattingEnabled = true;
+            this.cbxSearchTeacherGroup.Location = new System.Drawing.Point(173, 68);
+            this.cbxSearchTeacherGroup.Name = "cbxSearchTeacherGroup";
+            this.cbxSearchTeacherGroup.Size = new System.Drawing.Size(158, 24);
+            this.cbxSearchTeacherGroup.TabIndex = 5;
+            this.cbxSearchTeacherGroup.SelectedIndexChanged += new System.EventHandler(this.cbxSearchTeacherGroup_SelectedIndexChanged);
             // 
-            // label3
+            // lblSearchGroup
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(6, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Select group";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(6, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Select group type";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(6, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Select group time";
+            this.lblSearchGroup.AutoSize = true;
+            this.lblSearchGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSearchGroup.Location = new System.Drawing.Point(6, 71);
+            this.lblSearchGroup.Name = "lblSearchGroup";
+            this.lblSearchGroup.Size = new System.Drawing.Size(84, 16);
+            this.lblSearchGroup.TabIndex = 9;
+            this.lblSearchGroup.Text = "Select group";
             // 
             // gbxNewTeacher
             // 
+            this.gbxNewTeacher.Controls.Add(this.lblNewTeacherEducationPackage);
+            this.gbxNewTeacher.Controls.Add(this.cbxNewTeacherEducationPackage);
             this.gbxNewTeacher.Controls.Add(this.btnAddNewTeacher);
-            this.gbxNewTeacher.Controls.Add(this.textBox2);
-            this.gbxNewTeacher.Controls.Add(this.textBox3);
-            this.gbxNewTeacher.Controls.Add(this.textBox4);
-            this.gbxNewTeacher.Controls.Add(this.textBox5);
-            this.gbxNewTeacher.Controls.Add(this.label6);
-            this.gbxNewTeacher.Controls.Add(this.label7);
-            this.gbxNewTeacher.Controls.Add(this.label8);
-            this.gbxNewTeacher.Controls.Add(this.label9);
+            this.gbxNewTeacher.Controls.Add(this.tbxNewTeacherPhone);
+            this.gbxNewTeacher.Controls.Add(this.tbxNewTeacherEmail);
+            this.gbxNewTeacher.Controls.Add(this.tbxNewTeacherSurname);
+            this.gbxNewTeacher.Controls.Add(this.tbxNewTeacherName);
+            this.gbxNewTeacher.Controls.Add(this.lblNewTeacherEmail);
+            this.gbxNewTeacher.Controls.Add(this.lblNewTeacherPhone);
+            this.gbxNewTeacher.Controls.Add(this.lblNewTeacherSurname);
+            this.gbxNewTeacher.Controls.Add(this.lblNewTeacherName);
             this.gbxNewTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbxNewTeacher.Location = new System.Drawing.Point(510, 236);
             this.gbxNewTeacher.Name = "gbxNewTeacher";
@@ -1048,250 +1311,271 @@
             this.gbxNewTeacher.TabStop = false;
             this.gbxNewTeacher.Text = "New teacher";
             // 
+            // lblNewTeacherEducationPackage
+            // 
+            this.lblNewTeacherEducationPackage.AutoSize = true;
+            this.lblNewTeacherEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewTeacherEducationPackage.Location = new System.Drawing.Point(6, 157);
+            this.lblNewTeacherEducationPackage.Name = "lblNewTeacherEducationPackage";
+            this.lblNewTeacherEducationPackage.Size = new System.Drawing.Size(131, 16);
+            this.lblNewTeacherEducationPackage.TabIndex = 27;
+            this.lblNewTeacherEducationPackage.Text = "Education package :";
+            // 
+            // cbxNewTeacherEducationPackage
+            // 
+            this.cbxNewTeacherEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxNewTeacherEducationPackage.FormattingEnabled = true;
+            this.cbxNewTeacherEducationPackage.Location = new System.Drawing.Point(143, 152);
+            this.cbxNewTeacherEducationPackage.Name = "cbxNewTeacherEducationPackage";
+            this.cbxNewTeacherEducationPackage.Size = new System.Drawing.Size(189, 24);
+            this.cbxNewTeacherEducationPackage.TabIndex = 26;
+            // 
             // btnAddNewTeacher
             // 
             this.btnAddNewTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddNewTeacher.Location = new System.Drawing.Point(257, 172);
+            this.btnAddNewTeacher.Location = new System.Drawing.Point(257, 182);
             this.btnAddNewTeacher.Name = "btnAddNewTeacher";
             this.btnAddNewTeacher.Size = new System.Drawing.Size(75, 23);
             this.btnAddNewTeacher.TabIndex = 25;
             this.btnAddNewTeacher.Text = "Add";
             this.btnAddNewTeacher.UseVisualStyleBackColor = true;
+            this.btnAddNewTeacher.Click += new System.EventHandler(this.btnAddNewTeacher_Click);
             // 
-            // textBox2
+            // tbxNewTeacherPhone
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(86, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 22);
-            this.textBox2.TabIndex = 24;
+            this.tbxNewTeacherPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewTeacherPhone.Location = new System.Drawing.Point(86, 124);
+            this.tbxNewTeacherPhone.Name = "tbxNewTeacherPhone";
+            this.tbxNewTeacherPhone.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewTeacherPhone.TabIndex = 24;
             // 
-            // textBox3
+            // tbxNewTeacherEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(86, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(246, 22);
-            this.textBox3.TabIndex = 23;
+            this.tbxNewTeacherEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewTeacherEmail.Location = new System.Drawing.Point(86, 96);
+            this.tbxNewTeacherEmail.Name = "tbxNewTeacherEmail";
+            this.tbxNewTeacherEmail.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewTeacherEmail.TabIndex = 23;
             // 
-            // textBox4
+            // tbxNewTeacherSurname
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(86, 65);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(246, 22);
-            this.textBox4.TabIndex = 22;
+            this.tbxNewTeacherSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewTeacherSurname.Location = new System.Drawing.Point(86, 65);
+            this.tbxNewTeacherSurname.Name = "tbxNewTeacherSurname";
+            this.tbxNewTeacherSurname.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewTeacherSurname.TabIndex = 22;
             // 
-            // textBox5
+            // tbxNewTeacherName
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(86, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(246, 22);
-            this.textBox5.TabIndex = 21;
+            this.tbxNewTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewTeacherName.Location = new System.Drawing.Point(86, 37);
+            this.tbxNewTeacherName.Name = "tbxNewTeacherName";
+            this.tbxNewTeacherName.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewTeacherName.TabIndex = 21;
             // 
-            // label6
+            // lblNewTeacherEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(6, 99);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 16);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Email :";
+            this.lblNewTeacherEmail.AutoSize = true;
+            this.lblNewTeacherEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewTeacherEmail.Location = new System.Drawing.Point(6, 99);
+            this.lblNewTeacherEmail.Name = "lblNewTeacherEmail";
+            this.lblNewTeacherEmail.Size = new System.Drawing.Size(48, 16);
+            this.lblNewTeacherEmail.TabIndex = 16;
+            this.lblNewTeacherEmail.Text = "Email :";
             // 
-            // label7
+            // lblNewTeacherPhone
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(6, 127);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Phone :";
+            this.lblNewTeacherPhone.AutoSize = true;
+            this.lblNewTeacherPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewTeacherPhone.Location = new System.Drawing.Point(6, 127);
+            this.lblNewTeacherPhone.Name = "lblNewTeacherPhone";
+            this.lblNewTeacherPhone.Size = new System.Drawing.Size(53, 16);
+            this.lblNewTeacherPhone.TabIndex = 15;
+            this.lblNewTeacherPhone.Text = "Phone :";
             // 
-            // label8
+            // lblNewTeacherSurname
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(6, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Surname :";
+            this.lblNewTeacherSurname.AutoSize = true;
+            this.lblNewTeacherSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewTeacherSurname.Location = new System.Drawing.Point(6, 68);
+            this.lblNewTeacherSurname.Name = "lblNewTeacherSurname";
+            this.lblNewTeacherSurname.Size = new System.Drawing.Size(68, 16);
+            this.lblNewTeacherSurname.TabIndex = 14;
+            this.lblNewTeacherSurname.Text = "Surname :";
             // 
-            // label9
+            // lblNewTeacherName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(6, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Name :";
+            this.lblNewTeacherName.AutoSize = true;
+            this.lblNewTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewTeacherName.Location = new System.Drawing.Point(6, 40);
+            this.lblNewTeacherName.Name = "lblNewTeacherName";
+            this.lblNewTeacherName.Size = new System.Drawing.Size(51, 16);
+            this.lblNewTeacherName.TabIndex = 13;
+            this.lblNewTeacherName.Text = "Name :";
             // 
-            // groupBox4
+            // gbxTeacherUpdate
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.textBox8);
-            this.groupBox4.Controls.Add(this.textBox9);
-            this.groupBox4.Controls.Add(this.richTextBox1);
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.pbxTeacherPhoto);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 236);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(478, 269);
-            this.groupBox4.TabIndex = 30;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Update";
+            this.gbxTeacherUpdate.Controls.Add(this.btnUpdateTeacherPhoto);
+            this.gbxTeacherUpdate.Controls.Add(this.btnRemoveTeacher);
+            this.gbxTeacherUpdate.Controls.Add(this.tbxUpdateTeacherPhone);
+            this.gbxTeacherUpdate.Controls.Add(this.tbxUpdateTeacherEmail);
+            this.gbxTeacherUpdate.Controls.Add(this.tbxUpdateTeacherSurname);
+            this.gbxTeacherUpdate.Controls.Add(this.tbxUpdateTeacherName);
+            this.gbxTeacherUpdate.Controls.Add(this.rbxUpdateTeacherBio);
+            this.gbxTeacherUpdate.Controls.Add(this.btnUpdateTeacher);
+            this.gbxTeacherUpdate.Controls.Add(this.pbxUpdateTeacherPhoto);
+            this.gbxTeacherUpdate.Controls.Add(this.lblUpdateTeacherBio);
+            this.gbxTeacherUpdate.Controls.Add(this.lblUpdateTeacherEmail);
+            this.gbxTeacherUpdate.Controls.Add(this.lblUpdateTeacherPhone);
+            this.gbxTeacherUpdate.Controls.Add(this.lblUpdateTeacherSurname);
+            this.gbxTeacherUpdate.Controls.Add(this.lblUpdateTeacherName);
+            this.gbxTeacherUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxTeacherUpdate.Location = new System.Drawing.Point(6, 236);
+            this.gbxTeacherUpdate.Name = "gbxTeacherUpdate";
+            this.gbxTeacherUpdate.Size = new System.Drawing.Size(478, 269);
+            this.gbxTeacherUpdate.TabIndex = 30;
+            this.gbxTeacherUpdate.TabStop = false;
+            this.gbxTeacherUpdate.Text = "Update";
             // 
-            // button3
+            // btnUpdateTeacherPhoto
             // 
-            this.button3.AutoSize = true;
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(346, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 26);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Update photo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdateTeacherPhoto.AutoSize = true;
+            this.btnUpdateTeacherPhoto.Enabled = false;
+            this.btnUpdateTeacherPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateTeacherPhoto.Location = new System.Drawing.Point(346, 149);
+            this.btnUpdateTeacherPhoto.Name = "btnUpdateTeacherPhoto";
+            this.btnUpdateTeacherPhoto.Size = new System.Drawing.Size(100, 26);
+            this.btnUpdateTeacherPhoto.TabIndex = 27;
+            this.btnUpdateTeacherPhoto.Text = "Update photo";
+            this.btnUpdateTeacherPhoto.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRemoveTeacher
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Enabled = false;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(397, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Remove";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRemoveTeacher.BackColor = System.Drawing.Color.Red;
+            this.btnRemoveTeacher.Enabled = false;
+            this.btnRemoveTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRemoveTeacher.Location = new System.Drawing.Point(397, 240);
+            this.btnRemoveTeacher.Name = "btnRemoveTeacher";
+            this.btnRemoveTeacher.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveTeacher.TabIndex = 25;
+            this.btnRemoveTeacher.Text = "Remove";
+            this.btnRemoveTeacher.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // tbxUpdateTeacherPhone
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(86, 124);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 22);
-            this.textBox6.TabIndex = 24;
+            this.tbxUpdateTeacherPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateTeacherPhone.Location = new System.Drawing.Point(86, 124);
+            this.tbxUpdateTeacherPhone.Name = "tbxUpdateTeacherPhone";
+            this.tbxUpdateTeacherPhone.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateTeacherPhone.TabIndex = 24;
             // 
-            // textBox7
+            // tbxUpdateTeacherEmail
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(86, 96);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(182, 22);
-            this.textBox7.TabIndex = 23;
+            this.tbxUpdateTeacherEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateTeacherEmail.Location = new System.Drawing.Point(86, 96);
+            this.tbxUpdateTeacherEmail.Name = "tbxUpdateTeacherEmail";
+            this.tbxUpdateTeacherEmail.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateTeacherEmail.TabIndex = 23;
             // 
-            // textBox8
+            // tbxUpdateTeacherSurname
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(86, 65);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(182, 22);
-            this.textBox8.TabIndex = 22;
+            this.tbxUpdateTeacherSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateTeacherSurname.Location = new System.Drawing.Point(86, 65);
+            this.tbxUpdateTeacherSurname.Name = "tbxUpdateTeacherSurname";
+            this.tbxUpdateTeacherSurname.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateTeacherSurname.TabIndex = 22;
             // 
-            // textBox9
+            // tbxUpdateTeacherName
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox9.Location = new System.Drawing.Point(86, 37);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(182, 22);
-            this.textBox9.TabIndex = 21;
+            this.tbxUpdateTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateTeacherName.Location = new System.Drawing.Point(86, 37);
+            this.tbxUpdateTeacherName.Name = "tbxUpdateTeacherName";
+            this.tbxUpdateTeacherName.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateTeacherName.TabIndex = 21;
             // 
-            // richTextBox1
+            // rbxUpdateTeacherBio
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(6, 168);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(262, 90);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
+            this.rbxUpdateTeacherBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxUpdateTeacherBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbxUpdateTeacherBio.Location = new System.Drawing.Point(6, 168);
+            this.rbxUpdateTeacherBio.Name = "rbxUpdateTeacherBio";
+            this.rbxUpdateTeacherBio.Size = new System.Drawing.Size(262, 90);
+            this.rbxUpdateTeacherBio.TabIndex = 20;
+            this.rbxUpdateTeacherBio.Text = "";
             // 
-            // button5
+            // btnUpdateTeacher
             // 
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(316, 240);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Update";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnUpdateTeacher.Enabled = false;
+            this.btnUpdateTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateTeacher.Location = new System.Drawing.Point(316, 240);
+            this.btnUpdateTeacher.Name = "btnUpdateTeacher";
+            this.btnUpdateTeacher.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateTeacher.TabIndex = 19;
+            this.btnUpdateTeacher.Text = "Update";
+            this.btnUpdateTeacher.UseVisualStyleBackColor = true;
+            this.btnUpdateTeacher.Click += new System.EventHandler(this.btnUpdateTeacher_Click);
             // 
-            // pbxTeacherPhoto
+            // pbxUpdateTeacherPhoto
             // 
-            this.pbxTeacherPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxTeacherPhoto.ErrorImage")));
-            this.pbxTeacherPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxTeacherPhoto.Image")));
-            this.pbxTeacherPhoto.Location = new System.Drawing.Point(346, 31);
-            this.pbxTeacherPhoto.Name = "pbxTeacherPhoto";
-            this.pbxTeacherPhoto.Size = new System.Drawing.Size(100, 112);
-            this.pbxTeacherPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxTeacherPhoto.TabIndex = 18;
-            this.pbxTeacherPhoto.TabStop = false;
+            this.pbxUpdateTeacherPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxUpdateTeacherPhoto.ErrorImage")));
+            this.pbxUpdateTeacherPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxUpdateTeacherPhoto.Image")));
+            this.pbxUpdateTeacherPhoto.Location = new System.Drawing.Point(346, 31);
+            this.pbxUpdateTeacherPhoto.Name = "pbxUpdateTeacherPhoto";
+            this.pbxUpdateTeacherPhoto.Size = new System.Drawing.Size(100, 112);
+            this.pbxUpdateTeacherPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxUpdateTeacherPhoto.TabIndex = 18;
+            this.pbxUpdateTeacherPhoto.TabStop = false;
             // 
-            // label10
+            // lblUpdateTeacherBio
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(6, 149);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 16);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Bio :";
+            this.lblUpdateTeacherBio.AutoSize = true;
+            this.lblUpdateTeacherBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateTeacherBio.Location = new System.Drawing.Point(6, 149);
+            this.lblUpdateTeacherBio.Name = "lblUpdateTeacherBio";
+            this.lblUpdateTeacherBio.Size = new System.Drawing.Size(34, 16);
+            this.lblUpdateTeacherBio.TabIndex = 17;
+            this.lblUpdateTeacherBio.Text = "Bio :";
             // 
-            // label11
+            // lblUpdateTeacherEmail
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(6, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 16);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Email :";
+            this.lblUpdateTeacherEmail.AutoSize = true;
+            this.lblUpdateTeacherEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateTeacherEmail.Location = new System.Drawing.Point(6, 99);
+            this.lblUpdateTeacherEmail.Name = "lblUpdateTeacherEmail";
+            this.lblUpdateTeacherEmail.Size = new System.Drawing.Size(48, 16);
+            this.lblUpdateTeacherEmail.TabIndex = 16;
+            this.lblUpdateTeacherEmail.Text = "Email :";
             // 
-            // label12
+            // lblUpdateTeacherPhone
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(6, 127);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 16);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Phone :";
+            this.lblUpdateTeacherPhone.AutoSize = true;
+            this.lblUpdateTeacherPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateTeacherPhone.Location = new System.Drawing.Point(6, 127);
+            this.lblUpdateTeacherPhone.Name = "lblUpdateTeacherPhone";
+            this.lblUpdateTeacherPhone.Size = new System.Drawing.Size(53, 16);
+            this.lblUpdateTeacherPhone.TabIndex = 15;
+            this.lblUpdateTeacherPhone.Text = "Phone :";
             // 
-            // label13
+            // lblUpdateTeacherSurname
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(6, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 16);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Surname :";
+            this.lblUpdateTeacherSurname.AutoSize = true;
+            this.lblUpdateTeacherSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateTeacherSurname.Location = new System.Drawing.Point(6, 68);
+            this.lblUpdateTeacherSurname.Name = "lblUpdateTeacherSurname";
+            this.lblUpdateTeacherSurname.Size = new System.Drawing.Size(68, 16);
+            this.lblUpdateTeacherSurname.TabIndex = 14;
+            this.lblUpdateTeacherSurname.Text = "Surname :";
             // 
-            // label14
+            // lblUpdateTeacherName
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(6, 40);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(51, 16);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Name :";
+            this.lblUpdateTeacherName.AutoSize = true;
+            this.lblUpdateTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateTeacherName.Location = new System.Drawing.Point(6, 40);
+            this.lblUpdateTeacherName.Name = "lblUpdateTeacherName";
+            this.lblUpdateTeacherName.Size = new System.Drawing.Size(51, 16);
+            this.lblUpdateTeacherName.TabIndex = 13;
+            this.lblUpdateTeacherName.Text = "Name :";
             // 
             // lblTeachers
             // 
@@ -1309,34 +1593,579 @@
             this.dgvTeachersList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeachersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeachersList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.teacherIdDataGridViewTextBoxColumn,
-            this.programIdDataGridViewTextBoxColumn,
-            this.userIdDataGridViewTextBoxColumn,
             this.teacherNameDataGridViewTextBoxColumn,
             this.teacherSurnameDataGridViewTextBoxColumn,
             this.teacherEmailDataGridViewTextBoxColumn,
             this.teacherPhoneDataGridViewTextBoxColumn,
+            this.teacherBioDataGridViewTextBoxColumn,
             this.teacherPhotoDataGridViewTextBoxColumn,
-            this.teacherBioDataGridViewTextBoxColumn});
+            this.programIdDataGridViewTextBoxColumn,
+            this.teacherIdDataGridViewTextBoxColumn,
+            this.userIdDataGridViewTextBoxColumn});
             this.dgvTeachersList.DataSource = this.teachersBindingSource;
             this.dgvTeachersList.Location = new System.Drawing.Point(6, 38);
             this.dgvTeachersList.Name = "dgvTeachersList";
             this.dgvTeachersList.Size = new System.Drawing.Size(1197, 191);
             this.dgvTeachersList.TabIndex = 28;
-            // 
-            // educationProjectDataSet2
-            // 
-            this.educationProjectDataSet2.DataSetName = "EducationProjectDataSet2";
-            this.educationProjectDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dgvTeachersList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTeachersList_CellClick);
             // 
             // teachersBindingSource
             // 
             this.teachersBindingSource.DataMember = "Teachers";
             this.teachersBindingSource.DataSource = this.educationProjectDataSet2;
             // 
+            // educationProjectDataSet2
+            // 
+            this.educationProjectDataSet2.DataSetName = "EducationProjectDataSet2";
+            this.educationProjectDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabMentor
+            // 
+            this.tabMentor.Controls.Add(this.btnShowAllMentors);
+            this.tabMentor.Controls.Add(this.gbxSearchMentor);
+            this.tabMentor.Controls.Add(this.gbxNewMentor);
+            this.tabMentor.Controls.Add(this.gbxUpdateMentor);
+            this.tabMentor.Controls.Add(this.lblMentors);
+            this.tabMentor.Controls.Add(this.dgvMentorsList);
+            this.tabMentor.Location = new System.Drawing.Point(4, 22);
+            this.tabMentor.Name = "tabMentor";
+            this.tabMentor.Size = new System.Drawing.Size(1216, 520);
+            this.tabMentor.TabIndex = 3;
+            this.tabMentor.Text = "Mentors";
+            this.tabMentor.UseVisualStyleBackColor = true;
+            // 
+            // btnShowAllMentors
+            // 
+            this.btnShowAllMentors.AutoSize = true;
+            this.btnShowAllMentors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowAllMentors.Location = new System.Drawing.Point(1077, 5);
+            this.btnShowAllMentors.Name = "btnShowAllMentors";
+            this.btnShowAllMentors.Size = new System.Drawing.Size(123, 26);
+            this.btnShowAllMentors.TabIndex = 37;
+            this.btnShowAllMentors.Text = "Show all mentors";
+            this.btnShowAllMentors.UseVisualStyleBackColor = true;
+            this.btnShowAllMentors.Click += new System.EventHandler(this.btnShowAllMentors_Click);
+            // 
+            // gbxSearchMentor
+            // 
+            this.gbxSearchMentor.Controls.Add(this.lblSearchMentorEducationPackage);
+            this.gbxSearchMentor.Controls.Add(this.lblSearchMentorByName);
+            this.gbxSearchMentor.Controls.Add(this.cbxSearchMentorEducationPackage);
+            this.gbxSearchMentor.Controls.Add(this.tbxSearchMentorByName);
+            this.gbxSearchMentor.Controls.Add(this.cbxSearchMentorGroup);
+            this.gbxSearchMentor.Controls.Add(this.lblSearchMentorGroup);
+            this.gbxSearchMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxSearchMentor.Location = new System.Drawing.Point(861, 235);
+            this.gbxSearchMentor.Name = "gbxSearchMentor";
+            this.gbxSearchMentor.Size = new System.Drawing.Size(337, 269);
+            this.gbxSearchMentor.TabIndex = 39;
+            this.gbxSearchMentor.TabStop = false;
+            this.gbxSearchMentor.Text = "Search";
+            // 
+            // lblSearchMentorEducationPackage
+            // 
+            this.lblSearchMentorEducationPackage.AutoSize = true;
+            this.lblSearchMentorEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSearchMentorEducationPackage.Location = new System.Drawing.Point(6, 37);
+            this.lblSearchMentorEducationPackage.Name = "lblSearchMentorEducationPackage";
+            this.lblSearchMentorEducationPackage.Size = new System.Drawing.Size(165, 16);
+            this.lblSearchMentorEducationPackage.TabIndex = 6;
+            this.lblSearchMentorEducationPackage.Text = "Select education package";
+            // 
+            // lblSearchMentorByName
+            // 
+            this.lblSearchMentorByName.AutoSize = true;
+            this.lblSearchMentorByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSearchMentorByName.Location = new System.Drawing.Point(6, 110);
+            this.lblSearchMentorByName.Name = "lblSearchMentorByName";
+            this.lblSearchMentorByName.Size = new System.Drawing.Size(150, 16);
+            this.lblSearchMentorByName.TabIndex = 11;
+            this.lblSearchMentorByName.Text = "Search by mentor name";
+            // 
+            // cbxSearchMentorEducationPackage
+            // 
+            this.cbxSearchMentorEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxSearchMentorEducationPackage.FormattingEnabled = true;
+            this.cbxSearchMentorEducationPackage.Location = new System.Drawing.Point(173, 34);
+            this.cbxSearchMentorEducationPackage.Name = "cbxSearchMentorEducationPackage";
+            this.cbxSearchMentorEducationPackage.Size = new System.Drawing.Size(158, 24);
+            this.cbxSearchMentorEducationPackage.TabIndex = 4;
+            this.cbxSearchMentorEducationPackage.SelectedIndexChanged += new System.EventHandler(this.cbxSearchMentorEducationPackage_SelectedIndexChanged);
+            // 
+            // tbxSearchMentorByName
+            // 
+            this.tbxSearchMentorByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxSearchMentorByName.Location = new System.Drawing.Point(173, 107);
+            this.tbxSearchMentorByName.Name = "tbxSearchMentorByName";
+            this.tbxSearchMentorByName.Size = new System.Drawing.Size(158, 22);
+            this.tbxSearchMentorByName.TabIndex = 10;
+            this.tbxSearchMentorByName.TextChanged += new System.EventHandler(this.tbxSearchByName_TextChanged);
+            // 
+            // cbxSearchMentorGroup
+            // 
+            this.cbxSearchMentorGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxSearchMentorGroup.FormattingEnabled = true;
+            this.cbxSearchMentorGroup.Location = new System.Drawing.Point(173, 68);
+            this.cbxSearchMentorGroup.Name = "cbxSearchMentorGroup";
+            this.cbxSearchMentorGroup.Size = new System.Drawing.Size(158, 24);
+            this.cbxSearchMentorGroup.TabIndex = 5;
+            this.cbxSearchMentorGroup.SelectedIndexChanged += new System.EventHandler(this.cbxSearchMentorGroup_SelectedIndexChanged);
+            // 
+            // lblSearchMentorGroup
+            // 
+            this.lblSearchMentorGroup.AutoSize = true;
+            this.lblSearchMentorGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSearchMentorGroup.Location = new System.Drawing.Point(6, 71);
+            this.lblSearchMentorGroup.Name = "lblSearchMentorGroup";
+            this.lblSearchMentorGroup.Size = new System.Drawing.Size(84, 16);
+            this.lblSearchMentorGroup.TabIndex = 9;
+            this.lblSearchMentorGroup.Text = "Select group";
+            // 
+            // gbxNewMentor
+            // 
+            this.gbxNewMentor.Controls.Add(this.lblNewMentorEducationPackage);
+            this.gbxNewMentor.Controls.Add(this.cbxNewMentorEducationPackage);
+            this.gbxNewMentor.Controls.Add(this.btnAddNewMentor);
+            this.gbxNewMentor.Controls.Add(this.tbxNewMentorPhone);
+            this.gbxNewMentor.Controls.Add(this.tbxNewMentorEmail);
+            this.gbxNewMentor.Controls.Add(this.tbxNewMentorSurname);
+            this.gbxNewMentor.Controls.Add(this.tbxNewMentorName);
+            this.gbxNewMentor.Controls.Add(this.lblNewMentorEmail);
+            this.gbxNewMentor.Controls.Add(this.lblNewMentorPhone);
+            this.gbxNewMentor.Controls.Add(this.lblNewMentorSurname);
+            this.gbxNewMentor.Controls.Add(this.lblNewMentorName);
+            this.gbxNewMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxNewMentor.Location = new System.Drawing.Point(505, 235);
+            this.gbxNewMentor.Name = "gbxNewMentor";
+            this.gbxNewMentor.Size = new System.Drawing.Size(350, 269);
+            this.gbxNewMentor.TabIndex = 38;
+            this.gbxNewMentor.TabStop = false;
+            this.gbxNewMentor.Text = "New teacher";
+            // 
+            // lblNewMentorEducationPackage
+            // 
+            this.lblNewMentorEducationPackage.AutoSize = true;
+            this.lblNewMentorEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewMentorEducationPackage.Location = new System.Drawing.Point(6, 157);
+            this.lblNewMentorEducationPackage.Name = "lblNewMentorEducationPackage";
+            this.lblNewMentorEducationPackage.Size = new System.Drawing.Size(131, 16);
+            this.lblNewMentorEducationPackage.TabIndex = 29;
+            this.lblNewMentorEducationPackage.Text = "Education package :";
+            // 
+            // cbxNewMentorEducationPackage
+            // 
+            this.cbxNewMentorEducationPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbxNewMentorEducationPackage.FormattingEnabled = true;
+            this.cbxNewMentorEducationPackage.Location = new System.Drawing.Point(143, 152);
+            this.cbxNewMentorEducationPackage.Name = "cbxNewMentorEducationPackage";
+            this.cbxNewMentorEducationPackage.Size = new System.Drawing.Size(189, 24);
+            this.cbxNewMentorEducationPackage.TabIndex = 28;
+            // 
+            // btnAddNewMentor
+            // 
+            this.btnAddNewMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddNewMentor.Location = new System.Drawing.Point(257, 182);
+            this.btnAddNewMentor.Name = "btnAddNewMentor";
+            this.btnAddNewMentor.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNewMentor.TabIndex = 25;
+            this.btnAddNewMentor.Text = "Add";
+            this.btnAddNewMentor.UseVisualStyleBackColor = true;
+            this.btnAddNewMentor.Click += new System.EventHandler(this.btnAddNewMentor_Click);
+            // 
+            // tbxNewMentorPhone
+            // 
+            this.tbxNewMentorPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewMentorPhone.Location = new System.Drawing.Point(86, 124);
+            this.tbxNewMentorPhone.Name = "tbxNewMentorPhone";
+            this.tbxNewMentorPhone.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewMentorPhone.TabIndex = 24;
+            // 
+            // tbxNewMentorEmail
+            // 
+            this.tbxNewMentorEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewMentorEmail.Location = new System.Drawing.Point(86, 96);
+            this.tbxNewMentorEmail.Name = "tbxNewMentorEmail";
+            this.tbxNewMentorEmail.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewMentorEmail.TabIndex = 23;
+            // 
+            // tbxNewMentorSurname
+            // 
+            this.tbxNewMentorSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewMentorSurname.Location = new System.Drawing.Point(86, 65);
+            this.tbxNewMentorSurname.Name = "tbxNewMentorSurname";
+            this.tbxNewMentorSurname.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewMentorSurname.TabIndex = 22;
+            // 
+            // tbxNewMentorName
+            // 
+            this.tbxNewMentorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxNewMentorName.Location = new System.Drawing.Point(86, 37);
+            this.tbxNewMentorName.Name = "tbxNewMentorName";
+            this.tbxNewMentorName.Size = new System.Drawing.Size(246, 22);
+            this.tbxNewMentorName.TabIndex = 21;
+            // 
+            // lblNewMentorEmail
+            // 
+            this.lblNewMentorEmail.AutoSize = true;
+            this.lblNewMentorEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewMentorEmail.Location = new System.Drawing.Point(6, 99);
+            this.lblNewMentorEmail.Name = "lblNewMentorEmail";
+            this.lblNewMentorEmail.Size = new System.Drawing.Size(48, 16);
+            this.lblNewMentorEmail.TabIndex = 16;
+            this.lblNewMentorEmail.Text = "Email :";
+            // 
+            // lblNewMentorPhone
+            // 
+            this.lblNewMentorPhone.AutoSize = true;
+            this.lblNewMentorPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewMentorPhone.Location = new System.Drawing.Point(6, 127);
+            this.lblNewMentorPhone.Name = "lblNewMentorPhone";
+            this.lblNewMentorPhone.Size = new System.Drawing.Size(53, 16);
+            this.lblNewMentorPhone.TabIndex = 15;
+            this.lblNewMentorPhone.Text = "Phone :";
+            // 
+            // lblNewMentorSurname
+            // 
+            this.lblNewMentorSurname.AutoSize = true;
+            this.lblNewMentorSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewMentorSurname.Location = new System.Drawing.Point(6, 68);
+            this.lblNewMentorSurname.Name = "lblNewMentorSurname";
+            this.lblNewMentorSurname.Size = new System.Drawing.Size(68, 16);
+            this.lblNewMentorSurname.TabIndex = 14;
+            this.lblNewMentorSurname.Text = "Surname :";
+            // 
+            // lblNewMentorName
+            // 
+            this.lblNewMentorName.AutoSize = true;
+            this.lblNewMentorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNewMentorName.Location = new System.Drawing.Point(6, 40);
+            this.lblNewMentorName.Name = "lblNewMentorName";
+            this.lblNewMentorName.Size = new System.Drawing.Size(51, 16);
+            this.lblNewMentorName.TabIndex = 13;
+            this.lblNewMentorName.Text = "Name :";
+            // 
+            // gbxUpdateMentor
+            // 
+            this.gbxUpdateMentor.Controls.Add(this.btnUpdateMentorPhoto);
+            this.gbxUpdateMentor.Controls.Add(this.btnRemoveMentor);
+            this.gbxUpdateMentor.Controls.Add(this.tbxUpdateMentorPhone);
+            this.gbxUpdateMentor.Controls.Add(this.tbxUpdateMentorEmail);
+            this.gbxUpdateMentor.Controls.Add(this.tbxUpdateMentorSurname);
+            this.gbxUpdateMentor.Controls.Add(this.tbxUpdateMentorName);
+            this.gbxUpdateMentor.Controls.Add(this.rbxUpdateMentorBio);
+            this.gbxUpdateMentor.Controls.Add(this.btnUpdateMentor);
+            this.gbxUpdateMentor.Controls.Add(this.pbxUpdateMentorPhoto);
+            this.gbxUpdateMentor.Controls.Add(this.lblUpdateMentorBio);
+            this.gbxUpdateMentor.Controls.Add(this.lblUpdateMentorEmail);
+            this.gbxUpdateMentor.Controls.Add(this.lblUpdateMentorPhone);
+            this.gbxUpdateMentor.Controls.Add(this.lblUpdateMentorSurname);
+            this.gbxUpdateMentor.Controls.Add(this.lblUpdateMentorName);
+            this.gbxUpdateMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbxUpdateMentor.Location = new System.Drawing.Point(1, 235);
+            this.gbxUpdateMentor.Name = "gbxUpdateMentor";
+            this.gbxUpdateMentor.Size = new System.Drawing.Size(478, 269);
+            this.gbxUpdateMentor.TabIndex = 36;
+            this.gbxUpdateMentor.TabStop = false;
+            this.gbxUpdateMentor.Text = "Update";
+            // 
+            // btnUpdateMentorPhoto
+            // 
+            this.btnUpdateMentorPhoto.AutoSize = true;
+            this.btnUpdateMentorPhoto.Enabled = false;
+            this.btnUpdateMentorPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateMentorPhoto.Location = new System.Drawing.Point(346, 149);
+            this.btnUpdateMentorPhoto.Name = "btnUpdateMentorPhoto";
+            this.btnUpdateMentorPhoto.Size = new System.Drawing.Size(100, 26);
+            this.btnUpdateMentorPhoto.TabIndex = 27;
+            this.btnUpdateMentorPhoto.Text = "Update photo";
+            this.btnUpdateMentorPhoto.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveMentor
+            // 
+            this.btnRemoveMentor.BackColor = System.Drawing.Color.Red;
+            this.btnRemoveMentor.Enabled = false;
+            this.btnRemoveMentor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRemoveMentor.Location = new System.Drawing.Point(397, 240);
+            this.btnRemoveMentor.Name = "btnRemoveMentor";
+            this.btnRemoveMentor.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveMentor.TabIndex = 25;
+            this.btnRemoveMentor.Text = "Remove";
+            this.btnRemoveMentor.UseVisualStyleBackColor = false;
+            // 
+            // tbxUpdateMentorPhone
+            // 
+            this.tbxUpdateMentorPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateMentorPhone.Location = new System.Drawing.Point(86, 124);
+            this.tbxUpdateMentorPhone.Name = "tbxUpdateMentorPhone";
+            this.tbxUpdateMentorPhone.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateMentorPhone.TabIndex = 24;
+            // 
+            // tbxUpdateMentorEmail
+            // 
+            this.tbxUpdateMentorEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateMentorEmail.Location = new System.Drawing.Point(86, 96);
+            this.tbxUpdateMentorEmail.Name = "tbxUpdateMentorEmail";
+            this.tbxUpdateMentorEmail.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateMentorEmail.TabIndex = 23;
+            // 
+            // tbxUpdateMentorSurname
+            // 
+            this.tbxUpdateMentorSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateMentorSurname.Location = new System.Drawing.Point(86, 65);
+            this.tbxUpdateMentorSurname.Name = "tbxUpdateMentorSurname";
+            this.tbxUpdateMentorSurname.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateMentorSurname.TabIndex = 22;
+            // 
+            // tbxUpdateMentorName
+            // 
+            this.tbxUpdateMentorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxUpdateMentorName.Location = new System.Drawing.Point(86, 37);
+            this.tbxUpdateMentorName.Name = "tbxUpdateMentorName";
+            this.tbxUpdateMentorName.Size = new System.Drawing.Size(182, 22);
+            this.tbxUpdateMentorName.TabIndex = 21;
+            // 
+            // rbxUpdateMentorBio
+            // 
+            this.rbxUpdateMentorBio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxUpdateMentorBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbxUpdateMentorBio.Location = new System.Drawing.Point(6, 168);
+            this.rbxUpdateMentorBio.Name = "rbxUpdateMentorBio";
+            this.rbxUpdateMentorBio.Size = new System.Drawing.Size(262, 90);
+            this.rbxUpdateMentorBio.TabIndex = 20;
+            this.rbxUpdateMentorBio.Text = "";
+            // 
+            // btnUpdateMentor
+            // 
+            this.btnUpdateMentor.Enabled = false;
+            this.btnUpdateMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateMentor.Location = new System.Drawing.Point(316, 240);
+            this.btnUpdateMentor.Name = "btnUpdateMentor";
+            this.btnUpdateMentor.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateMentor.TabIndex = 19;
+            this.btnUpdateMentor.Text = "Update";
+            this.btnUpdateMentor.UseVisualStyleBackColor = true;
+            this.btnUpdateMentor.Click += new System.EventHandler(this.btnUpdateMentor_Click);
+            // 
+            // pbxUpdateMentorPhoto
+            // 
+            this.pbxUpdateMentorPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxUpdateMentorPhoto.ErrorImage")));
+            this.pbxUpdateMentorPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxUpdateMentorPhoto.Image")));
+            this.pbxUpdateMentorPhoto.Location = new System.Drawing.Point(346, 31);
+            this.pbxUpdateMentorPhoto.Name = "pbxUpdateMentorPhoto";
+            this.pbxUpdateMentorPhoto.Size = new System.Drawing.Size(100, 112);
+            this.pbxUpdateMentorPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxUpdateMentorPhoto.TabIndex = 18;
+            this.pbxUpdateMentorPhoto.TabStop = false;
+            // 
+            // lblUpdateMentorBio
+            // 
+            this.lblUpdateMentorBio.AutoSize = true;
+            this.lblUpdateMentorBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateMentorBio.Location = new System.Drawing.Point(6, 149);
+            this.lblUpdateMentorBio.Name = "lblUpdateMentorBio";
+            this.lblUpdateMentorBio.Size = new System.Drawing.Size(34, 16);
+            this.lblUpdateMentorBio.TabIndex = 17;
+            this.lblUpdateMentorBio.Text = "Bio :";
+            // 
+            // lblUpdateMentorEmail
+            // 
+            this.lblUpdateMentorEmail.AutoSize = true;
+            this.lblUpdateMentorEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateMentorEmail.Location = new System.Drawing.Point(6, 99);
+            this.lblUpdateMentorEmail.Name = "lblUpdateMentorEmail";
+            this.lblUpdateMentorEmail.Size = new System.Drawing.Size(48, 16);
+            this.lblUpdateMentorEmail.TabIndex = 16;
+            this.lblUpdateMentorEmail.Text = "Email :";
+            // 
+            // lblUpdateMentorPhone
+            // 
+            this.lblUpdateMentorPhone.AutoSize = true;
+            this.lblUpdateMentorPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateMentorPhone.Location = new System.Drawing.Point(6, 127);
+            this.lblUpdateMentorPhone.Name = "lblUpdateMentorPhone";
+            this.lblUpdateMentorPhone.Size = new System.Drawing.Size(53, 16);
+            this.lblUpdateMentorPhone.TabIndex = 15;
+            this.lblUpdateMentorPhone.Text = "Phone :";
+            // 
+            // lblUpdateMentorSurname
+            // 
+            this.lblUpdateMentorSurname.AutoSize = true;
+            this.lblUpdateMentorSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateMentorSurname.Location = new System.Drawing.Point(6, 68);
+            this.lblUpdateMentorSurname.Name = "lblUpdateMentorSurname";
+            this.lblUpdateMentorSurname.Size = new System.Drawing.Size(68, 16);
+            this.lblUpdateMentorSurname.TabIndex = 14;
+            this.lblUpdateMentorSurname.Text = "Surname :";
+            // 
+            // lblUpdateMentorName
+            // 
+            this.lblUpdateMentorName.AutoSize = true;
+            this.lblUpdateMentorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUpdateMentorName.Location = new System.Drawing.Point(6, 40);
+            this.lblUpdateMentorName.Name = "lblUpdateMentorName";
+            this.lblUpdateMentorName.Size = new System.Drawing.Size(51, 16);
+            this.lblUpdateMentorName.TabIndex = 13;
+            this.lblUpdateMentorName.Text = "Name :";
+            // 
+            // lblMentors
+            // 
+            this.lblMentors.AutoSize = true;
+            this.lblMentors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMentors.Location = new System.Drawing.Point(3, 9);
+            this.lblMentors.Name = "lblMentors";
+            this.lblMentors.Size = new System.Drawing.Size(97, 25);
+            this.lblMentors.TabIndex = 35;
+            this.lblMentors.Text = "Mentors";
+            // 
+            // dgvMentorsList
+            // 
+            this.dgvMentorsList.AutoGenerateColumns = false;
+            this.dgvMentorsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMentorsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMentorsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MentorName,
+            this.MentorSurname,
+            this.MentorEmail,
+            this.MentorPhone,
+            this.MentorBio,
+            this.dataGridViewTextBoxColumn2,
+            this.MentorPhoto,
+            this.dataGridViewTextBoxColumn3,
+            this.Column1});
+            this.dgvMentorsList.DataSource = this.mentorsBindingSource;
+            this.dgvMentorsList.Location = new System.Drawing.Point(1, 37);
+            this.dgvMentorsList.Name = "dgvMentorsList";
+            this.dgvMentorsList.Size = new System.Drawing.Size(1197, 191);
+            this.dgvMentorsList.TabIndex = 34;
+            this.dgvMentorsList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMentorsList_CellClick);
+            // 
+            // mentorsBindingSource
+            // 
+            this.mentorsBindingSource.DataMember = "Mentors";
+            this.mentorsBindingSource.DataSource = this.educationProjectDataSet4;
+            // 
+            // educationProjectDataSet4
+            // 
+            this.educationProjectDataSet4.DataSetName = "EducationProjectDataSet4";
+            this.educationProjectDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
+            // 
             // teachersTableAdapter
             // 
             this.teachersTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupsTableAdapter
+            // 
+            this.groupsTableAdapter.ClearBeforeFill = true;
+            // 
+            // mentorsTableAdapter
+            // 
+            this.mentorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dtpUpdateGroupStartDate
+            // 
+            this.dtpUpdateGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpUpdateGroupStartDate.Location = new System.Drawing.Point(137, 180);
+            this.dtpUpdateGroupStartDate.Name = "dtpUpdateGroupStartDate";
+            this.dtpUpdateGroupStartDate.Size = new System.Drawing.Size(280, 22);
+            this.dtpUpdateGroupStartDate.TabIndex = 24;
+            // 
+            // GroupName
+            // 
+            this.GroupName.DataPropertyName = "GroupName";
+            this.GroupName.HeaderText = "Group name";
+            this.GroupName.Name = "GroupName";
+            // 
+            // programIdDataGridViewTextBoxColumn1
+            // 
+            this.programIdDataGridViewTextBoxColumn1.DataPropertyName = "ProgramId";
+            this.programIdDataGridViewTextBoxColumn1.HeaderText = "Program id";
+            this.programIdDataGridViewTextBoxColumn1.Name = "programIdDataGridViewTextBoxColumn1";
+            // 
+            // TeacherId
+            // 
+            this.TeacherId.DataPropertyName = "TeacherId";
+            this.TeacherId.HeaderText = "Teacher id";
+            this.TeacherId.Name = "TeacherId";
+            // 
+            // MentorId
+            // 
+            this.MentorId.DataPropertyName = "MentorId";
+            this.MentorId.HeaderText = "Mentor id";
+            this.MentorId.Name = "MentorId";
+            // 
+            // GroupTypeId
+            // 
+            this.GroupTypeId.DataPropertyName = "GroupTypeId";
+            this.GroupTypeId.HeaderText = "Group type id";
+            this.GroupTypeId.Name = "GroupTypeId";
+            // 
+            // GroupStartDate
+            // 
+            this.GroupStartDate.DataPropertyName = "GroupStartDate";
+            this.GroupStartDate.HeaderText = "Group start date";
+            this.GroupStartDate.Name = "GroupStartDate";
+            // 
+            // GroupEndDate
+            // 
+            this.GroupEndDate.DataPropertyName = "GroupEndDate";
+            this.GroupEndDate.HeaderText = "Group end date";
+            this.GroupEndDate.Name = "GroupEndDate";
+            // 
+            // GroupId
+            // 
+            this.GroupId.DataPropertyName = "GroupId";
+            this.GroupId.HeaderText = "GroupId";
+            this.GroupId.Name = "GroupId";
+            this.GroupId.ReadOnly = true;
+            this.GroupId.Visible = false;
+            // 
+            // teacherNameDataGridViewTextBoxColumn
+            // 
+            this.teacherNameDataGridViewTextBoxColumn.DataPropertyName = "TeacherName";
+            this.teacherNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.teacherNameDataGridViewTextBoxColumn.Name = "teacherNameDataGridViewTextBoxColumn";
+            // 
+            // teacherSurnameDataGridViewTextBoxColumn
+            // 
+            this.teacherSurnameDataGridViewTextBoxColumn.DataPropertyName = "TeacherSurname";
+            this.teacherSurnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.teacherSurnameDataGridViewTextBoxColumn.Name = "teacherSurnameDataGridViewTextBoxColumn";
+            // 
+            // teacherEmailDataGridViewTextBoxColumn
+            // 
+            this.teacherEmailDataGridViewTextBoxColumn.DataPropertyName = "TeacherEmail";
+            this.teacherEmailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.teacherEmailDataGridViewTextBoxColumn.Name = "teacherEmailDataGridViewTextBoxColumn";
+            // 
+            // teacherPhoneDataGridViewTextBoxColumn
+            // 
+            this.teacherPhoneDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhone";
+            this.teacherPhoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.teacherPhoneDataGridViewTextBoxColumn.Name = "teacherPhoneDataGridViewTextBoxColumn";
+            // 
+            // teacherBioDataGridViewTextBoxColumn
+            // 
+            this.teacherBioDataGridViewTextBoxColumn.DataPropertyName = "TeacherBio";
+            this.teacherBioDataGridViewTextBoxColumn.HeaderText = "Bio";
+            this.teacherBioDataGridViewTextBoxColumn.Name = "teacherBioDataGridViewTextBoxColumn";
+            // 
+            // teacherPhotoDataGridViewTextBoxColumn
+            // 
+            this.teacherPhotoDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhoto";
+            this.teacherPhotoDataGridViewTextBoxColumn.HeaderText = "Teacher photo";
+            this.teacherPhotoDataGridViewTextBoxColumn.Name = "teacherPhotoDataGridViewTextBoxColumn";
+            this.teacherPhotoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // programIdDataGridViewTextBoxColumn
+            // 
+            this.programIdDataGridViewTextBoxColumn.DataPropertyName = "ProgramId";
+            this.programIdDataGridViewTextBoxColumn.HeaderText = "Program id";
+            this.programIdDataGridViewTextBoxColumn.Name = "programIdDataGridViewTextBoxColumn";
             // 
             // teacherIdDataGridViewTextBoxColumn
             // 
@@ -1344,54 +2173,71 @@
             this.teacherIdDataGridViewTextBoxColumn.HeaderText = "TeacherId";
             this.teacherIdDataGridViewTextBoxColumn.Name = "teacherIdDataGridViewTextBoxColumn";
             this.teacherIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // programIdDataGridViewTextBoxColumn
-            // 
-            this.programIdDataGridViewTextBoxColumn.DataPropertyName = "ProgramId";
-            this.programIdDataGridViewTextBoxColumn.HeaderText = "ProgramId";
-            this.programIdDataGridViewTextBoxColumn.Name = "programIdDataGridViewTextBoxColumn";
+            this.teacherIdDataGridViewTextBoxColumn.Visible = false;
             // 
             // userIdDataGridViewTextBoxColumn
             // 
             this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
             this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.Visible = false;
             // 
-            // teacherNameDataGridViewTextBoxColumn
+            // MentorName
             // 
-            this.teacherNameDataGridViewTextBoxColumn.DataPropertyName = "TeacherName";
-            this.teacherNameDataGridViewTextBoxColumn.HeaderText = "TeacherName";
-            this.teacherNameDataGridViewTextBoxColumn.Name = "teacherNameDataGridViewTextBoxColumn";
+            this.MentorName.DataPropertyName = "MentorName";
+            this.MentorName.HeaderText = "Name";
+            this.MentorName.Name = "MentorName";
             // 
-            // teacherSurnameDataGridViewTextBoxColumn
+            // MentorSurname
             // 
-            this.teacherSurnameDataGridViewTextBoxColumn.DataPropertyName = "TeacherSurname";
-            this.teacherSurnameDataGridViewTextBoxColumn.HeaderText = "TeacherSurname";
-            this.teacherSurnameDataGridViewTextBoxColumn.Name = "teacherSurnameDataGridViewTextBoxColumn";
+            this.MentorSurname.DataPropertyName = "MentorSurname";
+            this.MentorSurname.HeaderText = "Surname";
+            this.MentorSurname.Name = "MentorSurname";
             // 
-            // teacherEmailDataGridViewTextBoxColumn
+            // MentorEmail
             // 
-            this.teacherEmailDataGridViewTextBoxColumn.DataPropertyName = "TeacherEmail";
-            this.teacherEmailDataGridViewTextBoxColumn.HeaderText = "TeacherEmail";
-            this.teacherEmailDataGridViewTextBoxColumn.Name = "teacherEmailDataGridViewTextBoxColumn";
+            this.MentorEmail.DataPropertyName = "MentorEmail";
+            this.MentorEmail.HeaderText = "Email";
+            this.MentorEmail.Name = "MentorEmail";
             // 
-            // teacherPhoneDataGridViewTextBoxColumn
+            // MentorPhone
             // 
-            this.teacherPhoneDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhone";
-            this.teacherPhoneDataGridViewTextBoxColumn.HeaderText = "TeacherPhone";
-            this.teacherPhoneDataGridViewTextBoxColumn.Name = "teacherPhoneDataGridViewTextBoxColumn";
+            this.MentorPhone.DataPropertyName = "MentorPhone";
+            this.MentorPhone.HeaderText = "Phone";
+            this.MentorPhone.Name = "MentorPhone";
             // 
-            // teacherPhotoDataGridViewTextBoxColumn
+            // MentorBio
             // 
-            this.teacherPhotoDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhoto";
-            this.teacherPhotoDataGridViewTextBoxColumn.HeaderText = "TeacherPhoto";
-            this.teacherPhotoDataGridViewTextBoxColumn.Name = "teacherPhotoDataGridViewTextBoxColumn";
+            this.MentorBio.DataPropertyName = "MentorBio";
+            this.MentorBio.HeaderText = "Bio";
+            this.MentorBio.Name = "MentorBio";
             // 
-            // teacherBioDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.teacherBioDataGridViewTextBoxColumn.DataPropertyName = "TeacherBio";
-            this.teacherBioDataGridViewTextBoxColumn.HeaderText = "TeacherBio";
-            this.teacherBioDataGridViewTextBoxColumn.Name = "teacherBioDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProgramId";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Program id";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // MentorPhoto
+            // 
+            this.MentorPhoto.DataPropertyName = "MentorPhoto";
+            this.MentorPhoto.HeaderText = "MentorPhoto";
+            this.MentorPhoto.Name = "MentorPhoto";
+            this.MentorPhoto.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserId";
+            this.dataGridViewTextBoxColumn3.HeaderText = "UserId";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MentorId";
+            this.Column1.HeaderText = "MentorId";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // AdminForm
             // 
@@ -1419,20 +2265,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet1)).EndInit();
             this.tabGroup.ResumeLayout(false);
-            this.tabTeacher.ResumeLayout(false);
-            this.tabTeacher.PerformLayout();
+            this.tabGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet3)).EndInit();
+            this.gbxUpdateGroup.ResumeLayout(false);
+            this.gbxUpdateGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentsToGroup)).EndInit();
             this.gbxAddGroup.ResumeLayout(false);
             this.gbxAddGroup.PerformLayout();
+            this.tabTeacher.ResumeLayout(false);
+            this.tabTeacher.PerformLayout();
             this.gbxSearchTeacher.ResumeLayout(false);
             this.gbxSearchTeacher.PerformLayout();
             this.gbxNewTeacher.ResumeLayout(false);
             this.gbxNewTeacher.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTeacherPhoto)).EndInit();
+            this.gbxTeacherUpdate.ResumeLayout(false);
+            this.gbxTeacherUpdate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdateTeacherPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeachersList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet2)).EndInit();
+            this.tabMentor.ResumeLayout(false);
+            this.tabMentor.PerformLayout();
+            this.gbxSearchMentor.ResumeLayout(false);
+            this.gbxSearchMentor.PerformLayout();
+            this.gbxNewMentor.ResumeLayout(false);
+            this.gbxNewMentor.PerformLayout();
+            this.gbxUpdateMentor.ResumeLayout(false);
+            this.gbxUpdateMentor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdateMentorPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMentorsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mentorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1464,15 +2329,11 @@
         private System.Windows.Forms.Label lblStudentUpdateName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblSelectEducationPackage;
-        private System.Windows.Forms.ComboBox cbxSelectGroupType;
-        private System.Windows.Forms.ComboBox cbxSelectGroupTime;
         private System.Windows.Forms.Label lblSearchByStudentName;
         private System.Windows.Forms.ComboBox cbxSelectEducationPackage;
-        private System.Windows.Forms.TextBox tbxSearchByName;
+        private System.Windows.Forms.TextBox tbxSearchStudentByName;
         private System.Windows.Forms.ComboBox cbxSelectGroup;
         private System.Windows.Forms.Label lblSelectGroup;
-        private System.Windows.Forms.Label lblSelectGroupType;
-        private System.Windows.Forms.Label lblSelectGroupTime;
         private System.Windows.Forms.GroupBox gbxStudentAdd;
         private System.Windows.Forms.Button btnNewStudentAdd;
         private System.Windows.Forms.TextBox tbxNewStudentPhone;
@@ -1513,54 +2374,137 @@
         private System.Windows.Forms.ComboBox cbxGroupType;
         private System.Windows.Forms.Button btnShowAllTeachers;
         private System.Windows.Forms.GroupBox gbxSearchTeacher;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblSearchEducationPackage;
         private System.Windows.Forms.Label lblSearchByTeacherName;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxSearchTeacherEducationPackage;
+        private System.Windows.Forms.TextBox tbxSearchTeacherByName;
+        private System.Windows.Forms.ComboBox cbxSearchTeacherGroup;
+        private System.Windows.Forms.Label lblSearchGroup;
         private System.Windows.Forms.GroupBox gbxNewTeacher;
         private System.Windows.Forms.Button btnAddNewTeacher;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pbxTeacherPhoto;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbxNewTeacherPhone;
+        private System.Windows.Forms.TextBox tbxNewTeacherEmail;
+        private System.Windows.Forms.TextBox tbxNewTeacherSurname;
+        private System.Windows.Forms.TextBox tbxNewTeacherName;
+        private System.Windows.Forms.Label lblNewTeacherEmail;
+        private System.Windows.Forms.Label lblNewTeacherPhone;
+        private System.Windows.Forms.Label lblNewTeacherSurname;
+        private System.Windows.Forms.Label lblNewTeacherName;
+        private System.Windows.Forms.GroupBox gbxTeacherUpdate;
+        private System.Windows.Forms.Button btnUpdateTeacherPhoto;
+        private System.Windows.Forms.Button btnRemoveTeacher;
+        private System.Windows.Forms.TextBox tbxUpdateTeacherPhone;
+        private System.Windows.Forms.TextBox tbxUpdateTeacherEmail;
+        private System.Windows.Forms.TextBox tbxUpdateTeacherSurname;
+        private System.Windows.Forms.TextBox tbxUpdateTeacherName;
+        private System.Windows.Forms.RichTextBox rbxUpdateTeacherBio;
+        private System.Windows.Forms.Button btnUpdateTeacher;
+        private System.Windows.Forms.PictureBox pbxUpdateTeacherPhoto;
+        private System.Windows.Forms.Label lblUpdateTeacherBio;
+        private System.Windows.Forms.Label lblUpdateTeacherEmail;
+        private System.Windows.Forms.Label lblUpdateTeacherPhone;
+        private System.Windows.Forms.Label lblUpdateTeacherSurname;
+        private System.Windows.Forms.Label lblUpdateTeacherName;
         private System.Windows.Forms.Label lblTeachers;
         private System.Windows.Forms.DataGridView dgvTeachersList;
         private EducationProjectDataSet2 educationProjectDataSet2;
         private System.Windows.Forms.BindingSource teachersBindingSource;
         private EducationProjectDataSet2TableAdapters.TeachersTableAdapter teachersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacherIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn programIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvStudentsToGroup;
+        private System.Windows.Forms.Button btnAddStudentToGroup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentSurnameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentEmailDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentPhoneDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbxSelectWhicGroup;
+        private System.Windows.Forms.Label lblSelectWhichGroup;
+        private System.Windows.Forms.DataGridView dgvGroupsList;
+        private System.Windows.Forms.GroupBox gbxUpdateGroup;
+        private EducationProjectDataSet3 educationProjectDataSet3;
+        private System.Windows.Forms.BindingSource groupsBindingSource;
+        private EducationProjectDataSet3TableAdapters.GroupsTableAdapter groupsTableAdapter;
+        private System.Windows.Forms.Button btnUpdateGroup;
+        private System.Windows.Forms.Label lblUpdateGroupStartDate;
+        private System.Windows.Forms.TextBox tbxUpdateGroupName;
+        private System.Windows.Forms.Label lblGroupUpdateName;
+        private System.Windows.Forms.Label lblGroupUpdateGroupType;
+        private System.Windows.Forms.Label lblGroupUpdateMentor;
+        private System.Windows.Forms.Label lblGroupUpdateTeacher;
+        private System.Windows.Forms.ComboBox cbxUpdateGroupGroupType;
+        private System.Windows.Forms.ComboBox cbxUpdateGroupMentor;
+        private System.Windows.Forms.ComboBox cbxUpdateGroupTeacher;
+        private System.Windows.Forms.Label lblGroupUpdateProgramId;
+        private System.Windows.Forms.ComboBox cbxUpdateGroupProgramId;
+        private System.Windows.Forms.Button btnShowAllMentors;
+        private System.Windows.Forms.GroupBox gbxSearchMentor;
+        private System.Windows.Forms.Label lblSearchMentorEducationPackage;
+        private System.Windows.Forms.Label lblSearchMentorByName;
+        private System.Windows.Forms.ComboBox cbxSearchMentorEducationPackage;
+        private System.Windows.Forms.TextBox tbxSearchMentorByName;
+        private System.Windows.Forms.ComboBox cbxSearchMentorGroup;
+        private System.Windows.Forms.Label lblSearchMentorGroup;
+        private System.Windows.Forms.GroupBox gbxNewMentor;
+        private System.Windows.Forms.Button btnAddNewMentor;
+        private System.Windows.Forms.TextBox tbxNewMentorPhone;
+        private System.Windows.Forms.TextBox tbxNewMentorEmail;
+        private System.Windows.Forms.TextBox tbxNewMentorSurname;
+        private System.Windows.Forms.TextBox tbxNewMentorName;
+        private System.Windows.Forms.Label lblNewMentorEmail;
+        private System.Windows.Forms.Label lblNewMentorPhone;
+        private System.Windows.Forms.Label lblNewMentorSurname;
+        private System.Windows.Forms.Label lblNewMentorName;
+        private System.Windows.Forms.GroupBox gbxUpdateMentor;
+        private System.Windows.Forms.Button btnUpdateMentorPhoto;
+        private System.Windows.Forms.Button btnRemoveMentor;
+        private System.Windows.Forms.TextBox tbxUpdateMentorPhone;
+        private System.Windows.Forms.TextBox tbxUpdateMentorEmail;
+        private System.Windows.Forms.TextBox tbxUpdateMentorSurname;
+        private System.Windows.Forms.TextBox tbxUpdateMentorName;
+        private System.Windows.Forms.RichTextBox rbxUpdateMentorBio;
+        private System.Windows.Forms.Button btnUpdateMentor;
+        private System.Windows.Forms.PictureBox pbxUpdateMentorPhoto;
+        private System.Windows.Forms.Label lblUpdateMentorBio;
+        private System.Windows.Forms.Label lblUpdateMentorEmail;
+        private System.Windows.Forms.Label lblUpdateMentorPhone;
+        private System.Windows.Forms.Label lblUpdateMentorSurname;
+        private System.Windows.Forms.Label lblUpdateMentorName;
+        private System.Windows.Forms.Label lblMentors;
+        private System.Windows.Forms.DataGridView dgvMentorsList;
+        private System.Windows.Forms.Label lblNewTeacherEducationPackage;
+        private System.Windows.Forms.ComboBox cbxNewTeacherEducationPackage;
+        private EducationProjectDataSet4 educationProjectDataSet4;
+        private System.Windows.Forms.BindingSource mentorsBindingSource;
+        private EducationProjectDataSet4TableAdapters.MentorsTableAdapter mentorsTableAdapter;
+        private System.Windows.Forms.Label lblNewMentorEducationPackage;
+        private System.Windows.Forms.ComboBox cbxNewMentorEducationPackage;
+        private System.Windows.Forms.DateTimePicker dtpUpdateGroupStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TeacherId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupTypeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupEndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupId;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacherPhotoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherBioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacherPhotoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacherIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorSurname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorBio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MentorPhoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

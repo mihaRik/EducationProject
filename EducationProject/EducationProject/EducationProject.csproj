@@ -132,6 +132,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationProjectDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EducationProjectDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EducationProjectDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +219,28 @@
     </None>
     <None Include="EducationProjectDataSet2.xss">
       <DependentUpon>EducationProjectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet3.xsc">
+      <DependentUpon>EducationProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet3.xss">
+      <DependentUpon>EducationProjectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet4.xsc">
+      <DependentUpon>EducationProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet4.xss">
+      <DependentUpon>EducationProjectDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
