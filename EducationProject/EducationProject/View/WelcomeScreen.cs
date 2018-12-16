@@ -22,6 +22,7 @@ namespace EducationProject
 
         public Form1()
         {
+            this.CenterToScreen();
             InitializeComponent();
         }
 
@@ -36,6 +37,7 @@ namespace EducationProject
                 if (tbxEmail.Text == "admin" && tbxPassword.Text == "admin")
                 {
                     AdminForm adminForm = new AdminForm();
+                    //adminForm.SetDesktopLocation(DesktopBounds.Width / 2, DesktopBounds.Height / 2);
                     adminForm.Show();
                 }
                 else
@@ -47,11 +49,27 @@ namespace EducationProject
                     }
                     UserTypes userType = db.UserTypes.ToList().Find(x => x.UserTypeId == user.UserTypeId);
 
-                    if (tbxPassword.Text == user.UserPassword && cbxUserType.SelectedItem.ToString() == userType.UserTypeName)
+                    if (tbxPassword.Text == user.UserPassword  && cbxUserType.SelectedItem.ToString()==userType.UserTypeName)
                     {
-                        Controller.Controller.user = user;
-                        StudentsForm studentsForm = new StudentsForm();
-                        studentsForm.Show();
+                        switch (cbxUserType.SelectedItem.ToString())
+                        {
+                            case "Student":
+                                Controller.Controller.user = user;
+                                StudentsForm studentsForm = new StudentsForm();
+                                //studentsForm.SetDesktopLocation(DesktopBounds.Width / 2, DesktopBounds.Height / 2);
+                                studentsForm.Show();
+                                break;
+
+                            case "Teacher":
+                                Controller.Controller.user = user;
+                                TeacherForm teacherForm = new TeacherForm();
+                                //teacherForm.SetDesktopLocation(DesktopBounds.Width / 2, DesktopBounds.Height / 2);
+                                teacherForm.Show();
+                                break;
+
+                            default:
+                                break;
+                        }
                     }
                     else
                     {
@@ -68,7 +86,7 @@ namespace EducationProject
             {
                 cbxUserType.Items.Add(userType.UserTypeName);
             }
-            cbxUserType.SelectedIndex = 1;
+            cbxUserType.SelectedIndex = 2;
         }
     }
 }

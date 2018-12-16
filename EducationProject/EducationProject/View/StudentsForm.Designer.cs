@@ -169,11 +169,11 @@
             this.lblGroupmateSurname = new System.Windows.Forms.Label();
             this.lblGroupmateNameValue = new System.Windows.Forms.Label();
             this.lblGroupmateName = new System.Windows.Forms.Label();
+            this.lblGroupmateInfo = new System.Windows.Forms.Label();
             this.pbxGroupmatePhoto = new System.Windows.Forms.PictureBox();
             this.tabLibrary = new System.Windows.Forms.TabPage();
             this.messagesTableAdapter = new EducationProject.EducationProjectDataSetTableAdapters.MessagesTableAdapter();
             this.messagesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblGroupmateInfo = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudentPhoto)).BeginInit();
@@ -1594,6 +1594,16 @@
             this.lblGroupmateName.TabIndex = 44;
             this.lblGroupmateName.Text = "Name :";
             // 
+            // lblGroupmateInfo
+            // 
+            this.lblGroupmateInfo.AutoSize = true;
+            this.lblGroupmateInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGroupmateInfo.Location = new System.Drawing.Point(120, 94);
+            this.lblGroupmateInfo.Name = "lblGroupmateInfo";
+            this.lblGroupmateInfo.Size = new System.Drawing.Size(51, 25);
+            this.lblGroupmateInfo.TabIndex = 43;
+            this.lblGroupmateInfo.Text = "Info";
+            // 
             // pbxGroupmatePhoto
             // 
             this.pbxGroupmatePhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxGroupmatePhoto.ErrorImage")));
@@ -1623,16 +1633,6 @@
             this.messagesBindingSource1.DataMember = "Messages";
             this.messagesBindingSource1.DataSource = this.educationProjectDataSet;
             // 
-            // lblGroupmateInfo
-            // 
-            this.lblGroupmateInfo.AutoSize = true;
-            this.lblGroupmateInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGroupmateInfo.Location = new System.Drawing.Point(120, 94);
-            this.lblGroupmateInfo.Name = "lblGroupmateInfo";
-            this.lblGroupmateInfo.Size = new System.Drawing.Size(51, 25);
-            this.lblGroupmateInfo.TabIndex = 43;
-            this.lblGroupmateInfo.Text = "Info";
-            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1643,6 +1643,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "StudentsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentsForm";
             this.Load += new System.EventHandler(this.StudentsForm_Load);
             this.tabControl.ResumeLayout(false);

@@ -66,7 +66,7 @@
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(121, 22);
             this.tbxEmail.TabIndex = 2;
-            this.tbxEmail.Text = "admin";
+            this.tbxEmail.Text = "samir@code.edu.az";
             // 
             // tbxPassword
             // 
@@ -76,7 +76,7 @@
             this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(121, 22);
             this.tbxPassword.TabIndex = 4;
-            this.tbxPassword.Text = "admin";
+            this.tbxPassword.Text = "10000hoursrule";
             // 
             // lblPassword
             // 

@@ -51,14 +51,8 @@ namespace EducationProject.View
             lblStudentSurnameValue.Text = stud.StudentSurname;
             lblStudentEmailValue.Text = stud.StudentEmail;
             string studentPassword = Controller.Controller.user.UserPassword;
-            string unvisiblePassword = studentPassword;
 
-            for (int i = 0; i < studentPassword.Length - 2; i++)
-            {
-                unvisiblePassword = unvisiblePassword.Replace(studentPassword[i], '*');
-            }
-
-            lblStudentPasswordValue.Text = unvisiblePassword;
+            lblStudentPasswordValue.Text = Controller.Controller.HidePassword(studentPassword);
             lblStudentPhoneValue.Text = stud.StudentPhone;
             lblStudentBirthDateValue.Text = stud.StudentBirthDate.ToString();
             lblStudentRegisterDateValue.Text = stud.StudentRegistrationDate.ToString();
@@ -91,6 +85,8 @@ namespace EducationProject.View
                 pbxStudentPhoto.Image = Image.FromFile(stud.StudentPhoto);
             }
         }
+
+       
 
         private void btnStudentChangePhoto_Click(object sender, EventArgs e)
         {

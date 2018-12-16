@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationProjectDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EducationProjectDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationProjectDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +158,12 @@
     </Compile>
     <Compile Include="View\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\WelcomeScreen.cs">
       <SubType>Form</SubType>
@@ -167,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
@@ -241,6 +255,17 @@
     </None>
     <None Include="EducationProjectDataSet4.xss">
       <DependentUpon>EducationProjectDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet5.xsc">
+      <DependentUpon>EducationProjectDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="EducationProjectDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EducationProjectDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EducationProjectDataSet5.xss">
+      <DependentUpon>EducationProjectDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

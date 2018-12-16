@@ -80,9 +80,18 @@
             this.educationProjectDataSet1 = new EducationProject.EducationProjectDataSet1();
             this.tabGroup = new System.Windows.Forms.TabPage();
             this.dgvGroupsList = new System.Windows.Forms.DataGridView();
+            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeacherId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MentorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.educationProjectDataSet3 = new EducationProject.EducationProjectDataSet3();
             this.gbxUpdateGroup = new System.Windows.Forms.GroupBox();
+            this.dtpUpdateGroupStartDate = new System.Windows.Forms.DateTimePicker();
             this.btnUpdateGroup = new System.Windows.Forms.Button();
             this.lblUpdateGroupStartDate = new System.Windows.Forms.Label();
             this.tbxUpdateGroupName = new System.Windows.Forms.TextBox();
@@ -159,6 +168,15 @@
             this.lblUpdateTeacherName = new System.Windows.Forms.Label();
             this.lblTeachers = new System.Windows.Forms.Label();
             this.dgvTeachersList = new System.Windows.Forms.DataGridView();
+            this.teacherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherBioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherPhotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teachersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.educationProjectDataSet2 = new EducationProject.EducationProjectDataSet2();
             this.tabMentor = new System.Windows.Forms.TabPage();
@@ -199,30 +217,6 @@
             this.lblUpdateMentorName = new System.Windows.Forms.Label();
             this.lblMentors = new System.Windows.Forms.Label();
             this.dgvMentorsList = new System.Windows.Forms.DataGridView();
-            this.mentorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.educationProjectDataSet4 = new EducationProject.EducationProjectDataSet4();
-            this.studentsTableAdapter = new EducationProject.EducationProjectDataSet1TableAdapters.StudentsTableAdapter();
-            this.teachersTableAdapter = new EducationProject.EducationProjectDataSet2TableAdapters.TeachersTableAdapter();
-            this.groupsTableAdapter = new EducationProject.EducationProjectDataSet3TableAdapters.GroupsTableAdapter();
-            this.mentorsTableAdapter = new EducationProject.EducationProjectDataSet4TableAdapters.MentorsTableAdapter();
-            this.dtpUpdateGroupStartDate = new System.Windows.Forms.DateTimePicker();
-            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TeacherId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MentorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherBioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherPhotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacherIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MentorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MentorSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MentorEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -232,6 +226,12 @@
             this.MentorPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mentorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSet4 = new EducationProject.EducationProjectDataSet4();
+            this.studentsTableAdapter = new EducationProject.EducationProjectDataSet1TableAdapters.StudentsTableAdapter();
+            this.teachersTableAdapter = new EducationProject.EducationProjectDataSet2TableAdapters.TeachersTableAdapter();
+            this.groupsTableAdapter = new EducationProject.EducationProjectDataSet3TableAdapters.GroupsTableAdapter();
+            this.mentorsTableAdapter = new EducationProject.EducationProjectDataSet4TableAdapters.MentorsTableAdapter();
             this.tabControlAdmin.SuspendLayout();
             this.tabStudent.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -785,6 +785,56 @@
             this.dgvGroupsList.TabIndex = 22;
             this.dgvGroupsList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupsList_CellClick);
             // 
+            // GroupName
+            // 
+            this.GroupName.DataPropertyName = "GroupName";
+            this.GroupName.HeaderText = "Group name";
+            this.GroupName.Name = "GroupName";
+            // 
+            // programIdDataGridViewTextBoxColumn1
+            // 
+            this.programIdDataGridViewTextBoxColumn1.DataPropertyName = "ProgramId";
+            this.programIdDataGridViewTextBoxColumn1.HeaderText = "Program id";
+            this.programIdDataGridViewTextBoxColumn1.Name = "programIdDataGridViewTextBoxColumn1";
+            // 
+            // TeacherId
+            // 
+            this.TeacherId.DataPropertyName = "TeacherId";
+            this.TeacherId.HeaderText = "Teacher id";
+            this.TeacherId.Name = "TeacherId";
+            // 
+            // MentorId
+            // 
+            this.MentorId.DataPropertyName = "MentorId";
+            this.MentorId.HeaderText = "Mentor id";
+            this.MentorId.Name = "MentorId";
+            // 
+            // GroupTypeId
+            // 
+            this.GroupTypeId.DataPropertyName = "GroupTypeId";
+            this.GroupTypeId.HeaderText = "Group type id";
+            this.GroupTypeId.Name = "GroupTypeId";
+            // 
+            // GroupStartDate
+            // 
+            this.GroupStartDate.DataPropertyName = "GroupStartDate";
+            this.GroupStartDate.HeaderText = "Group start date";
+            this.GroupStartDate.Name = "GroupStartDate";
+            // 
+            // GroupEndDate
+            // 
+            this.GroupEndDate.DataPropertyName = "GroupEndDate";
+            this.GroupEndDate.HeaderText = "Group end date";
+            this.GroupEndDate.Name = "GroupEndDate";
+            // 
+            // GroupId
+            // 
+            this.GroupId.DataPropertyName = "GroupId";
+            this.GroupId.HeaderText = "GroupId";
+            this.GroupId.Name = "GroupId";
+            this.GroupId.ReadOnly = true;
+            this.GroupId.Visible = false;
+            // 
             // groupsBindingSource
             // 
             this.groupsBindingSource.DataMember = "Groups";
@@ -817,6 +867,14 @@
             this.gbxUpdateGroup.TabIndex = 21;
             this.gbxUpdateGroup.TabStop = false;
             this.gbxUpdateGroup.Text = "Update group data";
+            // 
+            // dtpUpdateGroupStartDate
+            // 
+            this.dtpUpdateGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpUpdateGroupStartDate.Location = new System.Drawing.Point(137, 180);
+            this.dtpUpdateGroupStartDate.Name = "dtpUpdateGroupStartDate";
+            this.dtpUpdateGroupStartDate.Size = new System.Drawing.Size(280, 22);
+            this.dtpUpdateGroupStartDate.TabIndex = 24;
             // 
             // btnUpdateGroup
             // 
@@ -1609,6 +1667,64 @@
             this.dgvTeachersList.TabIndex = 28;
             this.dgvTeachersList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTeachersList_CellClick);
             // 
+            // teacherNameDataGridViewTextBoxColumn
+            // 
+            this.teacherNameDataGridViewTextBoxColumn.DataPropertyName = "TeacherName";
+            this.teacherNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.teacherNameDataGridViewTextBoxColumn.Name = "teacherNameDataGridViewTextBoxColumn";
+            // 
+            // teacherSurnameDataGridViewTextBoxColumn
+            // 
+            this.teacherSurnameDataGridViewTextBoxColumn.DataPropertyName = "TeacherSurname";
+            this.teacherSurnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.teacherSurnameDataGridViewTextBoxColumn.Name = "teacherSurnameDataGridViewTextBoxColumn";
+            // 
+            // teacherEmailDataGridViewTextBoxColumn
+            // 
+            this.teacherEmailDataGridViewTextBoxColumn.DataPropertyName = "TeacherEmail";
+            this.teacherEmailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.teacherEmailDataGridViewTextBoxColumn.Name = "teacherEmailDataGridViewTextBoxColumn";
+            // 
+            // teacherPhoneDataGridViewTextBoxColumn
+            // 
+            this.teacherPhoneDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhone";
+            this.teacherPhoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.teacherPhoneDataGridViewTextBoxColumn.Name = "teacherPhoneDataGridViewTextBoxColumn";
+            // 
+            // teacherBioDataGridViewTextBoxColumn
+            // 
+            this.teacherBioDataGridViewTextBoxColumn.DataPropertyName = "TeacherBio";
+            this.teacherBioDataGridViewTextBoxColumn.HeaderText = "Bio";
+            this.teacherBioDataGridViewTextBoxColumn.Name = "teacherBioDataGridViewTextBoxColumn";
+            // 
+            // teacherPhotoDataGridViewTextBoxColumn
+            // 
+            this.teacherPhotoDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhoto";
+            this.teacherPhotoDataGridViewTextBoxColumn.HeaderText = "Teacher photo";
+            this.teacherPhotoDataGridViewTextBoxColumn.Name = "teacherPhotoDataGridViewTextBoxColumn";
+            this.teacherPhotoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // programIdDataGridViewTextBoxColumn
+            // 
+            this.programIdDataGridViewTextBoxColumn.DataPropertyName = "ProgramId";
+            this.programIdDataGridViewTextBoxColumn.HeaderText = "Program id";
+            this.programIdDataGridViewTextBoxColumn.Name = "programIdDataGridViewTextBoxColumn";
+            // 
+            // teacherIdDataGridViewTextBoxColumn
+            // 
+            this.teacherIdDataGridViewTextBoxColumn.DataPropertyName = "TeacherId";
+            this.teacherIdDataGridViewTextBoxColumn.HeaderText = "TeacherId";
+            this.teacherIdDataGridViewTextBoxColumn.Name = "teacherIdDataGridViewTextBoxColumn";
+            this.teacherIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.teacherIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.Visible = false;
+            // 
             // teachersBindingSource
             // 
             this.teachersBindingSource.DataMember = "Teachers";
@@ -2040,148 +2156,6 @@
             this.dgvMentorsList.TabIndex = 34;
             this.dgvMentorsList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMentorsList_CellClick);
             // 
-            // mentorsBindingSource
-            // 
-            this.mentorsBindingSource.DataMember = "Mentors";
-            this.mentorsBindingSource.DataSource = this.educationProjectDataSet4;
-            // 
-            // educationProjectDataSet4
-            // 
-            this.educationProjectDataSet4.DataSetName = "EducationProjectDataSet4";
-            this.educationProjectDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // teachersTableAdapter
-            // 
-            this.teachersTableAdapter.ClearBeforeFill = true;
-            // 
-            // groupsTableAdapter
-            // 
-            this.groupsTableAdapter.ClearBeforeFill = true;
-            // 
-            // mentorsTableAdapter
-            // 
-            this.mentorsTableAdapter.ClearBeforeFill = true;
-            // 
-            // dtpUpdateGroupStartDate
-            // 
-            this.dtpUpdateGroupStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpUpdateGroupStartDate.Location = new System.Drawing.Point(137, 180);
-            this.dtpUpdateGroupStartDate.Name = "dtpUpdateGroupStartDate";
-            this.dtpUpdateGroupStartDate.Size = new System.Drawing.Size(280, 22);
-            this.dtpUpdateGroupStartDate.TabIndex = 24;
-            // 
-            // GroupName
-            // 
-            this.GroupName.DataPropertyName = "GroupName";
-            this.GroupName.HeaderText = "Group name";
-            this.GroupName.Name = "GroupName";
-            // 
-            // programIdDataGridViewTextBoxColumn1
-            // 
-            this.programIdDataGridViewTextBoxColumn1.DataPropertyName = "ProgramId";
-            this.programIdDataGridViewTextBoxColumn1.HeaderText = "Program id";
-            this.programIdDataGridViewTextBoxColumn1.Name = "programIdDataGridViewTextBoxColumn1";
-            // 
-            // TeacherId
-            // 
-            this.TeacherId.DataPropertyName = "TeacherId";
-            this.TeacherId.HeaderText = "Teacher id";
-            this.TeacherId.Name = "TeacherId";
-            // 
-            // MentorId
-            // 
-            this.MentorId.DataPropertyName = "MentorId";
-            this.MentorId.HeaderText = "Mentor id";
-            this.MentorId.Name = "MentorId";
-            // 
-            // GroupTypeId
-            // 
-            this.GroupTypeId.DataPropertyName = "GroupTypeId";
-            this.GroupTypeId.HeaderText = "Group type id";
-            this.GroupTypeId.Name = "GroupTypeId";
-            // 
-            // GroupStartDate
-            // 
-            this.GroupStartDate.DataPropertyName = "GroupStartDate";
-            this.GroupStartDate.HeaderText = "Group start date";
-            this.GroupStartDate.Name = "GroupStartDate";
-            // 
-            // GroupEndDate
-            // 
-            this.GroupEndDate.DataPropertyName = "GroupEndDate";
-            this.GroupEndDate.HeaderText = "Group end date";
-            this.GroupEndDate.Name = "GroupEndDate";
-            // 
-            // GroupId
-            // 
-            this.GroupId.DataPropertyName = "GroupId";
-            this.GroupId.HeaderText = "GroupId";
-            this.GroupId.Name = "GroupId";
-            this.GroupId.ReadOnly = true;
-            this.GroupId.Visible = false;
-            // 
-            // teacherNameDataGridViewTextBoxColumn
-            // 
-            this.teacherNameDataGridViewTextBoxColumn.DataPropertyName = "TeacherName";
-            this.teacherNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.teacherNameDataGridViewTextBoxColumn.Name = "teacherNameDataGridViewTextBoxColumn";
-            // 
-            // teacherSurnameDataGridViewTextBoxColumn
-            // 
-            this.teacherSurnameDataGridViewTextBoxColumn.DataPropertyName = "TeacherSurname";
-            this.teacherSurnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.teacherSurnameDataGridViewTextBoxColumn.Name = "teacherSurnameDataGridViewTextBoxColumn";
-            // 
-            // teacherEmailDataGridViewTextBoxColumn
-            // 
-            this.teacherEmailDataGridViewTextBoxColumn.DataPropertyName = "TeacherEmail";
-            this.teacherEmailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.teacherEmailDataGridViewTextBoxColumn.Name = "teacherEmailDataGridViewTextBoxColumn";
-            // 
-            // teacherPhoneDataGridViewTextBoxColumn
-            // 
-            this.teacherPhoneDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhone";
-            this.teacherPhoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.teacherPhoneDataGridViewTextBoxColumn.Name = "teacherPhoneDataGridViewTextBoxColumn";
-            // 
-            // teacherBioDataGridViewTextBoxColumn
-            // 
-            this.teacherBioDataGridViewTextBoxColumn.DataPropertyName = "TeacherBio";
-            this.teacherBioDataGridViewTextBoxColumn.HeaderText = "Bio";
-            this.teacherBioDataGridViewTextBoxColumn.Name = "teacherBioDataGridViewTextBoxColumn";
-            // 
-            // teacherPhotoDataGridViewTextBoxColumn
-            // 
-            this.teacherPhotoDataGridViewTextBoxColumn.DataPropertyName = "TeacherPhoto";
-            this.teacherPhotoDataGridViewTextBoxColumn.HeaderText = "Teacher photo";
-            this.teacherPhotoDataGridViewTextBoxColumn.Name = "teacherPhotoDataGridViewTextBoxColumn";
-            this.teacherPhotoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // programIdDataGridViewTextBoxColumn
-            // 
-            this.programIdDataGridViewTextBoxColumn.DataPropertyName = "ProgramId";
-            this.programIdDataGridViewTextBoxColumn.HeaderText = "Program id";
-            this.programIdDataGridViewTextBoxColumn.Name = "programIdDataGridViewTextBoxColumn";
-            // 
-            // teacherIdDataGridViewTextBoxColumn
-            // 
-            this.teacherIdDataGridViewTextBoxColumn.DataPropertyName = "TeacherId";
-            this.teacherIdDataGridViewTextBoxColumn.HeaderText = "TeacherId";
-            this.teacherIdDataGridViewTextBoxColumn.Name = "teacherIdDataGridViewTextBoxColumn";
-            this.teacherIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.teacherIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.Visible = false;
-            // 
             // MentorName
             // 
             this.MentorName.DataPropertyName = "MentorName";
@@ -2239,6 +2213,32 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // mentorsBindingSource
+            // 
+            this.mentorsBindingSource.DataMember = "Mentors";
+            this.mentorsBindingSource.DataSource = this.educationProjectDataSet4;
+            // 
+            // educationProjectDataSet4
+            // 
+            this.educationProjectDataSet4.DataSetName = "EducationProjectDataSet4";
+            this.educationProjectDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // teachersTableAdapter
+            // 
+            this.teachersTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupsTableAdapter
+            // 
+            this.groupsTableAdapter.ClearBeforeFill = true;
+            // 
+            // mentorsTableAdapter
+            // 
+            this.mentorsTableAdapter.ClearBeforeFill = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2249,6 +2249,7 @@
             this.MaximumSize = new System.Drawing.Size(1235, 580);
             this.MinimumSize = new System.Drawing.Size(1235, 580);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.tabControlAdmin.ResumeLayout(false);
