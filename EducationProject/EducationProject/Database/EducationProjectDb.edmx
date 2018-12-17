@@ -113,6 +113,7 @@
           <Property Name="TaskName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TaskSubject" Type="nvarchar(max)" />
           <Property Name="TaskBody" Type="nvarchar(max)" />
+          <Property Name="TaskCategory" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Teachers">
           <Key>
@@ -282,6 +283,18 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="task_to_category">
+          <End Role="EducationPackages" Type="Self.EducationPackages" Multiplicity="1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationPackages">
+              <PropertyRef Name="ProgramId" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="TaskCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="teachers_programid_educationpackages">
           <End Role="EducationPackages" Type="Self.EducationPackages" Multiplicity="1" />
           <End Role="Teachers" Type="Self.Teachers" Multiplicity="*" />
@@ -407,6 +420,10 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
             <End Role="Tasks" EntitySet="Tasks" />
             <End Role="StudentTasks" EntitySet="StudentTasks" />
           </AssociationSet>
+          <AssociationSet Name="task_to_category" Association="Self.task_to_category">
+            <End Role="EducationPackages" EntitySet="EducationPackages" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
           <AssociationSet Name="teachers_programid_educationpackages" Association="Self.teachers_programid_educationpackages">
             <End Role="EducationPackages" EntitySet="EducationPackages" />
             <End Role="Teachers" EntitySet="Teachers" />
@@ -434,6 +451,7 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <NavigationProperty Name="Mentors" Relationship="Self.mentors_programid_educationpackages" FromRole="EducationPackages" ToRole="Mentors" />
           <NavigationProperty Name="Teachers" Relationship="Self.teachers_programid_educationpackages" FromRole="EducationPackages" ToRole="Teachers" />
           <Property Name="ProgramDuration" Type="Int32" />
+          <NavigationProperty Name="Tasks" Relationship="EducationProjectModel.task_to_category" FromRole="EducationPackages" ToRole="Tasks" />
         </EntityType>
         <EntityType Name="GroupLessonTimes">
           <Key>
@@ -552,6 +570,8 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <Property Name="TaskSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TaskBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="StudentTasks" Relationship="Self.studenttasks_taskid_tasks" FromRole="Tasks" ToRole="StudentTasks" />
+          <Property Name="TaskCategory" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EducationPackages" Relationship="EducationProjectModel.task_to_category" FromRole="Tasks" ToRole="EducationPackages" />
         </EntityType>
         <EntityType Name="Teachers">
           <Key>
@@ -859,6 +879,10 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <AssociationSet Name="task_to_category" Association="EducationProjectModel.task_to_category">
+            <End Role="EducationPackages" EntitySet="EducationPackages" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -871,6 +895,18 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <Association Name="task_to_category">
+          <End Type="EducationProjectModel.EducationPackages" Role="EducationPackages" Multiplicity="1" />
+          <End Type="EducationProjectModel.Tasks" Role="Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationPackages">
+              <PropertyRef Name="ProgramId" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="TaskCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -989,6 +1025,7 @@ warning 6035: The relationship 'sender_to_user' has columns that are not part of
           <EntitySetMapping Name="Tasks">
             <EntityTypeMapping TypeName="EducationProjectModel.Tasks">
               <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="TaskCategory" ColumnName="TaskCategory" />
                 <ScalarProperty Name="TaskId" ColumnName="TaskId" />
                 <ScalarProperty Name="TaskName" ColumnName="TaskName" />
                 <ScalarProperty Name="TaskSubject" ColumnName="TaskSubject" />

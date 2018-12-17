@@ -24,8 +24,10 @@ namespace EducationProject.Database
         public string TaskName { get; set; }
         public string TaskSubject { get; set; }
         public string TaskBody { get; set; }
+        public int TaskCategory { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentTasks> StudentTasks { get; set; }
+        public virtual EducationPackages EducationPackages { get; set; }
     }
 }

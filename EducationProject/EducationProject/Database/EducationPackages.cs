@@ -20,6 +20,7 @@ namespace EducationProject.Database
             this.Groups = new HashSet<Groups>();
             this.Mentors = new HashSet<Mentors>();
             this.Teachers = new HashSet<Teachers>();
+            this.Tasks = new HashSet<Tasks>();
         }
     
         public int ProgramId { get; set; }
@@ -32,5 +33,7 @@ namespace EducationProject.Database
         public virtual ICollection<Mentors> Mentors { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teachers> Teachers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tasks> Tasks { get; set; }
     }
 }

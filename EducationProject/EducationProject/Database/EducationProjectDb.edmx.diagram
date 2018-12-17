@@ -32,6 +32,7 @@
         <AssociationConnector Association="EducationProjectModel.studenttasks_taskid_tasks" ManuallyRouted="false" />
         <AssociationConnector Association="EducationProjectModel.teachers_userid_users" ManuallyRouted="false" />
         <AssociationConnector Association="EducationProjectModel.users_usertypeid_usertypes" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.task_to_category" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

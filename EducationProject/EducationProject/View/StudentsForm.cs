@@ -120,16 +120,22 @@ namespace EducationProject.View
             switch (tabControl.SelectedIndex)
             {
                 case 1:
-                    foreach (StudentTasks studentTasks in studTask)
+                    List<StudentTasks> studentTasks = db.StudentTasks.Where(x => x.StudentId == stud.StudentId).ToList();
+
+                    List<Tasks> tasks = new List<Tasks>();
+
+                    foreach (var item in studentTasks)
                     {
-                        task = db.Tasks.ToList().Find(x => x.TaskId == studentTasks.TaskId);
-                        string taskName = task.TaskName;
-                        cbxSelectTask.Items.Add(taskName);
+                        tasks.AddRange(db.Tasks.Where(x => x.TaskId == item.TaskId));
                     }
+                    cbxSelectTask.DisplayMember = "TaskName";
+                    cbxSelectTask.ValueMember = "TaskId";
+                    cbxSelectTask.DataSource = tasks;
 
                     if (studTask.Where(x => x.TaskPoint != null).Count() != 0)
                     {
-                        double studAvgPoint = (double)studTask.Where(x => x.TaskPoint != null).Average(x => x.TaskPoint);
+                        double studAvgPoint = (double)studTask.Average(x => x.TaskPoint);
+                        lblStudentAvgPointValue.Text = studAvgPoint.ToString();
                     }
                     else
                     {
@@ -225,13 +231,8 @@ namespace EducationProject.View
 
         private void cbxSelectTask_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Tasks selectedTask = null;
-
-            foreach (StudentTasks task in studTask)
-            {
-                selectedTask = db.Tasks.ToList().Find(x => x.TaskId == task.TaskId &&
-                x.TaskName == cbxSelectTask.SelectedItem.ToString());
-            }
+            Tasks selectedTask = db.Tasks.ToList().Find(x => x.TaskId ==
+            (int)cbxSelectTask.SelectedValue);
 
             lblStudentTaskSubjectValue.Text = selectedTask.TaskSubject;
             rbxStudentTaskBody.Text = selectedTask.TaskBody;
