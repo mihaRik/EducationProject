@@ -86,8 +86,6 @@ namespace EducationProject.View
             }
         }
 
-       
-
         private void btnStudentChangePhoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -265,7 +263,7 @@ namespace EducationProject.View
 
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(tbxMessageReceiver.Text) || String.IsNullOrEmpty(rbxMessageInboxBody.Text))
+            if (String.IsNullOrEmpty(tbxMessageReceiver.Text) || String.IsNullOrEmpty(rbxMessagesBody.Text))
             {
                 MessageBox.Show("Please fill out all required inputs!");
             }

@@ -16,6 +16,8 @@ namespace EducationProject.View
     {
         private static EducationProjectEntities db = Controller.Controller.db;
         private static Teachers teacher;
+        private static List<Messages> teacherMessages;
+        private static List<Messages> teacherSentMessages;
 
         public TeacherForm()
         {
@@ -29,6 +31,8 @@ namespace EducationProject.View
 
         private void TeacherForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'educationProjectDataSet.Messages' table. You can move, or remove it, as needed.
+            this.messagesTableAdapter.Fill(this.educationProjectDataSet.Messages);
             // TODO: This line of code loads data into the 'educationProjectDataSet1.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.educationProjectDataSet1.Students);
             // TODO: This line of code loads data into the 'educationProjectDataSet5.Tasks' table. You can move, or remove it, as needed.
@@ -169,6 +173,52 @@ namespace EducationProject.View
                     }
                     break;
 
+                case 4:
+                    {
+                        cbxMentorsSelectMentor.DisplayMember = "MentorName";
+                        cbxMentorsSelectMentor.ValueMember = "MentorId";
+
+                        List<Groups> teacherGroups = db.Groups
+                            .Where(x => x.TeacherId == teacher.TeacherId).ToList();
+
+                        List<Mentors> teacherMentors = new List<Mentors>();
+
+                        foreach (Groups group in teacherGroups)
+                        {
+                            if (!teacherMentors.Exists(x => x.MentorId == group.MentorId))
+                            {
+                                teacherMentors.Add(db.Mentors
+                                    .ToList().Find(x => x.MentorId == group.MentorId));
+                            }
+                        }
+                        cbxMentorsSelectMentor.DataSource = teacherMentors;
+
+                    }
+                    break;
+
+                case 5:
+                    {
+                        teacherMessages = db.Messages
+                            .Where(x => x.ReceiverEmail == teacher.TeacherEmail).ToList();
+
+                        teacherSentMessages = db.Messages
+                            .Where(x => x.SenderEmail == teacher.TeacherEmail).ToList();
+
+                        dgvMessagesSent.DataSource = teacherSentMessages;
+                        dgvInbox.DataSource = teacherMessages;
+                    }
+                    break;
+
+                case 6:
+                    {
+                        cbxWorkmatesSelectTeacher.DisplayMember = "TeacherName";
+                        cbxWorkmatesSelectTeacher.ValueMember = "TeacherId";
+
+                        cbxWorkmatesSelectTeacher.DataSource = db.Teachers
+                            .Where(x => x.TeacherId != teacher.TeacherId).ToList();
+                    }
+                    break;
+
                 default:
                     break;
             }
@@ -205,7 +255,9 @@ namespace EducationProject.View
         private void dgvTasksList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = dgvTasksList.CurrentRow;
-            Tasks selectedTask = db.Tasks.ToList().Find(x => x.TaskId == (int)selectedRow.Cells[3].Value);
+            Tasks selectedTask = db.Tasks.ToList()
+                .Find(x => x.TaskId == (int)selectedRow.Cells[3].Value
+                && teacher.ProgramId==x.TaskCategory);
 
             tbxUpdateTaskName.Text = selectedTask.TaskName;
             tbxUpdateTaskSubject.Text = selectedTask.TaskSubject;
@@ -434,7 +486,7 @@ namespace EducationProject.View
                 .Find(x => x.GroupLessonTimeId == selectedGroupType.GroupLessonTimeId);
 
             tbxGroupsInfoGroupTime.Text = selectedGroupTime.GroupLessonTimeName.
-                Replace(selectedGroupType.GroupTypeName,"");
+                Replace(selectedGroupType.GroupTypeName, "");
 
             tbxGroupsInfoGroupMentor.Text = db.Mentors.ToList()
                 .Find(x => x.MentorId == selectedGroup.MentorId).MentorName;
@@ -467,6 +519,188 @@ namespace EducationProject.View
                 .Where(x => x.StudentName.Contains(tbxGroupsSearchByName.Text)).ToList();
 
             dgvGroupsStudentsList.DataSource = filteredStudents;
+        }
+
+        private void cbxMentorsSelectMentor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Mentors selectedMentor = db.Mentors.ToList()
+                .Find(x => x.MentorId == (int)cbxMentorsSelectMentor.SelectedValue);
+
+            lblMentorsNameValue.Text = selectedMentor.MentorName;
+            lblMentorsSurnameValue.Text = selectedMentor.MentorSurname;
+            lblMentorsEmailValue.Text = selectedMentor.MentorEmail;
+            lblMentorsPhoneValue.Text = selectedMentor.MentorPhone;
+
+            if (selectedMentor.MentorBio != null)
+            {
+                rbxMentorsBioValue.Text = selectedMentor.MentorBio;
+            }
+            else
+            {
+                rbxMentorsBioValue.Text = "No info...";
+            }
+
+            if (selectedMentor.MentorPhoto != null)
+            {
+                pbxMentorsPhoto.Image = Image.FromFile(selectedMentor.MentorPhoto);
+            }
+        }
+
+        private void btnSendMessage_Click_1(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tbxMessageReceiver.Text) || String.IsNullOrEmpty(rbxMessagesBody.Text))
+            {
+                MessageBox.Show("Please fill out all required inputs!");
+            }
+            else
+            {
+                if (db.Users.ToList().Exists(x => x.UserEmail == tbxMessageReceiver.Text))
+                {
+                    Messages msg = new Messages()
+                    {
+                        SenderEmail = teacher.TeacherEmail,
+                        ReceiverEmail = tbxMessageReceiver.Text,
+                        MessageSubject = tbxMessageSubject.Text,
+                        MessageSendTime = DateTime.Now,
+                        MessageBody = rbxMessagesBody.Text,
+                    };
+                    db.Messages.Add(msg);
+                    db.SaveChanges();
+                    MessageBox.Show("Message sent!");
+                }
+                else
+                {
+                    MessageBox.Show("Check receiver email!");
+                }
+            }
+        }
+
+        private void dgvInbox_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblMessageInboxSenderValue.Text = dgvInbox.CurrentRow.Cells[0].Value.ToString();
+            lblMessageInboxSubjectValue.Text = dgvInbox.CurrentRow.Cells[2].Value.ToString();
+            rbxMessageInboxBody.Text = dgvInbox.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void dgvMessagesSent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblMessagesSentReceiverValue.Text = dgvMessagesSent.CurrentRow.Cells[0].Value.ToString();
+            lblMessagesSentSubjectValue.Text = dgvMessagesSent.CurrentRow.Cells[2].Value.ToString();
+            rbxMessagesSent.Text = dgvMessagesSent.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnSendToTeacher_Click(object sender, EventArgs e)
+        {
+            ComboBox teachersList = new ComboBox()
+            {
+                Left = tbxMessageReceiver.Left,
+                Top = tbxMessageReceiver.Top,
+                Width = tbxMessageReceiver.Width
+            };
+
+            tbxMessageReceiver.Hide();
+            tabMessagesSendTo.Controls.Add(teachersList);
+
+            teachersList.DisplayMember = "TeacherName";
+            teachersList.ValueMember = "TeacherEmail";
+            teachersList.DataSource = db.Teachers.Where(x=>x.TeacherId!=teacher.TeacherId).ToList();
+
+            teachersList.SelectedValueChanged += TeachersList_SelectedValueChanged;
+        }
+
+        private void TeachersList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            SetTextboxOfReceiver(sender);
+        }
+
+        private void SetTextboxOfReceiver(object sender)
+        {
+            ComboBox comboBox = (ComboBox)sender as ComboBox;
+            tbxMessageReceiver.Text = (string)comboBox.SelectedValue;
+        }
+
+        private void btnSendToMentor_Click(object sender, EventArgs e)
+        {
+            ComboBox mentorsList = new ComboBox()
+            {
+                Left = tbxMessageReceiver.Left,
+                Top = tbxMessageReceiver.Top,
+                Width = tbxMessageReceiver.Width
+            };
+
+            tbxMessageReceiver.Hide();
+            tabMessagesSendTo.Controls.Add(mentorsList);
+
+            mentorsList.DisplayMember = "MentorName";
+            mentorsList.ValueMember = "MentorEmail";
+
+            mentorsList.DataSource = db.Mentors.ToList();
+
+            mentorsList.SelectedValueChanged += MentorsList_SelectedValueChanged;
+        }
+
+        private void MentorsList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            SetTextboxOfReceiver(sender);
+        }
+
+        private void btnSendToStudents_Click(object sender, EventArgs e)
+        {
+            ComboBox studentsList = new ComboBox()
+            {
+                Left = tbxMessageReceiver.Left,
+                Top = tbxMessageReceiver.Top,
+                Width = tbxMessageReceiver.Width
+            };
+
+            tbxMessageReceiver.Hide();
+            tabMessagesSendTo.Controls.Add(studentsList);
+
+            studentsList.DisplayMember = "StudentName";
+            studentsList.ValueMember = "StudentEmail";
+
+            List<Groups> teacherGroups = db.Groups.Where(x => x.TeacherId == teacher.TeacherId).ToList();
+
+            List<Students> teacherStudents = new List<Students>();
+
+            foreach (Groups group in teacherGroups)
+            {
+                teacherStudents.AddRange(db.Students.Where(x => x.GroupId == group.GroupId));
+            }
+
+            studentsList.DataSource = teacherStudents;
+
+            studentsList.SelectedValueChanged += StudentsList_SelectedValueChanged;
+        }
+
+        private void StudentsList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            SetTextboxOfReceiver(sender);
+        }
+
+        private void cbxWorkmatesSelectTeacher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Teachers selectedTeacher = db.Teachers.ToList()
+                .Find(x => x.TeacherId == (int)cbxWorkmatesSelectTeacher.SelectedValue);
+
+            lblWorkmatesTeacherNameValue.Text = selectedTeacher.TeacherName;
+            lblWorkmatesTeacherSurnameValue.Text = selectedTeacher.TeacherSurname;
+            lblWorkmatesTeacherEmailValue.Text = selectedTeacher.TeacherEmail;
+            lblWorkmatesTeacherPhoneValue.Text = selectedTeacher.TeacherPhone;
+
+            if (selectedTeacher.TeacherBio != null)
+            {
+                rbxWorkmatesTeacherBioValue.Text = selectedTeacher.TeacherBio;
+            }
+            else
+            {
+                rbxWorkmatesTeacherBioValue.Text = "No info...";
+            }
+
+            if (selectedTeacher.TeacherPhoto != null)
+            {
+                pbxWorkmatesTeacherPhoto.Image = Image.FromFile(selectedTeacher.TeacherPhoto);
+            }
         }
     }
 }

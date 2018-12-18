@@ -1,6 +1,6 @@
 ﻿namespace EducationProject.View
 {
-    partial class TeacherForm
+    partial class MentorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
-            this.tabControlTeacher = new System.Windows.Forms.TabControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MentorForm));
+            this.tabControlMentor = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
             this.btnSaveChangePhone = new System.Windows.Forms.Button();
             this.btnSaveChangePassword = new System.Windows.Forms.Button();
@@ -54,22 +54,12 @@
             this.pbxTeacherPhoto = new System.Windows.Forms.PictureBox();
             this.tabTask = new System.Windows.Forms.TabPage();
             this.gbxUpdateTask = new System.Windows.Forms.GroupBox();
-            this.btnRemoveTask = new System.Windows.Forms.Button();
-            this.btnUpdateTask = new System.Windows.Forms.Button();
             this.rbxUpdateTaskBody = new System.Windows.Forms.RichTextBox();
             this.label1lblUpdateTaskBody = new System.Windows.Forms.Label();
             this.tbxUpdateTaskSubject = new System.Windows.Forms.TextBox();
             this.lblUpdateTaskSubject = new System.Windows.Forms.Label();
             this.tbxUpdateTaskName = new System.Windows.Forms.TextBox();
             this.lblUpdateTaskName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAddTask = new System.Windows.Forms.Button();
-            this.rbxAddTaskBody = new System.Windows.Forms.RichTextBox();
-            this.lblAddTaskBody = new System.Windows.Forms.Label();
-            this.tbxAddTaskSubject = new System.Windows.Forms.TextBox();
-            this.lblAddTaskSubject = new System.Windows.Forms.Label();
-            this.tbxAddTaskName = new System.Windows.Forms.TextBox();
-            this.lblAddTaskName = new System.Windows.Forms.Label();
             this.dgvTasksList = new System.Windows.Forms.DataGridView();
             this.taskNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taskSubjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,46 +68,6 @@
             this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.educationProjectDataSet5 = new EducationProject.EducationProjectDataSet5();
             this.lblTasks = new System.Windows.Forms.Label();
-            this.tabAssignTask = new System.Windows.Forms.TabPage();
-            this.gbxTaskPoint = new System.Windows.Forms.GroupBox();
-            this.btnAssignPoint = new System.Windows.Forms.Button();
-            this.tbxSelectedStudentPoint = new System.Windows.Forms.TextBox();
-            this.dtpSelectedStudentTaskEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpSelectedStudentTaskStartDate = new System.Windows.Forms.DateTimePicker();
-            this.lblSelectedStudentTaskPoint = new System.Windows.Forms.Label();
-            this.lblSelectedStudentTaskEndDate = new System.Windows.Forms.Label();
-            this.lblSelectedStudentTaskStartDate = new System.Windows.Forms.Label();
-            this.cbxSelectStudentForPoint = new System.Windows.Forms.ComboBox();
-            this.cbxSelectTaskPoint = new System.Windows.Forms.ComboBox();
-            this.lblSelectTaskPoint = new System.Windows.Forms.Label();
-            this.lblSelectedStudentsForPoints = new System.Windows.Forms.Label();
-            this.gbxAssignedTasksToStudents = new System.Windows.Forms.GroupBox();
-            this.lbxSelectedStudentFromAssignedTasks = new System.Windows.Forms.ListBox();
-            this.cbxSelectSelectedAssignedTaskToStudents = new System.Windows.Forms.ComboBox();
-            this.lblSelectAssignedTaskToStudents = new System.Windows.Forms.Label();
-            this.lblSelectedStudentsFromAssignedTasks = new System.Windows.Forms.Label();
-            this.gbxAssignTaskToStudents = new System.Windows.Forms.GroupBox();
-            this.btnShowTeacherAllStudents = new System.Windows.Forms.Button();
-            this.lblAssignTaskToStidentsSelectEndDate = new System.Windows.Forms.Label();
-            this.chbxSelectStudent = new System.Windows.Forms.CheckedListBox();
-            this.lblAssignTaskToStidentsSelectStartDate = new System.Windows.Forms.Label();
-            this.dtpAssignTaskToStudentsEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpAssignTaskToStudentsStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnAssignTaskToStudents = new System.Windows.Forms.Button();
-            this.cbxAssignTaskToStudentsSelectTask = new System.Windows.Forms.ComboBox();
-            this.lblAssignTaskToStidentsSelectTask = new System.Windows.Forms.Label();
-            this.cbxAssignTaskToStudentsSelectGroup = new System.Windows.Forms.ComboBox();
-            this.lblAssignTaskToStidentsSelectGroup = new System.Windows.Forms.Label();
-            this.gbxAssignTaskToGroup = new System.Windows.Forms.GroupBox();
-            this.lblTaskEndDate = new System.Windows.Forms.Label();
-            this.lblTaskStartDate = new System.Windows.Forms.Label();
-            this.dtpTaskEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpTaskStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnAssginTask = new System.Windows.Forms.Button();
-            this.cbxSelectTask = new System.Windows.Forms.ComboBox();
-            this.lblSelectTask = new System.Windows.Forms.Label();
-            this.cbxSelectGroup = new System.Windows.Forms.ComboBox();
-            this.lblSelectGroup = new System.Windows.Forms.Label();
             this.tabGroups = new System.Windows.Forms.TabPage();
             this.btnGoupsShowAllStudents = new System.Windows.Forms.Button();
             this.tbxGroupsSearchByName = new System.Windows.Forms.TextBox();
@@ -133,6 +83,7 @@
             this.StudentBio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.educationProjectDataSet1 = new EducationProject.EducationProjectDataSet1();
             this.gbxGroupsInfo = new System.Windows.Forms.GroupBox();
@@ -146,22 +97,6 @@
             this.lblGroupsInfoName = new System.Windows.Forms.Label();
             this.cbxGroupsSelectGroup = new System.Windows.Forms.ComboBox();
             this.lblGroupsSelectGroup = new System.Windows.Forms.Label();
-            this.tabMentorInfo = new System.Windows.Forms.TabPage();
-            this.cbxMentorsSelectMentor = new System.Windows.Forms.ComboBox();
-            this.lblMentorsSelectMentor = new System.Windows.Forms.Label();
-            this.lblMentors = new System.Windows.Forms.Label();
-            this.lblMentorsPhoneValue = new System.Windows.Forms.Label();
-            this.rbxMentorsBioValue = new System.Windows.Forms.RichTextBox();
-            this.lblMentorsBio = new System.Windows.Forms.Label();
-            this.lblMentorsPhone = new System.Windows.Forms.Label();
-            this.lblMentorsEmailValue = new System.Windows.Forms.Label();
-            this.lblMentorsEmail = new System.Windows.Forms.Label();
-            this.lblMentorsSurnameValue = new System.Windows.Forms.Label();
-            this.lblMentorsSurname = new System.Windows.Forms.Label();
-            this.lblMentorsNameValue = new System.Windows.Forms.Label();
-            this.lblMentorsName = new System.Windows.Forms.Label();
-            this.lblMentorsInfo = new System.Windows.Forms.Label();
-            this.pbxMentorsPhoto = new System.Windows.Forms.PictureBox();
             this.tabMessages = new System.Windows.Forms.TabPage();
             this.tabControllMessages = new System.Windows.Forms.TabControl();
             this.tabMessagesSendTo = new System.Windows.Forms.TabPage();
@@ -200,6 +135,7 @@
             this.senderEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messageIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messagesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.educationProjectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rbxMessagesSent = new System.Windows.Forms.RichTextBox();
             this.lblMessagesSentBody = new System.Windows.Forms.Label();
             this.lblMessagesSentSubjectValue = new System.Windows.Forms.Label();
@@ -207,6 +143,21 @@
             this.lblMessagesSentReceiverValue = new System.Windows.Forms.Label();
             this.lblMessagesSentReceiver = new System.Windows.Forms.Label();
             this.tabWorkMates = new System.Windows.Forms.TabPage();
+            this.cbxWorkMatesSelectMentor = new System.Windows.Forms.ComboBox();
+            this.lblWorkMatesSelectMentor = new System.Windows.Forms.Label();
+            this.lblWorkmatesMentors = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorPhoneValue = new System.Windows.Forms.Label();
+            this.rbxWorkMatesMentorBioValue = new System.Windows.Forms.RichTextBox();
+            this.lblWorkMatesMentorBio = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorPhone = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorEmailValue = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorEmail = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorSurnameValue = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorSurname = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorNameValue = new System.Windows.Forms.Label();
+            this.lblWorkMatesMentorName = new System.Windows.Forms.Label();
+            this.lblWorkmatesMentorInfo = new System.Windows.Forms.Label();
+            this.pbxWorkMatesMentorPhoto = new System.Windows.Forms.PictureBox();
             this.cbxWorkmatesSelectTeacher = new System.Windows.Forms.ComboBox();
             this.lblWorkmatesSelectTeacher = new System.Windows.Forms.Label();
             this.lblWorkmatesTeachers = new System.Windows.Forms.Label();
@@ -224,32 +175,21 @@
             this.pbxWorkmatesTeacherPhoto = new System.Windows.Forms.PictureBox();
             this.tabLibrary = new System.Windows.Forms.TabPage();
             this.tasksTableAdapter = new EducationProject.EducationProjectDataSet5TableAdapters.TasksTableAdapter();
-            this.groupsTableAdapter1 = new EducationProject.EducationProjectDataSet3TableAdapters.GroupsTableAdapter();
-            this.educationProjectDataSet3 = new EducationProject.EducationProjectDataSet3();
-            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentsTableAdapter = new EducationProject.EducationProjectDataSet1TableAdapters.StudentsTableAdapter();
             this.messagesTableAdapter = new EducationProject.EducationProjectDataSetTableAdapters.MessagesTableAdapter();
-            this.tabControlTeacher.SuspendLayout();
+            this.tabControlMentor.SuspendLayout();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeacherPhoto)).BeginInit();
             this.tabTask.SuspendLayout();
             this.gbxUpdateTask.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasksList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet5)).BeginInit();
-            this.tabAssignTask.SuspendLayout();
-            this.gbxTaskPoint.SuspendLayout();
-            this.gbxAssignedTasksToStudents.SuspendLayout();
-            this.gbxAssignTaskToStudents.SuspendLayout();
-            this.gbxAssignTaskToGroup.SuspendLayout();
             this.tabGroups.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupsStudentsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet1)).BeginInit();
             this.gbxGroupsInfo.SuspendLayout();
-            this.tabMentorInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMentorsPhoto)).BeginInit();
             this.tabMessages.SuspendLayout();
             this.tabControllMessages.SuspendLayout();
             this.tabMessagesSendTo.SuspendLayout();
@@ -260,28 +200,26 @@
             this.tabMessagesSent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMessagesSent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSetBindingSource)).BeginInit();
             this.tabWorkMates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWorkMatesMentorPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxWorkmatesTeacherPhoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControlTeacher
+            // tabControlMentor
             // 
-            this.tabControlTeacher.Controls.Add(this.tabInfo);
-            this.tabControlTeacher.Controls.Add(this.tabTask);
-            this.tabControlTeacher.Controls.Add(this.tabAssignTask);
-            this.tabControlTeacher.Controls.Add(this.tabGroups);
-            this.tabControlTeacher.Controls.Add(this.tabMentorInfo);
-            this.tabControlTeacher.Controls.Add(this.tabMessages);
-            this.tabControlTeacher.Controls.Add(this.tabWorkMates);
-            this.tabControlTeacher.Controls.Add(this.tabLibrary);
-            this.tabControlTeacher.Location = new System.Drawing.Point(0, 0);
-            this.tabControlTeacher.Name = "tabControlTeacher";
-            this.tabControlTeacher.SelectedIndex = 0;
-            this.tabControlTeacher.Size = new System.Drawing.Size(804, 455);
-            this.tabControlTeacher.TabIndex = 0;
-            this.tabControlTeacher.SelectedIndexChanged += new System.EventHandler(this.tabControlTeacher_SelectedIndexChanged);
+            this.tabControlMentor.Controls.Add(this.tabInfo);
+            this.tabControlMentor.Controls.Add(this.tabTask);
+            this.tabControlMentor.Controls.Add(this.tabGroups);
+            this.tabControlMentor.Controls.Add(this.tabMessages);
+            this.tabControlMentor.Controls.Add(this.tabWorkMates);
+            this.tabControlMentor.Controls.Add(this.tabLibrary);
+            this.tabControlMentor.Location = new System.Drawing.Point(-2, -2);
+            this.tabControlMentor.Name = "tabControlMentor";
+            this.tabControlMentor.SelectedIndex = 0;
+            this.tabControlMentor.Size = new System.Drawing.Size(804, 455);
+            this.tabControlMentor.TabIndex = 1;
+            this.tabControlMentor.SelectedIndexChanged += new System.EventHandler(this.tabControlTeacher_SelectedIndexChanged);
             // 
             // tabInfo
             // 
@@ -512,7 +450,6 @@
             // tabTask
             // 
             this.tabTask.Controls.Add(this.gbxUpdateTask);
-            this.tabTask.Controls.Add(this.groupBox1);
             this.tabTask.Controls.Add(this.dgvTasksList);
             this.tabTask.Controls.Add(this.lblTasks);
             this.tabTask.Location = new System.Drawing.Point(4, 22);
@@ -525,8 +462,6 @@
             // 
             // gbxUpdateTask
             // 
-            this.gbxUpdateTask.Controls.Add(this.btnRemoveTask);
-            this.gbxUpdateTask.Controls.Add(this.btnUpdateTask);
             this.gbxUpdateTask.Controls.Add(this.rbxUpdateTaskBody);
             this.gbxUpdateTask.Controls.Add(this.label1lblUpdateTaskBody);
             this.gbxUpdateTask.Controls.Add(this.tbxUpdateTaskSubject);
@@ -534,45 +469,20 @@
             this.gbxUpdateTask.Controls.Add(this.tbxUpdateTaskName);
             this.gbxUpdateTask.Controls.Add(this.lblUpdateTaskName);
             this.gbxUpdateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxUpdateTask.Location = new System.Drawing.Point(406, 202);
+            this.gbxUpdateTask.Location = new System.Drawing.Point(14, 204);
             this.gbxUpdateTask.Name = "gbxUpdateTask";
             this.gbxUpdateTask.Size = new System.Drawing.Size(378, 214);
             this.gbxUpdateTask.TabIndex = 8;
             this.gbxUpdateTask.TabStop = false;
-            this.gbxUpdateTask.Text = "Update task";
-            // 
-            // btnRemoveTask
-            // 
-            this.btnRemoveTask.BackColor = System.Drawing.Color.Red;
-            this.btnRemoveTask.Enabled = false;
-            this.btnRemoveTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRemoveTask.Location = new System.Drawing.Point(216, 182);
-            this.btnRemoveTask.Name = "btnRemoveTask";
-            this.btnRemoveTask.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveTask.TabIndex = 8;
-            this.btnRemoveTask.Text = "Remove task";
-            this.btnRemoveTask.UseVisualStyleBackColor = false;
-            this.btnRemoveTask.Click += new System.EventHandler(this.btnRemoveTask_Click);
-            // 
-            // btnUpdateTask
-            // 
-            this.btnUpdateTask.Enabled = false;
-            this.btnUpdateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdateTask.Location = new System.Drawing.Point(297, 182);
-            this.btnUpdateTask.Name = "btnUpdateTask";
-            this.btnUpdateTask.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdateTask.TabIndex = 7;
-            this.btnUpdateTask.Text = "Update task";
-            this.btnUpdateTask.UseVisualStyleBackColor = true;
-            this.btnUpdateTask.Click += new System.EventHandler(this.btnUpdateTask_Click);
+            this.gbxUpdateTask.Text = "Selected task";
             // 
             // rbxUpdateTaskBody
             // 
             this.rbxUpdateTaskBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rbxUpdateTaskBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbxUpdateTaskBody.Location = new System.Drawing.Point(118, 80);
+            this.rbxUpdateTaskBody.Location = new System.Drawing.Point(118, 98);
             this.rbxUpdateTaskBody.Name = "rbxUpdateTaskBody";
+            this.rbxUpdateTaskBody.ReadOnly = true;
             this.rbxUpdateTaskBody.Size = new System.Drawing.Size(254, 96);
             this.rbxUpdateTaskBody.TabIndex = 6;
             this.rbxUpdateTaskBody.Text = "";
@@ -581,7 +491,7 @@
             // 
             this.label1lblUpdateTaskBody.AutoSize = true;
             this.label1lblUpdateTaskBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1lblUpdateTaskBody.Location = new System.Drawing.Point(6, 83);
+            this.label1lblUpdateTaskBody.Location = new System.Drawing.Point(6, 101);
             this.label1lblUpdateTaskBody.Name = "label1lblUpdateTaskBody";
             this.label1lblUpdateTaskBody.Size = new System.Drawing.Size(73, 16);
             this.label1lblUpdateTaskBody.TabIndex = 4;
@@ -590,8 +500,9 @@
             // tbxUpdateTaskSubject
             // 
             this.tbxUpdateTaskSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxUpdateTaskSubject.Location = new System.Drawing.Point(118, 52);
+            this.tbxUpdateTaskSubject.Location = new System.Drawing.Point(118, 70);
             this.tbxUpdateTaskSubject.Name = "tbxUpdateTaskSubject";
+            this.tbxUpdateTaskSubject.ReadOnly = true;
             this.tbxUpdateTaskSubject.Size = new System.Drawing.Size(254, 22);
             this.tbxUpdateTaskSubject.TabIndex = 3;
             // 
@@ -599,7 +510,7 @@
             // 
             this.lblUpdateTaskSubject.AutoSize = true;
             this.lblUpdateTaskSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUpdateTaskSubject.Location = new System.Drawing.Point(6, 55);
+            this.lblUpdateTaskSubject.Location = new System.Drawing.Point(6, 73);
             this.lblUpdateTaskSubject.Name = "lblUpdateTaskSubject";
             this.lblUpdateTaskSubject.Size = new System.Drawing.Size(85, 16);
             this.lblUpdateTaskSubject.TabIndex = 2;
@@ -608,8 +519,9 @@
             // tbxUpdateTaskName
             // 
             this.tbxUpdateTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxUpdateTaskName.Location = new System.Drawing.Point(118, 24);
+            this.tbxUpdateTaskName.Location = new System.Drawing.Point(118, 42);
             this.tbxUpdateTaskName.Name = "tbxUpdateTaskName";
+            this.tbxUpdateTaskName.ReadOnly = true;
             this.tbxUpdateTaskName.Size = new System.Drawing.Size(254, 22);
             this.tbxUpdateTaskName.TabIndex = 1;
             // 
@@ -617,95 +529,11 @@
             // 
             this.lblUpdateTaskName.AutoSize = true;
             this.lblUpdateTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUpdateTaskName.Location = new System.Drawing.Point(6, 27);
+            this.lblUpdateTaskName.Location = new System.Drawing.Point(6, 45);
             this.lblUpdateTaskName.Name = "lblUpdateTaskName";
             this.lblUpdateTaskName.Size = new System.Drawing.Size(76, 16);
             this.lblUpdateTaskName.TabIndex = 0;
             this.lblUpdateTaskName.Text = "Task name";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnAddTask);
-            this.groupBox1.Controls.Add(this.rbxAddTaskBody);
-            this.groupBox1.Controls.Add(this.lblAddTaskBody);
-            this.groupBox1.Controls.Add(this.tbxAddTaskSubject);
-            this.groupBox1.Controls.Add(this.lblAddTaskSubject);
-            this.groupBox1.Controls.Add(this.tbxAddTaskName);
-            this.groupBox1.Controls.Add(this.lblAddTaskName);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 202);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 214);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add task";
-            // 
-            // btnAddTask
-            // 
-            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddTask.Location = new System.Drawing.Point(310, 182);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(75, 23);
-            this.btnAddTask.TabIndex = 7;
-            this.btnAddTask.Text = "Add task";
-            this.btnAddTask.UseVisualStyleBackColor = true;
-            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
-            // 
-            // rbxAddTaskBody
-            // 
-            this.rbxAddTaskBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rbxAddTaskBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbxAddTaskBody.Location = new System.Drawing.Point(118, 80);
-            this.rbxAddTaskBody.Name = "rbxAddTaskBody";
-            this.rbxAddTaskBody.Size = new System.Drawing.Size(267, 96);
-            this.rbxAddTaskBody.TabIndex = 6;
-            this.rbxAddTaskBody.Text = "";
-            // 
-            // lblAddTaskBody
-            // 
-            this.lblAddTaskBody.AutoSize = true;
-            this.lblAddTaskBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddTaskBody.Location = new System.Drawing.Point(6, 83);
-            this.lblAddTaskBody.Name = "lblAddTaskBody";
-            this.lblAddTaskBody.Size = new System.Drawing.Size(73, 16);
-            this.lblAddTaskBody.TabIndex = 4;
-            this.lblAddTaskBody.Text = "Task body";
-            // 
-            // tbxAddTaskSubject
-            // 
-            this.tbxAddTaskSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxAddTaskSubject.Location = new System.Drawing.Point(118, 52);
-            this.tbxAddTaskSubject.Name = "tbxAddTaskSubject";
-            this.tbxAddTaskSubject.Size = new System.Drawing.Size(267, 22);
-            this.tbxAddTaskSubject.TabIndex = 3;
-            // 
-            // lblAddTaskSubject
-            // 
-            this.lblAddTaskSubject.AutoSize = true;
-            this.lblAddTaskSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddTaskSubject.Location = new System.Drawing.Point(6, 55);
-            this.lblAddTaskSubject.Name = "lblAddTaskSubject";
-            this.lblAddTaskSubject.Size = new System.Drawing.Size(85, 16);
-            this.lblAddTaskSubject.TabIndex = 2;
-            this.lblAddTaskSubject.Text = "Task subject";
-            // 
-            // tbxAddTaskName
-            // 
-            this.tbxAddTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxAddTaskName.Location = new System.Drawing.Point(118, 24);
-            this.tbxAddTaskName.Name = "tbxAddTaskName";
-            this.tbxAddTaskName.Size = new System.Drawing.Size(267, 22);
-            this.tbxAddTaskName.TabIndex = 1;
-            // 
-            // lblAddTaskName
-            // 
-            this.lblAddTaskName.AutoSize = true;
-            this.lblAddTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAddTaskName.Location = new System.Drawing.Point(6, 27);
-            this.lblAddTaskName.Name = "lblAddTaskName";
-            this.lblAddTaskName.Size = new System.Drawing.Size(76, 16);
-            this.lblAddTaskName.TabIndex = 0;
-            this.lblAddTaskName.Text = "Task name";
             // 
             // dgvTasksList
             // 
@@ -769,436 +597,6 @@
             this.lblTasks.Size = new System.Drawing.Size(75, 25);
             this.lblTasks.TabIndex = 0;
             this.lblTasks.Text = "Tasks";
-            // 
-            // tabAssignTask
-            // 
-            this.tabAssignTask.Controls.Add(this.gbxTaskPoint);
-            this.tabAssignTask.Controls.Add(this.gbxAssignedTasksToStudents);
-            this.tabAssignTask.Controls.Add(this.gbxAssignTaskToStudents);
-            this.tabAssignTask.Controls.Add(this.gbxAssignTaskToGroup);
-            this.tabAssignTask.Location = new System.Drawing.Point(4, 22);
-            this.tabAssignTask.Name = "tabAssignTask";
-            this.tabAssignTask.Size = new System.Drawing.Size(796, 429);
-            this.tabAssignTask.TabIndex = 2;
-            this.tabAssignTask.Text = "Assign task";
-            this.tabAssignTask.UseVisualStyleBackColor = true;
-            // 
-            // gbxTaskPoint
-            // 
-            this.gbxTaskPoint.Controls.Add(this.btnAssignPoint);
-            this.gbxTaskPoint.Controls.Add(this.tbxSelectedStudentPoint);
-            this.gbxTaskPoint.Controls.Add(this.dtpSelectedStudentTaskEndDate);
-            this.gbxTaskPoint.Controls.Add(this.dtpSelectedStudentTaskStartDate);
-            this.gbxTaskPoint.Controls.Add(this.lblSelectedStudentTaskPoint);
-            this.gbxTaskPoint.Controls.Add(this.lblSelectedStudentTaskEndDate);
-            this.gbxTaskPoint.Controls.Add(this.lblSelectedStudentTaskStartDate);
-            this.gbxTaskPoint.Controls.Add(this.cbxSelectStudentForPoint);
-            this.gbxTaskPoint.Controls.Add(this.cbxSelectTaskPoint);
-            this.gbxTaskPoint.Controls.Add(this.lblSelectTaskPoint);
-            this.gbxTaskPoint.Controls.Add(this.lblSelectedStudentsForPoints);
-            this.gbxTaskPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxTaskPoint.Location = new System.Drawing.Point(333, 202);
-            this.gbxTaskPoint.Name = "gbxTaskPoint";
-            this.gbxTaskPoint.Size = new System.Drawing.Size(451, 214);
-            this.gbxTaskPoint.TabIndex = 10;
-            this.gbxTaskPoint.TabStop = false;
-            this.gbxTaskPoint.Text = "Points";
-            // 
-            // btnAssignPoint
-            // 
-            this.btnAssignPoint.AutoSize = true;
-            this.btnAssignPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAssignPoint.Location = new System.Drawing.Point(341, 173);
-            this.btnAssignPoint.Name = "btnAssignPoint";
-            this.btnAssignPoint.Size = new System.Drawing.Size(104, 26);
-            this.btnAssignPoint.TabIndex = 10;
-            this.btnAssignPoint.Text = "Assign point";
-            this.btnAssignPoint.UseVisualStyleBackColor = true;
-            this.btnAssignPoint.Click += new System.EventHandler(this.btnAssignPoint_Click);
-            // 
-            // tbxSelectedStudentPoint
-            // 
-            this.tbxSelectedStudentPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxSelectedStudentPoint.Location = new System.Drawing.Point(109, 122);
-            this.tbxSelectedStudentPoint.Name = "tbxSelectedStudentPoint";
-            this.tbxSelectedStudentPoint.Size = new System.Drawing.Size(336, 22);
-            this.tbxSelectedStudentPoint.TabIndex = 11;
-            // 
-            // dtpSelectedStudentTaskEndDate
-            // 
-            this.dtpSelectedStudentTaskEndDate.Enabled = false;
-            this.dtpSelectedStudentTaskEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpSelectedStudentTaskEndDate.Location = new System.Drawing.Point(109, 94);
-            this.dtpSelectedStudentTaskEndDate.Name = "dtpSelectedStudentTaskEndDate";
-            this.dtpSelectedStudentTaskEndDate.Size = new System.Drawing.Size(336, 22);
-            this.dtpSelectedStudentTaskEndDate.TabIndex = 10;
-            // 
-            // dtpSelectedStudentTaskStartDate
-            // 
-            this.dtpSelectedStudentTaskStartDate.Enabled = false;
-            this.dtpSelectedStudentTaskStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpSelectedStudentTaskStartDate.Location = new System.Drawing.Point(109, 66);
-            this.dtpSelectedStudentTaskStartDate.Name = "dtpSelectedStudentTaskStartDate";
-            this.dtpSelectedStudentTaskStartDate.Size = new System.Drawing.Size(336, 22);
-            this.dtpSelectedStudentTaskStartDate.TabIndex = 9;
-            // 
-            // lblSelectedStudentTaskPoint
-            // 
-            this.lblSelectedStudentTaskPoint.AutoSize = true;
-            this.lblSelectedStudentTaskPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectedStudentTaskPoint.Location = new System.Drawing.Point(6, 125);
-            this.lblSelectedStudentTaskPoint.Name = "lblSelectedStudentTaskPoint";
-            this.lblSelectedStudentTaskPoint.Size = new System.Drawing.Size(71, 16);
-            this.lblSelectedStudentTaskPoint.TabIndex = 7;
-            this.lblSelectedStudentTaskPoint.Text = "Task point";
-            // 
-            // lblSelectedStudentTaskEndDate
-            // 
-            this.lblSelectedStudentTaskEndDate.AutoSize = true;
-            this.lblSelectedStudentTaskEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectedStudentTaskEndDate.Location = new System.Drawing.Point(6, 99);
-            this.lblSelectedStudentTaskEndDate.Name = "lblSelectedStudentTaskEndDate";
-            this.lblSelectedStudentTaskEndDate.Size = new System.Drawing.Size(95, 16);
-            this.lblSelectedStudentTaskEndDate.TabIndex = 6;
-            this.lblSelectedStudentTaskEndDate.Text = "Task end date";
-            // 
-            // lblSelectedStudentTaskStartDate
-            // 
-            this.lblSelectedStudentTaskStartDate.AutoSize = true;
-            this.lblSelectedStudentTaskStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectedStudentTaskStartDate.Location = new System.Drawing.Point(6, 71);
-            this.lblSelectedStudentTaskStartDate.Name = "lblSelectedStudentTaskStartDate";
-            this.lblSelectedStudentTaskStartDate.Size = new System.Drawing.Size(97, 16);
-            this.lblSelectedStudentTaskStartDate.TabIndex = 5;
-            this.lblSelectedStudentTaskStartDate.Text = "Task start date";
-            // 
-            // cbxSelectStudentForPoint
-            // 
-            this.cbxSelectStudentForPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectStudentForPoint.FormattingEnabled = true;
-            this.cbxSelectStudentForPoint.Location = new System.Drawing.Point(306, 30);
-            this.cbxSelectStudentForPoint.Name = "cbxSelectStudentForPoint";
-            this.cbxSelectStudentForPoint.Size = new System.Drawing.Size(139, 24);
-            this.cbxSelectStudentForPoint.TabIndex = 4;
-            this.cbxSelectStudentForPoint.SelectedIndexChanged += new System.EventHandler(this.cbxSelectStudentForPoint_SelectedIndexChanged);
-            // 
-            // cbxSelectTaskPoint
-            // 
-            this.cbxSelectTaskPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectTaskPoint.FormattingEnabled = true;
-            this.cbxSelectTaskPoint.Location = new System.Drawing.Point(86, 30);
-            this.cbxSelectTaskPoint.Name = "cbxSelectTaskPoint";
-            this.cbxSelectTaskPoint.Size = new System.Drawing.Size(148, 24);
-            this.cbxSelectTaskPoint.TabIndex = 3;
-            this.cbxSelectTaskPoint.SelectedIndexChanged += new System.EventHandler(this.cbxSelectTaskPoint_SelectedIndexChanged);
-            // 
-            // lblSelectTaskPoint
-            // 
-            this.lblSelectTaskPoint.AutoSize = true;
-            this.lblSelectTaskPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectTaskPoint.Location = new System.Drawing.Point(6, 33);
-            this.lblSelectTaskPoint.Name = "lblSelectTaskPoint";
-            this.lblSelectTaskPoint.Size = new System.Drawing.Size(74, 16);
-            this.lblSelectTaskPoint.TabIndex = 2;
-            this.lblSelectTaskPoint.Text = "Select task";
-            // 
-            // lblSelectedStudentsForPoints
-            // 
-            this.lblSelectedStudentsForPoints.AutoSize = true;
-            this.lblSelectedStudentsForPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectedStudentsForPoints.Location = new System.Drawing.Point(240, 33);
-            this.lblSelectedStudentsForPoints.Name = "lblSelectedStudentsForPoints";
-            this.lblSelectedStudentsForPoints.Size = new System.Drawing.Size(60, 16);
-            this.lblSelectedStudentsForPoints.TabIndex = 0;
-            this.lblSelectedStudentsForPoints.Text = "Students";
-            // 
-            // gbxAssignedTasksToStudents
-            // 
-            this.gbxAssignedTasksToStudents.Controls.Add(this.lbxSelectedStudentFromAssignedTasks);
-            this.gbxAssignedTasksToStudents.Controls.Add(this.cbxSelectSelectedAssignedTaskToStudents);
-            this.gbxAssignedTasksToStudents.Controls.Add(this.lblSelectAssignedTaskToStudents);
-            this.gbxAssignedTasksToStudents.Controls.Add(this.lblSelectedStudentsFromAssignedTasks);
-            this.gbxAssignedTasksToStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxAssignedTasksToStudents.Location = new System.Drawing.Point(8, 202);
-            this.gbxAssignedTasksToStudents.Name = "gbxAssignedTasksToStudents";
-            this.gbxAssignedTasksToStudents.Size = new System.Drawing.Size(319, 214);
-            this.gbxAssignedTasksToStudents.TabIndex = 9;
-            this.gbxAssignedTasksToStudents.TabStop = false;
-            this.gbxAssignedTasksToStudents.Text = "Assigned tasks to students";
-            // 
-            // lbxSelectedStudentFromAssignedTasks
-            // 
-            this.lbxSelectedStudentFromAssignedTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbxSelectedStudentFromAssignedTasks.FormattingEnabled = true;
-            this.lbxSelectedStudentFromAssignedTasks.ItemHeight = 16;
-            this.lbxSelectedStudentFromAssignedTasks.Location = new System.Drawing.Point(96, 60);
-            this.lbxSelectedStudentFromAssignedTasks.Name = "lbxSelectedStudentFromAssignedTasks";
-            this.lbxSelectedStudentFromAssignedTasks.Size = new System.Drawing.Size(178, 116);
-            this.lbxSelectedStudentFromAssignedTasks.TabIndex = 5;
-            // 
-            // cbxSelectSelectedAssignedTaskToStudents
-            // 
-            this.cbxSelectSelectedAssignedTaskToStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectSelectedAssignedTaskToStudents.FormattingEnabled = true;
-            this.cbxSelectSelectedAssignedTaskToStudents.Location = new System.Drawing.Point(96, 30);
-            this.cbxSelectSelectedAssignedTaskToStudents.Name = "cbxSelectSelectedAssignedTaskToStudents";
-            this.cbxSelectSelectedAssignedTaskToStudents.Size = new System.Drawing.Size(178, 24);
-            this.cbxSelectSelectedAssignedTaskToStudents.TabIndex = 3;
-            this.cbxSelectSelectedAssignedTaskToStudents.SelectedIndexChanged += new System.EventHandler(this.cbxSelectSelectedAssignedTaskToStudents_SelectedIndexChanged);
-            // 
-            // lblSelectAssignedTaskToStudents
-            // 
-            this.lblSelectAssignedTaskToStudents.AutoSize = true;
-            this.lblSelectAssignedTaskToStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectAssignedTaskToStudents.Location = new System.Drawing.Point(6, 33);
-            this.lblSelectAssignedTaskToStudents.Name = "lblSelectAssignedTaskToStudents";
-            this.lblSelectAssignedTaskToStudents.Size = new System.Drawing.Size(74, 16);
-            this.lblSelectAssignedTaskToStudents.TabIndex = 2;
-            this.lblSelectAssignedTaskToStudents.Text = "Select task";
-            // 
-            // lblSelectedStudentsFromAssignedTasks
-            // 
-            this.lblSelectedStudentsFromAssignedTasks.AutoSize = true;
-            this.lblSelectedStudentsFromAssignedTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectedStudentsFromAssignedTasks.Location = new System.Drawing.Point(6, 60);
-            this.lblSelectedStudentsFromAssignedTasks.Name = "lblSelectedStudentsFromAssignedTasks";
-            this.lblSelectedStudentsFromAssignedTasks.Size = new System.Drawing.Size(60, 16);
-            this.lblSelectedStudentsFromAssignedTasks.TabIndex = 0;
-            this.lblSelectedStudentsFromAssignedTasks.Text = "Students";
-            // 
-            // gbxAssignTaskToStudents
-            // 
-            this.gbxAssignTaskToStudents.Controls.Add(this.btnShowTeacherAllStudents);
-            this.gbxAssignTaskToStudents.Controls.Add(this.lblAssignTaskToStidentsSelectEndDate);
-            this.gbxAssignTaskToStudents.Controls.Add(this.chbxSelectStudent);
-            this.gbxAssignTaskToStudents.Controls.Add(this.lblAssignTaskToStidentsSelectStartDate);
-            this.gbxAssignTaskToStudents.Controls.Add(this.dtpAssignTaskToStudentsEndDate);
-            this.gbxAssignTaskToStudents.Controls.Add(this.dtpAssignTaskToStudentsStartDate);
-            this.gbxAssignTaskToStudents.Controls.Add(this.btnAssignTaskToStudents);
-            this.gbxAssignTaskToStudents.Controls.Add(this.cbxAssignTaskToStudentsSelectTask);
-            this.gbxAssignTaskToStudents.Controls.Add(this.lblAssignTaskToStidentsSelectTask);
-            this.gbxAssignTaskToStudents.Controls.Add(this.cbxAssignTaskToStudentsSelectGroup);
-            this.gbxAssignTaskToStudents.Controls.Add(this.lblAssignTaskToStidentsSelectGroup);
-            this.gbxAssignTaskToStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxAssignTaskToStudents.Location = new System.Drawing.Point(294, 3);
-            this.gbxAssignTaskToStudents.Name = "gbxAssignTaskToStudents";
-            this.gbxAssignTaskToStudents.Size = new System.Drawing.Size(490, 193);
-            this.gbxAssignTaskToStudents.TabIndex = 9;
-            this.gbxAssignTaskToStudents.TabStop = false;
-            this.gbxAssignTaskToStudents.Text = "Assign task to students";
-            // 
-            // btnShowTeacherAllStudents
-            // 
-            this.btnShowTeacherAllStudents.AutoSize = true;
-            this.btnShowTeacherAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowTeacherAllStudents.Location = new System.Drawing.Point(289, 34);
-            this.btnShowTeacherAllStudents.Name = "btnShowTeacherAllStudents";
-            this.btnShowTeacherAllStudents.Size = new System.Drawing.Size(195, 26);
-            this.btnShowTeacherAllStudents.TabIndex = 9;
-            this.btnShowTeacherAllStudents.Text = "Show my all students";
-            this.btnShowTeacherAllStudents.UseVisualStyleBackColor = true;
-            this.btnShowTeacherAllStudents.Click += new System.EventHandler(this.btnShowTeacherAllStudents_Click);
-            // 
-            // lblAssignTaskToStidentsSelectEndDate
-            // 
-            this.lblAssignTaskToStidentsSelectEndDate.AutoSize = true;
-            this.lblAssignTaskToStidentsSelectEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAssignTaskToStidentsSelectEndDate.Location = new System.Drawing.Point(199, 129);
-            this.lblAssignTaskToStidentsSelectEndDate.Name = "lblAssignTaskToStidentsSelectEndDate";
-            this.lblAssignTaskToStidentsSelectEndDate.Size = new System.Drawing.Size(62, 16);
-            this.lblAssignTaskToStidentsSelectEndDate.TabIndex = 8;
-            this.lblAssignTaskToStidentsSelectEndDate.Text = "End date";
-            // 
-            // chbxSelectStudent
-            // 
-            this.chbxSelectStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chbxSelectStudent.FormattingEnabled = true;
-            this.chbxSelectStudent.Location = new System.Drawing.Point(9, 69);
-            this.chbxSelectStudent.Name = "chbxSelectStudent";
-            this.chbxSelectStudent.Size = new System.Drawing.Size(184, 106);
-            this.chbxSelectStudent.TabIndex = 2;
-            // 
-            // lblAssignTaskToStidentsSelectStartDate
-            // 
-            this.lblAssignTaskToStidentsSelectStartDate.AutoSize = true;
-            this.lblAssignTaskToStidentsSelectStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAssignTaskToStidentsSelectStartDate.Location = new System.Drawing.Point(199, 101);
-            this.lblAssignTaskToStidentsSelectStartDate.Name = "lblAssignTaskToStidentsSelectStartDate";
-            this.lblAssignTaskToStidentsSelectStartDate.Size = new System.Drawing.Size(65, 16);
-            this.lblAssignTaskToStidentsSelectStartDate.TabIndex = 7;
-            this.lblAssignTaskToStidentsSelectStartDate.Text = "Start date";
-            // 
-            // dtpAssignTaskToStudentsEndDate
-            // 
-            this.dtpAssignTaskToStudentsEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpAssignTaskToStudentsEndDate.Location = new System.Drawing.Point(289, 124);
-            this.dtpAssignTaskToStudentsEndDate.Name = "dtpAssignTaskToStudentsEndDate";
-            this.dtpAssignTaskToStudentsEndDate.Size = new System.Drawing.Size(195, 22);
-            this.dtpAssignTaskToStudentsEndDate.TabIndex = 6;
-            // 
-            // dtpAssignTaskToStudentsStartDate
-            // 
-            this.dtpAssignTaskToStudentsStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpAssignTaskToStudentsStartDate.Location = new System.Drawing.Point(289, 96);
-            this.dtpAssignTaskToStudentsStartDate.Name = "dtpAssignTaskToStudentsStartDate";
-            this.dtpAssignTaskToStudentsStartDate.Size = new System.Drawing.Size(195, 22);
-            this.dtpAssignTaskToStudentsStartDate.TabIndex = 5;
-            // 
-            // btnAssignTaskToStudents
-            // 
-            this.btnAssignTaskToStudents.AutoSize = true;
-            this.btnAssignTaskToStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAssignTaskToStudents.Location = new System.Drawing.Point(380, 152);
-            this.btnAssignTaskToStudents.Name = "btnAssignTaskToStudents";
-            this.btnAssignTaskToStudents.Size = new System.Drawing.Size(104, 26);
-            this.btnAssignTaskToStudents.TabIndex = 4;
-            this.btnAssignTaskToStudents.Text = "Assign task";
-            this.btnAssignTaskToStudents.UseVisualStyleBackColor = true;
-            this.btnAssignTaskToStudents.Click += new System.EventHandler(this.btnAssignTaskToStudents_Click);
-            // 
-            // cbxAssignTaskToStudentsSelectTask
-            // 
-            this.cbxAssignTaskToStudentsSelectTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxAssignTaskToStudentsSelectTask.FormattingEnabled = true;
-            this.cbxAssignTaskToStudentsSelectTask.Location = new System.Drawing.Point(289, 66);
-            this.cbxAssignTaskToStudentsSelectTask.Name = "cbxAssignTaskToStudentsSelectTask";
-            this.cbxAssignTaskToStudentsSelectTask.Size = new System.Drawing.Size(195, 24);
-            this.cbxAssignTaskToStudentsSelectTask.TabIndex = 3;
-            // 
-            // lblAssignTaskToStidentsSelectTask
-            // 
-            this.lblAssignTaskToStidentsSelectTask.AutoSize = true;
-            this.lblAssignTaskToStidentsSelectTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAssignTaskToStidentsSelectTask.Location = new System.Drawing.Point(199, 69);
-            this.lblAssignTaskToStidentsSelectTask.Name = "lblAssignTaskToStidentsSelectTask";
-            this.lblAssignTaskToStidentsSelectTask.Size = new System.Drawing.Size(74, 16);
-            this.lblAssignTaskToStidentsSelectTask.TabIndex = 2;
-            this.lblAssignTaskToStidentsSelectTask.Text = "Select task";
-            // 
-            // cbxAssignTaskToStudentsSelectGroup
-            // 
-            this.cbxAssignTaskToStudentsSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxAssignTaskToStudentsSelectGroup.FormattingEnabled = true;
-            this.cbxAssignTaskToStudentsSelectGroup.Location = new System.Drawing.Point(96, 36);
-            this.cbxAssignTaskToStudentsSelectGroup.Name = "cbxAssignTaskToStudentsSelectGroup";
-            this.cbxAssignTaskToStudentsSelectGroup.Size = new System.Drawing.Size(178, 24);
-            this.cbxAssignTaskToStudentsSelectGroup.TabIndex = 1;
-            this.cbxAssignTaskToStudentsSelectGroup.SelectedIndexChanged += new System.EventHandler(this.cbxAssignTaskToStudentsSelectGroup_SelectedIndexChanged);
-            // 
-            // lblAssignTaskToStidentsSelectGroup
-            // 
-            this.lblAssignTaskToStidentsSelectGroup.AutoSize = true;
-            this.lblAssignTaskToStidentsSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAssignTaskToStidentsSelectGroup.Location = new System.Drawing.Point(6, 39);
-            this.lblAssignTaskToStidentsSelectGroup.Name = "lblAssignTaskToStidentsSelectGroup";
-            this.lblAssignTaskToStidentsSelectGroup.Size = new System.Drawing.Size(84, 16);
-            this.lblAssignTaskToStidentsSelectGroup.TabIndex = 0;
-            this.lblAssignTaskToStidentsSelectGroup.Text = "Select group";
-            // 
-            // gbxAssignTaskToGroup
-            // 
-            this.gbxAssignTaskToGroup.Controls.Add(this.lblTaskEndDate);
-            this.gbxAssignTaskToGroup.Controls.Add(this.lblTaskStartDate);
-            this.gbxAssignTaskToGroup.Controls.Add(this.dtpTaskEndDate);
-            this.gbxAssignTaskToGroup.Controls.Add(this.dtpTaskStartDate);
-            this.gbxAssignTaskToGroup.Controls.Add(this.btnAssginTask);
-            this.gbxAssignTaskToGroup.Controls.Add(this.cbxSelectTask);
-            this.gbxAssignTaskToGroup.Controls.Add(this.lblSelectTask);
-            this.gbxAssignTaskToGroup.Controls.Add(this.cbxSelectGroup);
-            this.gbxAssignTaskToGroup.Controls.Add(this.lblSelectGroup);
-            this.gbxAssignTaskToGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbxAssignTaskToGroup.Location = new System.Drawing.Point(8, 3);
-            this.gbxAssignTaskToGroup.Name = "gbxAssignTaskToGroup";
-            this.gbxAssignTaskToGroup.Size = new System.Drawing.Size(280, 193);
-            this.gbxAssignTaskToGroup.TabIndex = 1;
-            this.gbxAssignTaskToGroup.TabStop = false;
-            this.gbxAssignTaskToGroup.Text = "Assign task to group";
-            // 
-            // lblTaskEndDate
-            // 
-            this.lblTaskEndDate.AutoSize = true;
-            this.lblTaskEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskEndDate.Location = new System.Drawing.Point(6, 129);
-            this.lblTaskEndDate.Name = "lblTaskEndDate";
-            this.lblTaskEndDate.Size = new System.Drawing.Size(62, 16);
-            this.lblTaskEndDate.TabIndex = 8;
-            this.lblTaskEndDate.Text = "End date";
-            // 
-            // lblTaskStartDate
-            // 
-            this.lblTaskStartDate.AutoSize = true;
-            this.lblTaskStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskStartDate.Location = new System.Drawing.Point(6, 101);
-            this.lblTaskStartDate.Name = "lblTaskStartDate";
-            this.lblTaskStartDate.Size = new System.Drawing.Size(65, 16);
-            this.lblTaskStartDate.TabIndex = 7;
-            this.lblTaskStartDate.Text = "Start date";
-            // 
-            // dtpTaskEndDate
-            // 
-            this.dtpTaskEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpTaskEndDate.Location = new System.Drawing.Point(96, 124);
-            this.dtpTaskEndDate.Name = "dtpTaskEndDate";
-            this.dtpTaskEndDate.Size = new System.Drawing.Size(178, 22);
-            this.dtpTaskEndDate.TabIndex = 6;
-            // 
-            // dtpTaskStartDate
-            // 
-            this.dtpTaskStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpTaskStartDate.Location = new System.Drawing.Point(96, 96);
-            this.dtpTaskStartDate.Name = "dtpTaskStartDate";
-            this.dtpTaskStartDate.Size = new System.Drawing.Size(178, 22);
-            this.dtpTaskStartDate.TabIndex = 5;
-            // 
-            // btnAssginTask
-            // 
-            this.btnAssginTask.AutoSize = true;
-            this.btnAssginTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAssginTask.Location = new System.Drawing.Point(187, 152);
-            this.btnAssginTask.Name = "btnAssginTask";
-            this.btnAssginTask.Size = new System.Drawing.Size(87, 26);
-            this.btnAssginTask.TabIndex = 4;
-            this.btnAssginTask.Text = "Assign task";
-            this.btnAssginTask.UseVisualStyleBackColor = true;
-            this.btnAssginTask.Click += new System.EventHandler(this.btnAssginTask_Click);
-            // 
-            // cbxSelectTask
-            // 
-            this.cbxSelectTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectTask.FormattingEnabled = true;
-            this.cbxSelectTask.Location = new System.Drawing.Point(96, 66);
-            this.cbxSelectTask.Name = "cbxSelectTask";
-            this.cbxSelectTask.Size = new System.Drawing.Size(178, 24);
-            this.cbxSelectTask.TabIndex = 3;
-            // 
-            // lblSelectTask
-            // 
-            this.lblSelectTask.AutoSize = true;
-            this.lblSelectTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectTask.Location = new System.Drawing.Point(6, 69);
-            this.lblSelectTask.Name = "lblSelectTask";
-            this.lblSelectTask.Size = new System.Drawing.Size(74, 16);
-            this.lblSelectTask.TabIndex = 2;
-            this.lblSelectTask.Text = "Select task";
-            // 
-            // cbxSelectGroup
-            // 
-            this.cbxSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbxSelectGroup.FormattingEnabled = true;
-            this.cbxSelectGroup.Location = new System.Drawing.Point(96, 36);
-            this.cbxSelectGroup.Name = "cbxSelectGroup";
-            this.cbxSelectGroup.Size = new System.Drawing.Size(178, 24);
-            this.cbxSelectGroup.TabIndex = 1;
-            // 
-            // lblSelectGroup
-            // 
-            this.lblSelectGroup.AutoSize = true;
-            this.lblSelectGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSelectGroup.Location = new System.Drawing.Point(6, 39);
-            this.lblSelectGroup.Name = "lblSelectGroup";
-            this.lblSelectGroup.Size = new System.Drawing.Size(84, 16);
-            this.lblSelectGroup.TabIndex = 0;
-            this.lblSelectGroup.Text = "Select group";
             // 
             // tabGroups
             // 
@@ -1269,7 +667,8 @@
             this.StudentRegistrationDate,
             this.StudentBio,
             this.Column1,
-            this.groupIdDataGridViewTextBoxColumn});
+            this.groupIdDataGridViewTextBoxColumn,
+            this.userIdDataGridViewTextBoxColumn});
             this.dgvGroupsStudentsList.DataSource = this.studentsBindingSource;
             this.dgvGroupsStudentsList.Location = new System.Drawing.Point(12, 193);
             this.dgvGroupsStudentsList.Name = "dgvGroupsStudentsList";
@@ -1331,8 +730,12 @@
             this.groupIdDataGridViewTextBoxColumn.DataPropertyName = "GroupId";
             this.groupIdDataGridViewTextBoxColumn.HeaderText = "GroupId";
             this.groupIdDataGridViewTextBoxColumn.Name = "groupIdDataGridViewTextBoxColumn";
-            this.groupIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.groupIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             // 
             // studentsBindingSource
             // 
@@ -1386,9 +789,9 @@
             this.lblGroupsInfoGroupMentor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblGroupsInfoGroupMentor.Location = new System.Drawing.Point(6, 142);
             this.lblGroupsInfoGroupMentor.Name = "lblGroupsInfoGroupMentor";
-            this.lblGroupsInfoGroupMentor.Size = new System.Drawing.Size(49, 16);
+            this.lblGroupsInfoGroupMentor.Size = new System.Drawing.Size(59, 16);
             this.lblGroupsInfoGroupMentor.TabIndex = 13;
-            this.lblGroupsInfoGroupMentor.Text = "Mentor";
+            this.lblGroupsInfoGroupMentor.Text = "Teacher";
             // 
             // lblGroupsInfoGroupTime
             // 
@@ -1456,170 +859,6 @@
             this.lblGroupsSelectGroup.TabIndex = 0;
             this.lblGroupsSelectGroup.Text = "Select group";
             // 
-            // tabMentorInfo
-            // 
-            this.tabMentorInfo.Controls.Add(this.cbxMentorsSelectMentor);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsSelectMentor);
-            this.tabMentorInfo.Controls.Add(this.lblMentors);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsPhoneValue);
-            this.tabMentorInfo.Controls.Add(this.rbxMentorsBioValue);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsBio);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsPhone);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsEmailValue);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsEmail);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsSurnameValue);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsSurname);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsNameValue);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsName);
-            this.tabMentorInfo.Controls.Add(this.lblMentorsInfo);
-            this.tabMentorInfo.Controls.Add(this.pbxMentorsPhoto);
-            this.tabMentorInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabMentorInfo.Name = "tabMentorInfo";
-            this.tabMentorInfo.Size = new System.Drawing.Size(796, 429);
-            this.tabMentorInfo.TabIndex = 4;
-            this.tabMentorInfo.Text = "Mentor info";
-            this.tabMentorInfo.UseVisualStyleBackColor = true;
-            // 
-            // cbxMentorsSelectMentor
-            // 
-            this.cbxMentorsSelectMentor.FormattingEnabled = true;
-            this.cbxMentorsSelectMentor.Location = new System.Drawing.Point(89, 39);
-            this.cbxMentorsSelectMentor.Name = "cbxMentorsSelectMentor";
-            this.cbxMentorsSelectMentor.Size = new System.Drawing.Size(121, 21);
-            this.cbxMentorsSelectMentor.TabIndex = 96;
-            this.cbxMentorsSelectMentor.SelectedIndexChanged += new System.EventHandler(this.cbxMentorsSelectMentor_SelectedIndexChanged);
-            // 
-            // lblMentorsSelectMentor
-            // 
-            this.lblMentorsSelectMentor.AutoSize = true;
-            this.lblMentorsSelectMentor.Location = new System.Drawing.Point(11, 42);
-            this.lblMentorsSelectMentor.Name = "lblMentorsSelectMentor";
-            this.lblMentorsSelectMentor.Size = new System.Drawing.Size(72, 13);
-            this.lblMentorsSelectMentor.TabIndex = 95;
-            this.lblMentorsSelectMentor.Text = "Select mentor";
-            // 
-            // lblMentors
-            // 
-            this.lblMentors.AutoSize = true;
-            this.lblMentors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblMentors.Location = new System.Drawing.Point(9, 4);
-            this.lblMentors.Name = "lblMentors";
-            this.lblMentors.Size = new System.Drawing.Size(97, 25);
-            this.lblMentors.TabIndex = 94;
-            this.lblMentors.Text = "Mentors";
-            // 
-            // lblMentorsPhoneValue
-            // 
-            this.lblMentorsPhoneValue.AutoSize = true;
-            this.lblMentorsPhoneValue.Location = new System.Drawing.Point(213, 240);
-            this.lblMentorsPhoneValue.Name = "lblMentorsPhoneValue";
-            this.lblMentorsPhoneValue.Size = new System.Drawing.Size(54, 13);
-            this.lblMentorsPhoneValue.TabIndex = 93;
-            this.lblMentorsPhoneValue.Text = "Loading...";
-            // 
-            // rbxMentorsBioValue
-            // 
-            this.rbxMentorsBioValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rbxMentorsBioValue.Location = new System.Drawing.Point(216, 269);
-            this.rbxMentorsBioValue.Name = "rbxMentorsBioValue";
-            this.rbxMentorsBioValue.ReadOnly = true;
-            this.rbxMentorsBioValue.Size = new System.Drawing.Size(257, 96);
-            this.rbxMentorsBioValue.TabIndex = 89;
-            this.rbxMentorsBioValue.Text = "";
-            // 
-            // lblMentorsBio
-            // 
-            this.lblMentorsBio.AutoSize = true;
-            this.lblMentorsBio.Location = new System.Drawing.Point(125, 271);
-            this.lblMentorsBio.Name = "lblMentorsBio";
-            this.lblMentorsBio.Size = new System.Drawing.Size(28, 13);
-            this.lblMentorsBio.TabIndex = 88;
-            this.lblMentorsBio.Text = "Bio :";
-            // 
-            // lblMentorsPhone
-            // 
-            this.lblMentorsPhone.AutoSize = true;
-            this.lblMentorsPhone.Location = new System.Drawing.Point(125, 240);
-            this.lblMentorsPhone.Name = "lblMentorsPhone";
-            this.lblMentorsPhone.Size = new System.Drawing.Size(44, 13);
-            this.lblMentorsPhone.TabIndex = 83;
-            this.lblMentorsPhone.Text = "Phone :";
-            // 
-            // lblMentorsEmailValue
-            // 
-            this.lblMentorsEmailValue.AutoSize = true;
-            this.lblMentorsEmailValue.Location = new System.Drawing.Point(213, 211);
-            this.lblMentorsEmailValue.Name = "lblMentorsEmailValue";
-            this.lblMentorsEmailValue.Size = new System.Drawing.Size(54, 13);
-            this.lblMentorsEmailValue.TabIndex = 82;
-            this.lblMentorsEmailValue.Text = "Loading...";
-            // 
-            // lblMentorsEmail
-            // 
-            this.lblMentorsEmail.AutoSize = true;
-            this.lblMentorsEmail.Location = new System.Drawing.Point(125, 211);
-            this.lblMentorsEmail.Name = "lblMentorsEmail";
-            this.lblMentorsEmail.Size = new System.Drawing.Size(38, 13);
-            this.lblMentorsEmail.TabIndex = 81;
-            this.lblMentorsEmail.Text = "Email :";
-            // 
-            // lblMentorsSurnameValue
-            // 
-            this.lblMentorsSurnameValue.AutoSize = true;
-            this.lblMentorsSurnameValue.Location = new System.Drawing.Point(213, 180);
-            this.lblMentorsSurnameValue.Name = "lblMentorsSurnameValue";
-            this.lblMentorsSurnameValue.Size = new System.Drawing.Size(54, 13);
-            this.lblMentorsSurnameValue.TabIndex = 80;
-            this.lblMentorsSurnameValue.Text = "Loading...";
-            // 
-            // lblMentorsSurname
-            // 
-            this.lblMentorsSurname.AutoSize = true;
-            this.lblMentorsSurname.Location = new System.Drawing.Point(125, 180);
-            this.lblMentorsSurname.Name = "lblMentorsSurname";
-            this.lblMentorsSurname.Size = new System.Drawing.Size(55, 13);
-            this.lblMentorsSurname.TabIndex = 79;
-            this.lblMentorsSurname.Text = "Surname :";
-            // 
-            // lblMentorsNameValue
-            // 
-            this.lblMentorsNameValue.AutoSize = true;
-            this.lblMentorsNameValue.Location = new System.Drawing.Point(213, 151);
-            this.lblMentorsNameValue.Name = "lblMentorsNameValue";
-            this.lblMentorsNameValue.Size = new System.Drawing.Size(54, 13);
-            this.lblMentorsNameValue.TabIndex = 78;
-            this.lblMentorsNameValue.Text = "Loading...";
-            // 
-            // lblMentorsName
-            // 
-            this.lblMentorsName.AutoSize = true;
-            this.lblMentorsName.Location = new System.Drawing.Point(125, 151);
-            this.lblMentorsName.Name = "lblMentorsName";
-            this.lblMentorsName.Size = new System.Drawing.Size(41, 13);
-            this.lblMentorsName.TabIndex = 77;
-            this.lblMentorsName.Text = "Name :";
-            // 
-            // lblMentorsInfo
-            // 
-            this.lblMentorsInfo.AutoSize = true;
-            this.lblMentorsInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblMentorsInfo.Location = new System.Drawing.Point(129, 96);
-            this.lblMentorsInfo.Name = "lblMentorsInfo";
-            this.lblMentorsInfo.Size = new System.Drawing.Size(51, 25);
-            this.lblMentorsInfo.TabIndex = 76;
-            this.lblMentorsInfo.Text = "Info";
-            // 
-            // pbxMentorsPhoto
-            // 
-            this.pbxMentorsPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxMentorsPhoto.ErrorImage")));
-            this.pbxMentorsPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxMentorsPhoto.Image")));
-            this.pbxMentorsPhoto.Location = new System.Drawing.Point(8, 96);
-            this.pbxMentorsPhoto.Name = "pbxMentorsPhoto";
-            this.pbxMentorsPhoto.Size = new System.Drawing.Size(105, 112);
-            this.pbxMentorsPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxMentorsPhoto.TabIndex = 75;
-            this.pbxMentorsPhoto.TabStop = false;
-            // 
             // tabMessages
             // 
             this.tabMessages.Controls.Add(this.tabControllMessages);
@@ -1670,7 +909,7 @@
             this.btnSendMessage.TabIndex = 11;
             this.btnSendMessage.Text = "Send message";
             this.btnSendMessage.UseVisualStyleBackColor = true;
-            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click_1);
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // tbxMessageSubject
             // 
@@ -1972,7 +1211,12 @@
             // messagesBindingSource1
             // 
             this.messagesBindingSource1.DataMember = "Messages";
-            this.messagesBindingSource1.DataSource = this.educationProjectDataSet;
+            this.messagesBindingSource1.DataSource = this.educationProjectDataSetBindingSource;
+            // 
+            // educationProjectDataSetBindingSource
+            // 
+            this.educationProjectDataSetBindingSource.DataSource = this.educationProjectDataSet;
+            this.educationProjectDataSetBindingSource.Position = 0;
             // 
             // rbxMessagesSent
             // 
@@ -2030,6 +1274,21 @@
             // 
             // tabWorkMates
             // 
+            this.tabWorkMates.Controls.Add(this.cbxWorkMatesSelectMentor);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesSelectMentor);
+            this.tabWorkMates.Controls.Add(this.lblWorkmatesMentors);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorPhoneValue);
+            this.tabWorkMates.Controls.Add(this.rbxWorkMatesMentorBioValue);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorBio);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorPhone);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorEmailValue);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorEmail);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorSurnameValue);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorSurname);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorNameValue);
+            this.tabWorkMates.Controls.Add(this.lblWorkMatesMentorName);
+            this.tabWorkMates.Controls.Add(this.lblWorkmatesMentorInfo);
+            this.tabWorkMates.Controls.Add(this.pbxWorkMatesMentorPhoto);
             this.tabWorkMates.Controls.Add(this.cbxWorkmatesSelectTeacher);
             this.tabWorkMates.Controls.Add(this.lblWorkmatesSelectTeacher);
             this.tabWorkMates.Controls.Add(this.lblWorkmatesTeachers);
@@ -2052,6 +1311,146 @@
             this.tabWorkMates.Text = "Work mates";
             this.tabWorkMates.UseVisualStyleBackColor = true;
             // 
+            // cbxWorkMatesSelectMentor
+            // 
+            this.cbxWorkMatesSelectMentor.FormattingEnabled = true;
+            this.cbxWorkMatesSelectMentor.Location = new System.Drawing.Point(505, 44);
+            this.cbxWorkMatesSelectMentor.Name = "cbxWorkMatesSelectMentor";
+            this.cbxWorkMatesSelectMentor.Size = new System.Drawing.Size(121, 21);
+            this.cbxWorkMatesSelectMentor.TabIndex = 126;
+            this.cbxWorkMatesSelectMentor.SelectedIndexChanged += new System.EventHandler(this.cbxWorkMatesSelectMentor_SelectedIndexChanged);
+            // 
+            // lblWorkMatesSelectMentor
+            // 
+            this.lblWorkMatesSelectMentor.AutoSize = true;
+            this.lblWorkMatesSelectMentor.Location = new System.Drawing.Point(427, 47);
+            this.lblWorkMatesSelectMentor.Name = "lblWorkMatesSelectMentor";
+            this.lblWorkMatesSelectMentor.Size = new System.Drawing.Size(72, 13);
+            this.lblWorkMatesSelectMentor.TabIndex = 125;
+            this.lblWorkMatesSelectMentor.Text = "Select mentor";
+            // 
+            // lblWorkmatesMentors
+            // 
+            this.lblWorkmatesMentors.AutoSize = true;
+            this.lblWorkmatesMentors.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWorkmatesMentors.Location = new System.Drawing.Point(425, 9);
+            this.lblWorkmatesMentors.Name = "lblWorkmatesMentors";
+            this.lblWorkmatesMentors.Size = new System.Drawing.Size(97, 25);
+            this.lblWorkmatesMentors.TabIndex = 124;
+            this.lblWorkmatesMentors.Text = "Mentors";
+            // 
+            // lblWorkMatesMentorPhoneValue
+            // 
+            this.lblWorkMatesMentorPhoneValue.AutoSize = true;
+            this.lblWorkMatesMentorPhoneValue.Location = new System.Drawing.Point(629, 245);
+            this.lblWorkMatesMentorPhoneValue.Name = "lblWorkMatesMentorPhoneValue";
+            this.lblWorkMatesMentorPhoneValue.Size = new System.Drawing.Size(54, 13);
+            this.lblWorkMatesMentorPhoneValue.TabIndex = 123;
+            this.lblWorkMatesMentorPhoneValue.Text = "Loading...";
+            // 
+            // rbxWorkMatesMentorBioValue
+            // 
+            this.rbxWorkMatesMentorBioValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rbxWorkMatesMentorBioValue.Location = new System.Drawing.Point(424, 302);
+            this.rbxWorkMatesMentorBioValue.Name = "rbxWorkMatesMentorBioValue";
+            this.rbxWorkMatesMentorBioValue.ReadOnly = true;
+            this.rbxWorkMatesMentorBioValue.Size = new System.Drawing.Size(257, 96);
+            this.rbxWorkMatesMentorBioValue.TabIndex = 122;
+            this.rbxWorkMatesMentorBioValue.Text = "";
+            // 
+            // lblWorkMatesMentorBio
+            // 
+            this.lblWorkMatesMentorBio.AutoSize = true;
+            this.lblWorkMatesMentorBio.Location = new System.Drawing.Point(541, 276);
+            this.lblWorkMatesMentorBio.Name = "lblWorkMatesMentorBio";
+            this.lblWorkMatesMentorBio.Size = new System.Drawing.Size(28, 13);
+            this.lblWorkMatesMentorBio.TabIndex = 121;
+            this.lblWorkMatesMentorBio.Text = "Bio :";
+            // 
+            // lblWorkMatesMentorPhone
+            // 
+            this.lblWorkMatesMentorPhone.AutoSize = true;
+            this.lblWorkMatesMentorPhone.Location = new System.Drawing.Point(541, 245);
+            this.lblWorkMatesMentorPhone.Name = "lblWorkMatesMentorPhone";
+            this.lblWorkMatesMentorPhone.Size = new System.Drawing.Size(44, 13);
+            this.lblWorkMatesMentorPhone.TabIndex = 120;
+            this.lblWorkMatesMentorPhone.Text = "Phone :";
+            // 
+            // lblWorkMatesMentorEmailValue
+            // 
+            this.lblWorkMatesMentorEmailValue.AutoSize = true;
+            this.lblWorkMatesMentorEmailValue.Location = new System.Drawing.Point(629, 216);
+            this.lblWorkMatesMentorEmailValue.Name = "lblWorkMatesMentorEmailValue";
+            this.lblWorkMatesMentorEmailValue.Size = new System.Drawing.Size(54, 13);
+            this.lblWorkMatesMentorEmailValue.TabIndex = 119;
+            this.lblWorkMatesMentorEmailValue.Text = "Loading...";
+            // 
+            // lblWorkMatesMentorEmail
+            // 
+            this.lblWorkMatesMentorEmail.AutoSize = true;
+            this.lblWorkMatesMentorEmail.Location = new System.Drawing.Point(541, 216);
+            this.lblWorkMatesMentorEmail.Name = "lblWorkMatesMentorEmail";
+            this.lblWorkMatesMentorEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblWorkMatesMentorEmail.TabIndex = 118;
+            this.lblWorkMatesMentorEmail.Text = "Email :";
+            // 
+            // lblWorkMatesMentorSurnameValue
+            // 
+            this.lblWorkMatesMentorSurnameValue.AutoSize = true;
+            this.lblWorkMatesMentorSurnameValue.Location = new System.Drawing.Point(629, 185);
+            this.lblWorkMatesMentorSurnameValue.Name = "lblWorkMatesMentorSurnameValue";
+            this.lblWorkMatesMentorSurnameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblWorkMatesMentorSurnameValue.TabIndex = 117;
+            this.lblWorkMatesMentorSurnameValue.Text = "Loading...";
+            // 
+            // lblWorkMatesMentorSurname
+            // 
+            this.lblWorkMatesMentorSurname.AutoSize = true;
+            this.lblWorkMatesMentorSurname.Location = new System.Drawing.Point(541, 185);
+            this.lblWorkMatesMentorSurname.Name = "lblWorkMatesMentorSurname";
+            this.lblWorkMatesMentorSurname.Size = new System.Drawing.Size(55, 13);
+            this.lblWorkMatesMentorSurname.TabIndex = 116;
+            this.lblWorkMatesMentorSurname.Text = "Surname :";
+            // 
+            // lblWorkMatesMentorNameValue
+            // 
+            this.lblWorkMatesMentorNameValue.AutoSize = true;
+            this.lblWorkMatesMentorNameValue.Location = new System.Drawing.Point(629, 156);
+            this.lblWorkMatesMentorNameValue.Name = "lblWorkMatesMentorNameValue";
+            this.lblWorkMatesMentorNameValue.Size = new System.Drawing.Size(54, 13);
+            this.lblWorkMatesMentorNameValue.TabIndex = 115;
+            this.lblWorkMatesMentorNameValue.Text = "Loading...";
+            // 
+            // lblWorkMatesMentorName
+            // 
+            this.lblWorkMatesMentorName.AutoSize = true;
+            this.lblWorkMatesMentorName.Location = new System.Drawing.Point(541, 156);
+            this.lblWorkMatesMentorName.Name = "lblWorkMatesMentorName";
+            this.lblWorkMatesMentorName.Size = new System.Drawing.Size(41, 13);
+            this.lblWorkMatesMentorName.TabIndex = 114;
+            this.lblWorkMatesMentorName.Text = "Name :";
+            // 
+            // lblWorkmatesMentorInfo
+            // 
+            this.lblWorkmatesMentorInfo.AutoSize = true;
+            this.lblWorkmatesMentorInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWorkmatesMentorInfo.Location = new System.Drawing.Point(545, 101);
+            this.lblWorkmatesMentorInfo.Name = "lblWorkmatesMentorInfo";
+            this.lblWorkmatesMentorInfo.Size = new System.Drawing.Size(51, 25);
+            this.lblWorkmatesMentorInfo.TabIndex = 113;
+            this.lblWorkmatesMentorInfo.Text = "Info";
+            // 
+            // pbxWorkMatesMentorPhoto
+            // 
+            this.pbxWorkMatesMentorPhoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxWorkMatesMentorPhoto.ErrorImage")));
+            this.pbxWorkMatesMentorPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxWorkMatesMentorPhoto.Image")));
+            this.pbxWorkMatesMentorPhoto.Location = new System.Drawing.Point(424, 101);
+            this.pbxWorkMatesMentorPhoto.Name = "pbxWorkMatesMentorPhoto";
+            this.pbxWorkMatesMentorPhoto.Size = new System.Drawing.Size(105, 112);
+            this.pbxWorkMatesMentorPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxWorkMatesMentorPhoto.TabIndex = 112;
+            this.pbxWorkMatesMentorPhoto.TabStop = false;
+            // 
             // cbxWorkmatesSelectTeacher
             // 
             this.cbxWorkmatesSelectTeacher.FormattingEnabled = true;
@@ -2066,9 +1465,9 @@
             this.lblWorkmatesSelectTeacher.AutoSize = true;
             this.lblWorkmatesSelectTeacher.Location = new System.Drawing.Point(10, 47);
             this.lblWorkmatesSelectTeacher.Name = "lblWorkmatesSelectTeacher";
-            this.lblWorkmatesSelectTeacher.Size = new System.Drawing.Size(72, 13);
+            this.lblWorkmatesSelectTeacher.Size = new System.Drawing.Size(76, 13);
             this.lblWorkmatesSelectTeacher.TabIndex = 110;
-            this.lblWorkmatesSelectTeacher.Text = "Select mentor";
+            this.lblWorkmatesSelectTeacher.Text = "Select teacher";
             // 
             // lblWorkmatesTeachers
             // 
@@ -2076,9 +1475,9 @@
             this.lblWorkmatesTeachers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblWorkmatesTeachers.Location = new System.Drawing.Point(8, 9);
             this.lblWorkmatesTeachers.Name = "lblWorkmatesTeachers";
-            this.lblWorkmatesTeachers.Size = new System.Drawing.Size(97, 25);
+            this.lblWorkmatesTeachers.Size = new System.Drawing.Size(110, 25);
             this.lblWorkmatesTeachers.TabIndex = 109;
-            this.lblWorkmatesTeachers.Text = "Mentors";
+            this.lblWorkmatesTeachers.Text = "Teachers";
             // 
             // lblWorkmatesTeacherPhoneValue
             // 
@@ -2092,7 +1491,7 @@
             // rbxWorkmatesTeacherBioValue
             // 
             this.rbxWorkmatesTeacherBioValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rbxWorkmatesTeacherBioValue.Location = new System.Drawing.Point(215, 274);
+            this.rbxWorkmatesTeacherBioValue.Location = new System.Drawing.Point(9, 302);
             this.rbxWorkmatesTeacherBioValue.Name = "rbxWorkmatesTeacherBioValue";
             this.rbxWorkmatesTeacherBioValue.ReadOnly = true;
             this.rbxWorkmatesTeacherBioValue.Size = new System.Drawing.Size(257, 96);
@@ -2205,20 +1604,6 @@
             // 
             this.tasksTableAdapter.ClearBeforeFill = true;
             // 
-            // groupsTableAdapter1
-            // 
-            this.groupsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // educationProjectDataSet3
-            // 
-            this.educationProjectDataSet3.DataSetName = "EducationProjectDataSet3";
-            this.educationProjectDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupsBindingSource
-            // 
-            this.groupsBindingSource.DataMember = "Groups";
-            this.groupsBindingSource.DataSource = this.educationProjectDataSet3;
-            // 
             // studentsTableAdapter
             // 
             this.studentsTableAdapter.ClearBeforeFill = true;
@@ -2227,17 +1612,20 @@
             // 
             this.messagesTableAdapter.ClearBeforeFill = true;
             // 
-            // TeacherForm
+            // MentorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControlTeacher);
-            this.Name = "TeacherForm";
+            this.Controls.Add(this.tabControlMentor);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.Name = "MentorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TeacherForm";
-            this.Load += new System.EventHandler(this.TeacherForm_Load);
-            this.tabControlTeacher.ResumeLayout(false);
+            this.Text = "MentorForm";
+            this.Load += new System.EventHandler(this.Mentor_Load);
+            this.tabControlMentor.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeacherPhoto)).EndInit();
@@ -2245,20 +1633,9 @@
             this.tabTask.PerformLayout();
             this.gbxUpdateTask.ResumeLayout(false);
             this.gbxUpdateTask.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasksList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet5)).EndInit();
-            this.tabAssignTask.ResumeLayout(false);
-            this.gbxTaskPoint.ResumeLayout(false);
-            this.gbxTaskPoint.PerformLayout();
-            this.gbxAssignedTasksToStudents.ResumeLayout(false);
-            this.gbxAssignedTasksToStudents.PerformLayout();
-            this.gbxAssignTaskToStudents.ResumeLayout(false);
-            this.gbxAssignTaskToStudents.PerformLayout();
-            this.gbxAssignTaskToGroup.ResumeLayout(false);
-            this.gbxAssignTaskToGroup.PerformLayout();
             this.tabGroups.ResumeLayout(false);
             this.tabGroups.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupsStudentsList)).EndInit();
@@ -2266,9 +1643,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet1)).EndInit();
             this.gbxGroupsInfo.ResumeLayout(false);
             this.gbxGroupsInfo.PerformLayout();
-            this.tabMentorInfo.ResumeLayout(false);
-            this.tabMentorInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMentorsPhoto)).EndInit();
             this.tabMessages.ResumeLayout(false);
             this.tabControllMessages.ResumeLayout(false);
             this.tabMessagesSendTo.ResumeLayout(false);
@@ -2282,26 +1656,23 @@
             this.tabMessagesSent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMessagesSent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.messagesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSetBindingSource)).EndInit();
             this.tabWorkMates.ResumeLayout(false);
             this.tabWorkMates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWorkMatesMentorPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxWorkmatesTeacherPhoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.educationProjectDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControlTeacher;
+        private System.Windows.Forms.TabControl tabControlMentor;
         private System.Windows.Forms.TabPage tabInfo;
-        private System.Windows.Forms.TabPage tabTask;
-        private System.Windows.Forms.TabPage tabAssignTask;
-        private System.Windows.Forms.TabPage tabGroups;
-        private System.Windows.Forms.TabPage tabMentorInfo;
-        private System.Windows.Forms.TabPage tabMessages;
-        private System.Windows.Forms.TabPage tabWorkMates;
-        private System.Windows.Forms.TabPage tabLibrary;
+        private System.Windows.Forms.Button btnSaveChangePhone;
+        private System.Windows.Forms.Button btnSaveChangePassword;
+        private System.Windows.Forms.TextBox tbxTeacherPhoneValue;
+        private System.Windows.Forms.TextBox tbxTeacherPasswordValue;
         private System.Windows.Forms.Button btnTeacherSaveChangeBio;
         private System.Windows.Forms.RichTextBox rbxTeacherBio;
         private System.Windows.Forms.Label lblTeacherBio;
@@ -2318,82 +1689,22 @@
         private System.Windows.Forms.Label lblTeacherName;
         private System.Windows.Forms.Label lblTeacherInfo;
         private System.Windows.Forms.PictureBox pbxTeacherPhoto;
-        private System.Windows.Forms.TextBox tbxTeacherPhoneValue;
-        private System.Windows.Forms.TextBox tbxTeacherPasswordValue;
-        private System.Windows.Forms.Button btnSaveChangePhone;
-        private System.Windows.Forms.Button btnSaveChangePassword;
-        private System.Windows.Forms.DataGridView dgvTasksList;
-        private System.Windows.Forms.Label lblTasks;
-        private EducationProjectDataSet5 educationProjectDataSet5;
-        private System.Windows.Forms.BindingSource tasksBindingSource;
-        private EducationProjectDataSet5TableAdapters.TasksTableAdapter tasksTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnAddTask;
-        private System.Windows.Forms.RichTextBox rbxAddTaskBody;
-        private System.Windows.Forms.Label lblAddTaskBody;
-        private System.Windows.Forms.TextBox tbxAddTaskSubject;
-        private System.Windows.Forms.Label lblAddTaskSubject;
-        private System.Windows.Forms.TextBox tbxAddTaskName;
-        private System.Windows.Forms.Label lblAddTaskName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskSubjectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskBodyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taskIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabTask;
         private System.Windows.Forms.GroupBox gbxUpdateTask;
-        private System.Windows.Forms.Button btnUpdateTask;
         private System.Windows.Forms.RichTextBox rbxUpdateTaskBody;
         private System.Windows.Forms.Label label1lblUpdateTaskBody;
         private System.Windows.Forms.TextBox tbxUpdateTaskSubject;
         private System.Windows.Forms.Label lblUpdateTaskSubject;
         private System.Windows.Forms.TextBox tbxUpdateTaskName;
         private System.Windows.Forms.Label lblUpdateTaskName;
-        private EducationProjectDataSet3TableAdapters.GroupsTableAdapter groupsTableAdapter1;
-        private System.Windows.Forms.Button btnRemoveTask;
-        private System.Windows.Forms.GroupBox gbxAssignTaskToGroup;
-        private System.Windows.Forms.Button btnAssginTask;
-        private System.Windows.Forms.ComboBox cbxSelectTask;
-        private System.Windows.Forms.Label lblSelectTask;
-        private System.Windows.Forms.ComboBox cbxSelectGroup;
-        private System.Windows.Forms.Label lblSelectGroup;
-        private System.Windows.Forms.Label lblTaskEndDate;
-        private System.Windows.Forms.Label lblTaskStartDate;
-        private System.Windows.Forms.DateTimePicker dtpTaskEndDate;
-        private System.Windows.Forms.DateTimePicker dtpTaskStartDate;
-        private System.Windows.Forms.CheckedListBox chbxSelectStudent;
-        private System.Windows.Forms.GroupBox gbxAssignTaskToStudents;
-        private System.Windows.Forms.Label lblAssignTaskToStidentsSelectEndDate;
-        private System.Windows.Forms.Label lblAssignTaskToStidentsSelectStartDate;
-        private System.Windows.Forms.DateTimePicker dtpAssignTaskToStudentsEndDate;
-        private System.Windows.Forms.DateTimePicker dtpAssignTaskToStudentsStartDate;
-        private System.Windows.Forms.Button btnAssignTaskToStudents;
-        private System.Windows.Forms.ComboBox cbxAssignTaskToStudentsSelectTask;
-        private System.Windows.Forms.Label lblAssignTaskToStidentsSelectTask;
-        private System.Windows.Forms.ComboBox cbxAssignTaskToStudentsSelectGroup;
-        private System.Windows.Forms.Label lblAssignTaskToStidentsSelectGroup;
-        private System.Windows.Forms.Button btnShowTeacherAllStudents;
-        private System.Windows.Forms.GroupBox gbxAssignedTasksToStudents;
-        private System.Windows.Forms.ComboBox cbxSelectSelectedAssignedTaskToStudents;
-        private System.Windows.Forms.Label lblSelectAssignedTaskToStudents;
-        private System.Windows.Forms.Label lblSelectedStudentsFromAssignedTasks;
-        private System.Windows.Forms.ListBox lbxSelectedStudentFromAssignedTasks;
-        private System.Windows.Forms.GroupBox gbxTaskPoint;
-        private System.Windows.Forms.ComboBox cbxSelectStudentForPoint;
-        private System.Windows.Forms.ComboBox cbxSelectTaskPoint;
-        private System.Windows.Forms.Label lblSelectTaskPoint;
-        private System.Windows.Forms.Label lblSelectedStudentsForPoints;
-        private System.Windows.Forms.Button btnAssignPoint;
-        private System.Windows.Forms.TextBox tbxSelectedStudentPoint;
-        private System.Windows.Forms.DateTimePicker dtpSelectedStudentTaskEndDate;
-        private System.Windows.Forms.DateTimePicker dtpSelectedStudentTaskStartDate;
-        private System.Windows.Forms.Label lblSelectedStudentTaskPoint;
-        private System.Windows.Forms.Label lblSelectedStudentTaskEndDate;
-        private System.Windows.Forms.Label lblSelectedStudentTaskStartDate;
+        private System.Windows.Forms.DataGridView dgvTasksList;
+        private System.Windows.Forms.Label lblTasks;
+        private System.Windows.Forms.TabPage tabGroups;
+        private System.Windows.Forms.Button btnGoupsShowAllStudents;
         private System.Windows.Forms.TextBox tbxGroupsSearchByName;
         private System.Windows.Forms.Label lblGroupsSearchByName;
         private System.Windows.Forms.Label lblGroups;
         private System.Windows.Forms.DataGridView dgvGroupsStudentsList;
-        private System.Windows.Forms.BindingSource groupsBindingSource;
-        private EducationProjectDataSet3 educationProjectDataSet3;
         private System.Windows.Forms.GroupBox gbxGroupsInfo;
         private System.Windows.Forms.TextBox tbxGroupsInfoGroupTime;
         private System.Windows.Forms.TextBox tbxGroupsInfoGroupMentor;
@@ -2405,36 +1716,10 @@
         private System.Windows.Forms.Label lblGroupsInfoName;
         private System.Windows.Forms.ComboBox cbxGroupsSelectGroup;
         private System.Windows.Forms.Label lblGroupsSelectGroup;
-        private EducationProjectDataSet1 educationProjectDataSet1;
-        private System.Windows.Forms.BindingSource studentsBindingSource;
-        private EducationProjectDataSet1TableAdapters.StudentsTableAdapter studentsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentSurname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentBirthDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentRegistrationDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentBio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groupIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnGoupsShowAllStudents;
-        private System.Windows.Forms.Label lblMentorsPhoneValue;
-        private System.Windows.Forms.RichTextBox rbxMentorsBioValue;
-        private System.Windows.Forms.Label lblMentorsBio;
-        private System.Windows.Forms.Label lblMentorsPhone;
-        private System.Windows.Forms.Label lblMentorsEmailValue;
-        private System.Windows.Forms.Label lblMentorsEmail;
-        private System.Windows.Forms.Label lblMentorsSurnameValue;
-        private System.Windows.Forms.Label lblMentorsSurname;
-        private System.Windows.Forms.Label lblMentorsNameValue;
-        private System.Windows.Forms.Label lblMentorsName;
-        private System.Windows.Forms.Label lblMentorsInfo;
-        private System.Windows.Forms.PictureBox pbxMentorsPhoto;
-        private System.Windows.Forms.ComboBox cbxMentorsSelectMentor;
-        private System.Windows.Forms.Label lblMentorsSelectMentor;
-        private System.Windows.Forms.Label lblMentors;
+        private System.Windows.Forms.TabPage tabMessages;
         private System.Windows.Forms.TabControl tabControllMessages;
         private System.Windows.Forms.TabPage tabMessagesSendTo;
+        private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.TextBox tbxMessageSubject;
         private System.Windows.Forms.TextBox tbxMessageReceiver;
         private System.Windows.Forms.RichTextBox rbxMessagesBody;
@@ -2460,23 +1745,7 @@
         private System.Windows.Forms.Label lblMessagesSentSubject;
         private System.Windows.Forms.Label lblMessagesSentReceiverValue;
         private System.Windows.Forms.Label lblMessagesSentReceiver;
-        private System.Windows.Forms.Button btnSendMessage;
-        private EducationProjectDataSet educationProjectDataSet;
-        private System.Windows.Forms.BindingSource messagesBindingSource;
-        private EducationProjectDataSetTableAdapters.MessagesTableAdapter messagesTableAdapter;
-        private System.Windows.Forms.BindingSource messagesBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senderEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn receiverEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn receiverEmailDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senderEmailDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messageIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TabPage tabWorkMates;
         private System.Windows.Forms.ComboBox cbxWorkmatesSelectTeacher;
         private System.Windows.Forms.Label lblWorkmatesSelectTeacher;
         private System.Windows.Forms.Label lblWorkmatesTeachers;
@@ -2492,5 +1761,58 @@
         private System.Windows.Forms.Label lblWorkmatesTeacherName;
         private System.Windows.Forms.Label lblWorkmatesInfo;
         private System.Windows.Forms.PictureBox pbxWorkmatesTeacherPhoto;
+        private System.Windows.Forms.TabPage tabLibrary;
+        private System.Windows.Forms.ComboBox cbxWorkMatesSelectMentor;
+        private System.Windows.Forms.Label lblWorkMatesSelectMentor;
+        private System.Windows.Forms.Label lblWorkmatesMentors;
+        private System.Windows.Forms.Label lblWorkMatesMentorPhoneValue;
+        private System.Windows.Forms.RichTextBox rbxWorkMatesMentorBioValue;
+        private System.Windows.Forms.Label lblWorkMatesMentorBio;
+        private System.Windows.Forms.Label lblWorkMatesMentorPhone;
+        private System.Windows.Forms.Label lblWorkMatesMentorEmailValue;
+        private System.Windows.Forms.Label lblWorkMatesMentorEmail;
+        private System.Windows.Forms.Label lblWorkMatesMentorSurnameValue;
+        private System.Windows.Forms.Label lblWorkMatesMentorSurname;
+        private System.Windows.Forms.Label lblWorkMatesMentorNameValue;
+        private System.Windows.Forms.Label lblWorkMatesMentorName;
+        private System.Windows.Forms.Label lblWorkmatesMentorInfo;
+        private System.Windows.Forms.PictureBox pbxWorkMatesMentorPhoto;
+        private EducationProjectDataSet5 educationProjectDataSet5;
+        private System.Windows.Forms.BindingSource tasksBindingSource;
+        private EducationProjectDataSet5TableAdapters.TasksTableAdapter tasksTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskSubjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskBodyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taskIdDataGridViewTextBoxColumn;
+        private EducationProjectDataSet1 educationProjectDataSet1;
+        private System.Windows.Forms.BindingSource studentsBindingSource;
+        private EducationProjectDataSet1TableAdapters.StudentsTableAdapter studentsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentSurname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentBirthDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentRegistrationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentBio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private EducationProjectDataSet educationProjectDataSet;
+        private System.Windows.Forms.BindingSource messagesBindingSource;
+        private EducationProjectDataSetTableAdapters.MessagesTableAdapter messagesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receiverEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receiverEmailDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSendTimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageSubjectDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageBodyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderEmailDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource messagesBindingSource1;
+        private System.Windows.Forms.BindingSource educationProjectDataSetBindingSource;
     }
 }

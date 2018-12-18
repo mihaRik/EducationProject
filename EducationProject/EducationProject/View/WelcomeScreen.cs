@@ -56,15 +56,19 @@ namespace EducationProject
                             case "Student":
                                 Controller.Controller.user = user;
                                 StudentsForm studentsForm = new StudentsForm();
-                                //studentsForm.SetDesktopLocation(DesktopBounds.Width / 2, DesktopBounds.Height / 2);
                                 studentsForm.Show();
                                 break;
 
                             case "Teacher":
                                 Controller.Controller.user = user;
                                 TeacherForm teacherForm = new TeacherForm();
-                                //teacherForm.SetDesktopLocation(DesktopBounds.Width / 2, DesktopBounds.Height / 2);
                                 teacherForm.Show();
+                                break;
+
+                            case "Mentor":
+                                Controller.Controller.user = user;
+                                MentorForm mentorForm = new MentorForm();
+                                mentorForm.Show();
                                 break;
 
                             default:
@@ -86,7 +90,7 @@ namespace EducationProject
             {
                 cbxUserType.Items.Add(userType.UserTypeName);
             }
-            cbxUserType.SelectedIndex = 2;
+            cbxUserType.SelectedIndex = 0;
         }
     }
 }
